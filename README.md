@@ -21,3 +21,7 @@
 * Clone your repository down to your local machine.
 * From Windows File Explorer, open index.html in Chrome to view.
 * Using Visual Studio Code, open the folder to edit.
+
+## Stay current
+
+* <https://getbootstrap.com/>
