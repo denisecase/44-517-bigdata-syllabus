@@ -39,6 +39,12 @@ h3 {
   color: rgb(121, 121, 121);
 }
 
+a {
+  margin-top: 2rem;
+  color: #115dff;
+}
+
+
 .img-thumbnail {
   border-width: 0px;
   margin-right: 5px;
