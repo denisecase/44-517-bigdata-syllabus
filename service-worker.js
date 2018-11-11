@@ -16,14 +16,15 @@
 
 const cacheName = '44-517'
 const dataCacheName = '44-517-data'
+const repo = '44-517-bigdata-syllabus'
 const filesToCache = [
-  '/',
-  '/index.html',
-  '/vendor/bootstrap-4.1.3-dist/css/bootstrap.min.css',
-  '/styles/case-syllabus.css',
-  '/vendor/mark.min.js',
-  '/scripts/main.js',
-  '/images/northwestlogo.jpg'
+  '/'+repo +'/',
+  '/'+repo +'/index.html',
+  '/'+repo +'/vendor/bootstrap-4.1.3-dist/css/bootstrap.min.css',
+  '/'+repo +'/styles/case-syllabus.css',
+  '/'+repo +'/vendor/mark.min.js',
+  '/'+repo +'/scripts/main.js',
+  '/'+repo +'/images/northwestlogo.jpg'
 ]
 
 
@@ -39,7 +40,7 @@ self.addEventListener('install', function (event) {
   );
 })
 
-// activate is fired when worker starts up
+// activate is fired when worker starts up - delete outdated caches
 self.addEventListener('activate', function (event) {
   console.log('SERVICE-WORKER: Starting activate')
   event.waitUntil(
