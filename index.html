@@ -376,8 +376,7 @@
       <li> Unauthorized use of devices during class may result in reduction in scores.</li>
       <li>Be ready to work when the class is scheduled to begin.</li>
       <li>Be polite and respective to other people in the class. Do not interrupt someone during a class discussion,
-        and respect
-        others' opinions/comments as you expect them to respect yours.</li>
+        and respect others' opinions/comments as you expect them to respect yours.</li>
     </ol>
 
     <h2> Citation Requirements</h2>
@@ -457,27 +456,24 @@
 
     <h2>Academic Integrity Policy</h2>
     The students, faculty, and staff at Northwest endeavor to sustain an environment that values honesty in academic
-    work, that
-    acknowledges the authorized aid provided by and intellectual contributions of others, and that enables equitable
-    student
-    evaluation. Please refer to Northwest Missouri State University’s Academic Integrity Policy at
+    work, that acknowledges the authorized aid provided by and intellectual contributions of others, 
+    and that enables equitable student evaluation. 
+    Please refer to Northwest Missouri State University’s Academic Integrity Policy at
     <a target="_blank" rel="noopener" href="http://www.nwmissouri.edu/policies/academics/Academic-Integrity.pdf">http://www.nwmissouri.edu/policies/academics/Academic-Integrity.pdf</a>.
     In addition, students are expected to understand
     and abide by the Computer Science and Information Systems Academic Integrity Policy at
     <a target="_blank" rel="noopener" href="http://www.nwmissouri.edu/csis/pdf/AcademicIntegrityCSI.doc">http://www.nwmissouri.edu/csis/pdf/AcademicIntegrityCSI.doc</a>.
     This document explains types of behavior considered
     to constitute academic dishonesty. You are responsible for reading this document and abiding by the guidelines
-    described
-    therein.
+    described therein.
 
     <h2>Special Accommodations Policy </h2>
     Northwest Missouri State University complies with Section 504 of the Rehabilitation Act of 1973 and the Americans
     with Disabilities
-    Act of 1990 [ADA] and the ADA Amendments Act of 2008 [ADAAA]. If a student has a disability that qualifies under
-    the
-    ADA/ADAAA and requires accommodations, they should contact the Office for Equity and Accessibility for information
-    on
-    appropriate policies and procedures at
+    Act of 1990 [ADA] and the ADA Amendments Act of 2008 [ADAAA]. 
+    If a student has a disability that qualifies under the ADA/ADAAA and requires accommodations, 
+    they should contact the Office for Equity and Accessibility for information
+    on appropriate policies and procedures at
     <a href="tel:+16605621639">660.562.1639</a>, or
     <a target="_top" href="mailto:pjp@nwmissouri.edu?Subject=Special accomodations">pjp@nwmissouri.edu</a> /
     <a target="_top" href="mailto:ADA@nwmissouri.edu?Subject=Special accomodations">ADA@nwmissouri.edu</a>. For the
@@ -523,8 +519,7 @@
     </div>
   </footer>
 
-  <!-- Bootstrap core JavaScript - see https://getbootstrap.com/ for current version
-    ================================================== -->
+  <!-- See https://getbootstrap.com/ for current version
   <!-- Placed at the end of the document so the pages load faster -->
   <!-- Use async on non-critical scripts to avoid blocking -->
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
@@ -538,7 +533,8 @@
   <script>
     if ('serviceWorker' in navigator) {
       console.log('CLIENT: service worker registration in progress.');
-      navigator.serviceWorker.register('/service-worker.js').then(function () {
+      console.log('CLIENT: registering with repo path for GitHub Pages.');
+      navigator.serviceWorker.register('/44-517-bigdata-syllabus/service-worker.js', { scope: '/44-517-bigdata-syllabus/' }).then(function () {
         console.log('CLIENT: service worker registration complete.');
       }, function () {
         console.log('CLIENT: service worker registration failure.');
