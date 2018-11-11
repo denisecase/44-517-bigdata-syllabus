@@ -43,6 +43,21 @@ a {
   color: #115dff;
 }
 
+.state-icon {
+  margin-left: -5px;
+  margin-right: 5px;
+  text-align: center;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+.active{
+  background-color: #006747;
+  color: white;
+}
+
 .img-thumbnail {
   border-width: 0px;
   margin-right: 5px;
@@ -106,3 +121,4 @@ mark {
 mark.current {
   background:orange
 }
+

@@ -1,9 +1,8 @@
-$(function () {
-
-  const found = new Mark(".content");
-  const inputElement = $("input[type='text']");
-  const btnClear = $("#reset");
-  const btnCount = $("#count");
+(function ($) {
+  const found = new Mark(".content")
+  const inputElement = $("input[type='text']")
+  const btnClear = $("#reset")
+  const btnCount = $("#count")
 
   /**
   * Assign clear handler
@@ -29,7 +28,5 @@ $(function () {
       }
     })
   })
-
-
-})
+})(jQuery)
 

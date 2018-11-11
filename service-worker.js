@@ -21,7 +21,8 @@ const filesToCache = [
   '/'+repo +'/',
   '/'+repo +'/index.html',
   '/'+repo +'/vendor/bootstrap-4.1.3-dist/css/bootstrap.min.css',
-  '/'+repo +'/styles/case-syllabus.css',
+  '/'+repo +'/vendor/print.css',
+  '/'+repo +'/images/northwestlogo.jpg'
   '/'+repo +'/vendor/mark.min.js',
   '/'+repo +'/scripts/main.js',
   '/'+repo +'/images/northwestlogo.jpg'
