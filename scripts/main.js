@@ -1,32 +1,27 @@
-(function ($) {
-  const found = new Mark(".content")
-  const inputElement = $("input[type='text']")
+$(function () {
+
   const btnClear = $("#reset")
   const btnCount = $("#count")
 
-  /**
-  * Assign clear handler
-  */
-  btnClear.on("click", function () {
+  btnClear.on("click", () => {
     inputElement.val("").focus()
     found.unmark()
   })
 
-  /**
-   * Search on input
-   */
-  inputElement.on("input", function () {
-    const searchVal = this.value;
-    found.unmark({
+  const mark = () => {
+    const searchVal = $("input[name='keyword']").val();
+    // Remove previous marked elements and mark
+    // the new keyword inside the context
+    $(".context").unmark({
       done: () => {
-        found.mark(searchVal, {
+        $(".context").mark(searchVal, {
           separateWordSearch: true,
-          done: (counter) => {
-            btnCount.html(counter.toString())
-          }
+          done: count => { btnCount.html(count.toString()) }
         })
       }
     })
-  })
-})(jQuery)
+  }
+
+  $("input[name='keyword']").on("input", mark)
+})
 

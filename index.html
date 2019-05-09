@@ -2,30 +2,52 @@
 <html lang="en">
 
 <head>
+  <!-- Put GA immediately after head tag -->
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-65828104-10"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'UA-65828104-10');
+  </script>
+
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="Syllabus for NWMSU 44-517 Big Data Course">
   <meta name="author" content="Denise Case">
   <link rel="canonical" href="https://profcase.github.io/44-517-bigdata-syllabus/" />
-  <link rel="icon" href="./favicon.gif">
-  <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/icons/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="./images/icons/favicon-16x16.png">
-  <link rel="manifest" href="./manifest.json">
-  <link rel="mask-icon" href="./images/icons/safari-pinned-tab.svg" color="#006747">
-
+  <meta name="theme-color" content="#006747" />
   <meta name="msapplication-TileColor" content="#006747">
-  <meta name="theme-color" content="#ffffff">
+  <link rel="icon" href="favicon.gif">
+  <link rel="manifest" href="./manifest.json">
 
   <title>44-517 Big Data</title>
 
-  <!-- See https://getbootstrap.com/ for current version -->
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
-    crossorigin="anonymous">
-  <link rel="stylesheet" href="./vendor/bootstrap-4.1.3-dist/css/bootstrap-reboot.min.css">
-  <link rel="stylesheet" href="./vendor/bootstrap-4.1.3-dist/css/bootstrap.min.css">
-  <link rel="stylesheet" href="./styles/case-syllabus.css">
-  <link rel="stylesheet" href="./vendor/print.css">
+  <!-- https://fezvrasta.github.io/bootstrap-material-design/docs/4.0/getting-started/introduction/ -->
+  <!-- Material Design for Bootstrap fonts and icons -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons">
+
+  <!-- Material Design for Bootstrap CSS -->
+  <link rel="stylesheet"
+    href="https://unpkg.com/bootstrap-material-design@4.1.1/dist/css/bootstrap-material-design.min.css"
+    integrity="sha384-wXznGJNEXNG1NFsbm0ugrLFMQPWswR3lds2VeinahP8N0zJw9VWSopbjv2x7WCvX" crossorigin="anonymous">
+
+  <!-- Custom styles for this template -->
+  <link href="styles/case-syllabus.css" rel="stylesheet">
+
+  <!-- use chrome://inspect/#service-workers to inspect -->
+  <script>
+    if ('serviceWorker' in navigator) {
+      console.log('CLIENT: service worker registration in progress.');
+      navigator.serviceWorker.register('./sw.js').then(registration => {
+        console.log('Service worker registration successful with scope: ', registration.scope);
+      }, function (err) {
+        console.log('Service worker registration failed: ', err);
+      });
+    }
+  </script>
+
 </head>
 
 <body>
@@ -46,19 +68,20 @@
             </a>
           </li>
           <li class="nav-item">
-            <a target="_blank" rel="noopener" class="nav-link" href="https://nwmissouri.instructure.com/courses/17513">Canvas</a>
+            <a target="_blank" rel="noopener" class="nav-link"
+              href="https://nwmissouri.instructure.com/courses/25852">Canvas</a>
           </li>
         </ul>
         <form class="form-inline mt-2 mt-md-0">
-          <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-success my-2 my-sm-0" type="submit" id="count" disabled>0</button>
-          <button class="btn btn-outline-success my-2 my-sm-0" type="submit" id="reset">&olarr;</button>
+          <input name='keyword' class="form-control input-sm" type="text" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success " type="submit" id="count">0</button>
+          <button class="btn btn-outline-success " type="submit" id="reset">&olarr;</button>
         </form>
       </div>
     </nav>
   </header>
 
-  <main class="container content ">
+  <main class="container context">
 
     <div class="main-heading d-flex flex-wrap ">
       <img src="./images/northwestlogo.jpg " alt="Northwest Logo " class="img-thumbnail ">
@@ -88,9 +111,11 @@
     <br /> Assistant Professor
     <br /> 660.562.1136
     <br />
-    <a target="_top" href="mailto:dcase@nwmissouri.edu?Subject=Put%20Course%20Number%20and%20Section%20Here%20-%20with%20useful%20subject">dcase@nwmissouri.edu</a>
+    <a target="_top"
+      href="mailto:dcase@nwmissouri.edu?Subject=Put%20Course%20Number%20and%20Section%20Here%20-%20with%20useful%20subject">dcase@nwmissouri.edu</a>
     <br />
-    <a target="_blank" rel="noopener" href="https://www.nwmissouri.edu/services/facility/pdf/floorplans/Colden%20Hall%202nd%20Floor.pdf">
+    <a target="_blank" rel="noopener"
+      href="https://www.nwmissouri.edu/services/facility/pdf/floorplans/Colden%20Hall%202nd%20Floor.pdf">
       Colden Hall 2280</a>
     <br />
 
@@ -150,7 +175,8 @@
           data-intensive systems.</li>
         <li id="11" class="list-group-item list-group-item-action active">Understand and employ basic regular
           expressions.</li>
-        <li id="12" class="list-group-item list-group-item-action active">Understand and employ basic shell commands.</li>
+        <li id="12" class="list-group-item list-group-item-action active">Understand and employ basic shell commands.
+        </li>
         <li id="13" class="list-group-item list-group-item-action active">Implement big data solutions using standard
           algorithms.</li>
         <li id="14" class="list-group-item list-group-item-action active">Implement data intensive systems using
@@ -163,9 +189,11 @@
     <h2>Materials</h2>
     <p> Recommended references</p>
     <ul>
-      <li><a target="_blank" rel="noopener" href="https://static.googleusercontent.com/media/research.google.com/en//archive/mapreduce-osdi04.pdf">
+      <li><a target="_blank" rel="noopener"
+          href="https://static.googleusercontent.com/media/research.google.com/en//archive/mapreduce-osdi04.pdf">
           MapReduce: Simplified Data Processing on Large Clusters by Jeffrey Dean and Sanjay Ghemawat, 2004.</a></li>
-      <li><a target="_blank" rel="noopener" href="https://lintool.github.io/MapReduceAlgorithms/MapReduce-book-final.pdf">
+      <li><a target="_blank" rel="noopener"
+          href="https://lintool.github.io/MapReduceAlgorithms/MapReduce-book-final.pdf">
           Data-Intensive Text Processing with MapReduce by Jimmy Lin and Chris Dyer, 2010.</a></li>
       <li><a target="_blank" rel="noopener" href="http://infolab.stanford.edu/~ullman/mmds/book.pdf">
           Mining of Massive Datasets by Leskovec, Rajaraman, and Ullman, 2014.</a></li>
@@ -184,7 +212,8 @@
         Windows File
         Explorer</li>
       <li> Free
-        <a target="_blank" rel="noopener" href="https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html">PuTTY</a>
+        <a target="_blank" rel="noopener"
+          href="https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html">PuTTY</a>
         for creating
         SSH public/private key pairs</li>
       <li> Free
@@ -271,7 +300,8 @@
         <a target="_blank" rel="noopener" href="https://www.nwmissouri.edu/academics/calendar.htm">Academic Calendar</a>
       </li>
       <li>
-        <a target="_blank" rel="noopener" href="https://www.nwmissouri.edu/registrar/finals.htm">Final Exams Schedule</a>
+        <a target="_blank" rel="noopener" href="https://www.nwmissouri.edu/registrar/finals.htm">Final Exams
+          Schedule</a>
       </li>
       <li>
         <a target="_blank" rel="noopener" href="http://calendar.nwmissouri.edu/">University Events</a>
@@ -440,7 +470,8 @@
     points for the activity.
     It is the responsibility of the student to promptly notify their instructor
     when unable to attend class. Please refer to the university policy on attendance at
-    <a target="_blank" rel="noopener" href="https://www.nwmissouri.edu/policies/academics/Attendance.pdf">https://www.nwmissouri.edu/policies/academics/Attendance.pdf</a>
+    <a target="_blank" rel="noopener"
+      href="https://www.nwmissouri.edu/policies/academics/Attendance.pdf">https://www.nwmissouri.edu/policies/academics/Attendance.pdf</a>
 
     <h2>Excused Absences </h2>
     Excused absences include attendance at a university sponsored event
@@ -463,7 +494,8 @@
 
     <h2>Course Access</h2>
     Course content is provided via Canvas and Northwest Online. Access to Northwest Online is at
-    <a target="_blank" rel="noopener" href="https://nwmissouri.instructure.com/">https://nwmissouri.instructure.com/</a>.
+    <a target="_blank" rel="noopener"
+      href="https://nwmissouri.instructure.com/">https://nwmissouri.instructure.com/</a>.
 
     <h2>University Communications </h2>
     Students are expected to use their Northwest student email account for any electronic correspondence within the
@@ -475,10 +507,12 @@
     work, that acknowledges the authorized aid provided by and intellectual contributions of others,
     and that enables equitable student evaluation.
     Please refer to Northwest Missouri State University’s Academic Integrity Policy at
-    <a target="_blank" rel="noopener" href="http://www.nwmissouri.edu/policies/academics/Academic-Integrity.pdf">http://www.nwmissouri.edu/policies/academics/Academic-Integrity.pdf</a>.
+    <a target="_blank" rel="noopener"
+      href="http://www.nwmissouri.edu/policies/academics/Academic-Integrity.pdf">http://www.nwmissouri.edu/policies/academics/Academic-Integrity.pdf</a>.
     In addition, students are expected to understand
     and abide by the Computer Science and Information Systems Academic Integrity Policy at
-    <a target="_blank" rel="noopener" href="http://www.nwmissouri.edu/csis/pdf/AcademicIntegrityCSI.doc">http://www.nwmissouri.edu/csis/pdf/AcademicIntegrityCSI.doc</a>.
+    <a target="_blank" rel="noopener"
+      href="http://www.nwmissouri.edu/csis/pdf/AcademicIntegrityCSI.doc">http://www.nwmissouri.edu/csis/pdf/AcademicIntegrityCSI.doc</a>.
     This document explains types of behavior considered
     to constitute academic dishonesty. You are responsible for reading this document and abiding by the guidelines
     described therein.
@@ -494,7 +528,8 @@
     <a target="_top" href="mailto:pjp@nwmissouri.edu?Subject=Special%20accomodations">pjp@nwmissouri.edu</a> /
     <a target="_top" href="mailto:ADA@nwmissouri.edu?Subject=Special%20accomodations">ADA@nwmissouri.edu</a>.
     For the university policy on disability accommodation refer to
-    <a target="_blank" rel="noopener" href="http://www.nwmissouri.edu/policies/student/Disability-Accommodation.pdf">http://www.nwmissouri.edu/policies/student/Disability-Accommodation.pdf</a>.
+    <a target="_blank" rel="noopener"
+      href="http://www.nwmissouri.edu/policies/student/Disability-Accommodation.pdf">http://www.nwmissouri.edu/policies/student/Disability-Accommodation.pdf</a>.
 
     <h2>Non-Discrimination and Anti-Harrassment Policy </h2>
     Northwest Missouri State University is committed to maintaining an environment for all faculty, staff, students,
@@ -502,7 +537,8 @@
     parties that is free of illegal discrimination and harassment. Please refer to the Non-Discrimination and
     Anti-Harassment
     Policy at
-    <a target="_blank" rel="noopener" href="http://www.nwmissouri.edu/diversity/titlevi.htm">http://www.nwmissouri.edu/diversity/titlevi.htm</a>.
+    <a target="_blank" rel="noopener"
+      href="http://www.nwmissouri.edu/diversity/titlevi.htm">http://www.nwmissouri.edu/diversity/titlevi.htm</a>.
 
     <h2> Family Educational Rights and Privacy Act (FERPA) </h2>
     Family Educational Rights and Privacy Act of 1974, as amended (commonly
@@ -510,7 +546,8 @@
     colleges and universities will maintain the confidentiality of student
     education records.
     Please refer to the Family Educational Rights and Privacy Act (FERPA) Policy at
-    <a target="_blank" rel="noopener" href="http://www.nwmissouri.edu/policies/academics/Family-Educational-Rights-and-Privacy-Act.pdf">http://www.nwmissouri.edu/policies/academics/Family-Educational-Rights-and-Privacy-Act.pdf</a>
+    <a target="_blank" rel="noopener"
+      href="http://www.nwmissouri.edu/policies/academics/Family-Educational-Rights-and-Privacy-Act.pdf">http://www.nwmissouri.edu/policies/academics/Family-Educational-Rights-and-Privacy-Act.pdf</a>
 
     <h2>Course Evaluation</h2>
     At the end of this course, you will be encouraged to complete a course evaluation.
@@ -528,40 +565,33 @@
       <span>
         <a target="_blank" rel="noopener" href="https://www.linkedin.com/in/denisecase/">Denise Case </a>&nbsp; &#9670;
         &nbsp;
-        <a target="_blank" rel="noopener" href="https://profcase.github.io/44-517-bigdata-syllabus">Webpage</a>
+        <a target="_blank" rel="noopener" href="https://profcase.github.io/44-517-bigdata-syllabus">Site</a>
         &nbsp; &#9670; &nbsp;
         <a target="_blank" rel="noopener" href="https://github.com/profcase/44-517-bigdata-syllabus">Source</a>
       </span>
     </div>
   </footer>
 
-  <!-- See https://getbootstrap.com/ for current version -->
-  <!-- Scripts at the end of document so pages load faster -->
-  <!-- Use async on non-critical scripts to avoid blocking -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <!-- Use defer to wait until HTML finishes loading -->
+  <!-- https://fezvrasta.github.io/bootstrap-material-design/docs/4.0/getting-started/introduction/ -->
 
-  <script>
-    if ('serviceWorker' in navigator) {
-      console.log('CLIENT: service worker registration in progress.');
-      console.log('CLIENT: registering with repo path for GitHub Pages.');
-      navigator.serviceWorker.register('./service-worker.js', { scope: './' }).then(function () {
-        console.log('CLIENT: service worker registration complete.');
-      }, function () {
-        console.log('CLIENT: service worker registration failure.');
-      });
-    } else {
-      console.log('CLIENT: service worker is not supported.');
-    }
-  </script>
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
     crossorigin="anonymous"></script>
-  <script async src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+  <script src="https://unpkg.com/popper.js@1.12.6/dist/umd/popper.js"
+    integrity="sha384-fA23ZRQ3G/J53mElWqVJEGJzU0sTs+SvzG8fXVWP+kJQ1lwFAOkcUOysnlKJC33U"
     crossorigin="anonymous"></script>
-  <script async src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+  <script src="https://unpkg.com/bootstrap-material-design@4.1.1/dist/js/bootstrap-material-design.js"
+    integrity="sha384-CauSuKpEqAFajSpkdjv3z9t8E7RlpJ1UP0lKM/+NdtSarroVKu069AlsRPKkFBz9"
     crossorigin="anonymous"></script>
-  <script async src="./vendor/mark.min.js"></script>
-  <script async src="./scripts/main.js"></script>
-  <script async src="./scripts/checked.js"></script>
+  <script>$(document).ready(function () { $('body').bootstrapMaterialDesign(); });</script>
 
+  <script src="https://cdn.jsdelivr.net/npm/mark.js@8.11.1/dist/jquery.mark.min.js"
+    integrity="sha256-4HLtjeVgH0eIB3aZ9mLYF6E8oU5chNdjU6p6rrXpl9U=" crossorigin="anonymous"></script>
+  <script src="scripts/main.js"></script>
 </body>
 
 </html>
