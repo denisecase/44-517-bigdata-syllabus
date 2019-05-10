@@ -84,8 +84,7 @@ self.addEventListener('fetch', event => {
             })
             .catch(err => {
               console.log('Service worker unsuccessful fetching event request ', event.request);
-              return caches.open(CACHE_CONTAINING_ERROR_MESSAGES)
-                .then(cache => { return cache.match('Error - not available'); });
+              return fetch(event.request);
             });
         }
       })
