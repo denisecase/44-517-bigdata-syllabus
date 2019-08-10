@@ -2,9 +2,9 @@
 <html lang="en">
 
 <head>
-  <!-- Put GA immediately after head tag -->
+  <!-- Put Google Analytics immediately after head tag -->
   <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script src="https://www.googletagmanager.com/gtag/js?id=UA-65828104-10"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-145064908-1"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag() { dataLayer.push(arguments); }
@@ -13,585 +13,783 @@
   </script>
 
   <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
   <meta name="description" content="Syllabus for NWMSU 44-517 Big Data Course">
   <meta name="author" content="Denise Case">
-  <link rel="canonical" href="https://profcase.github.io/44-517-bigdata-syllabus/" />
   <meta name="theme-color" content="#006747" />
   <meta name="msapplication-TileColor" content="#006747">
-  <link rel="icon" href="favicon.gif">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+  <link rel="icon" href="favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="./images/favicon_io/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon_io/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="./images/favicon_io/favicon-16x16.png">
+  <link rel="canonical" href="https://profcase.github.io/44-517-bigdata-syllabus/" />
   <link rel="manifest" href="./manifest.json">
 
   <title>44-517 Big Data</title>
 
-  <!-- https://fezvrasta.github.io/bootstrap-material-design/docs/4.0/getting-started/introduction/ -->
+  <!-- https://mdbootstrap.com/md-bootstrap-cdn/ -->
   <!-- Material Design for Bootstrap fonts and icons -->
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons">
+  <!-- Add defer for improved performance -->
+  <!-- Explicitly opt in to CORS with crossorigin = "anonymous" -->
+  <!-- https://developers.google.com/web/tools/workbox/guides/handle-third-party-requests -->
 
-  <!-- Material Design for Bootstrap CSS -->
-  <link rel="stylesheet"
-    href="https://unpkg.com/bootstrap-material-design@4.1.1/dist/css/bootstrap-material-design.min.css"
-    integrity="sha384-wXznGJNEXNG1NFsbm0ugrLFMQPWswR3lds2VeinahP8N0zJw9VWSopbjv2x7WCvX" crossorigin="anonymous">
+  <!-- Font Awesome -->
+  <link defer crossorigin="anonymous" rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+  <!-- Bootstrap core CSS -->
+  <link defer crossorigin="anonymous" rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+  <!-- Material Design Bootstrap -->
+  <link defer crossorigin="anonymous" rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.7/css/mdb.min.css">
 
-  <!-- Custom styles for this template -->
-  <link href="styles/case-syllabus.css" rel="stylesheet">
+  <!-- Custom styles -->
+  <link href="./styles/case-syllabus.css" rel="stylesheet">
+  <link href="./styles/active-checks.css" rel="stylesheet">
 
-  <!-- use chrome://inspect/#service-workers to inspect -->
+  <!-- Service worker -->
+  <!-- If the browser (navigator) enables service workers, then after loading, register -->
+  <!-- Use chrome://inspect/#service-workers to inspect -->
+
   <script>
+
     if ('serviceWorker' in navigator) {
-      console.log('CLIENT: service worker registration in progress.');
-      navigator.serviceWorker.register('./sw.js').then(registration => {
-        console.log('Service worker registration successful with scope: ', registration.scope);
-      }, function (err) {
-        console.log('Service worker registration failed: ', err);
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('./service-worker.js')
+          .then(registration => {
+            console.log(`Service worker registered with scope: ${registration.scope}`);
+          }, err => {
+            console.log('Service worker registration failed: ', err);
+          });
       });
     }
+
   </script>
+
+  <!-- Security Note -->
+  <!-- When adding links, use rel="noopener" to prevent linked page from being able to access window.opener property. -->
+  <!-- This ensures the new page will run in a separate process. -->
 
 </head>
 
 <body>
 
   <header>
+
     <!-- Fixed navbar -->
     <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark bg-nw-green">
-      <a class="navbar-brand bg-nw-green" href="#">44-517</a>
-      <button class="navbar-toggler bg-nw-green" type="button" data-toggle="collapse" data-target="#navbarCollapse"
-        aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarCollapse">
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="#">Syllabus
-              <span class="sr-only">(current)</span>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a target="_blank" rel="noopener" class="nav-link"
-              href="https://nwmissouri.instructure.com/courses/25852">Canvas</a>
-          </li>
-        </ul>
-        <form class="form-inline mt-2 mt-md-0">
-          <input name='keyword' class="form-control input-sm" type="text" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-success " type="submit" id="count">0</button>
-          <button class="btn btn-outline-success " type="submit" id="reset">&olarr;</button>
-        </form>
+
+      <!-- Additional container -->
+      <div class="container">
+
+        <!-- Navbar brand -->
+        <a rel="noopener" class="navbar-brand bg-nw-green" href="#">44-517</a>
+
+        <!-- Collapse button -->
+        <button class="navbar-toggler bg-nw-green" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+          aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Collapsible content -->
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+
+          <!-- Left Links -->
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a rel="noopener" class="nav-link" href="#">Syllabus <span class="sr-only">(current)</span> </a>
+            </li>
+            <li class="nav-item">
+              <a rel="noopener" class="nav-link" href="https://nwmissouri.instructure.com/courses/25852"
+                target="_blank">Canvas</a>
+            </li>
+          </ul>
+
+          <!-- Right Search -->
+          <form class="form-inline ">
+            <div class="md-form my-0">
+              <input name='keyword' class="form-control input-sm" type="text" placeholder="Search"
+                aria-label="Search"></input>
+              <button class="btn btn-outline-success " type="submit" id="count">0</button>
+              <button class="btn btn-outline-success " type="submit" id="reset">&olarr;</button>
+            </div>
+          </form>
+
+        </div>
+
       </div>
+      <!-- Additional container -->
+
     </nav>
+
   </header>
 
-  <main class="container context">
+  <!-- Main area: Add 'context' class for area subject to search marking -->
+  <!-- mt-5 is a Material Design Bootstrap class - it means 'margin top level 5 (the biggest)' -->
 
-    <div class="main-heading d-flex flex-wrap ">
-      <img src="./images/northwestlogo.jpg " alt="Northwest Logo " class="img-thumbnail ">
-      <h1 class="mt-5 ">44-517-01 Course Syllabus</h1>
-    </div>
-    <br />
-    <br />
+  <main class="context mt-5">
 
-    <h2>Course Title</h2>
-    44-517 Big Data
+    <!-- Main grid container-->
+    <div class="container">
 
-    <h2>Course Credit</h2>
-    3 hours
+      <!-- A centered container for the icon and title -->
 
-    <h2>Placement in Curriculum</h2>
-    This course is typically offered in the later years of an undergraduate degree or after the first semester of a
-    graduate program.
+      <div class="d-flex flex-wrap flex-center">
+        <img src="images/northwestlogo.jpg " alt="Northwest Logo " class="img-thumbnail mt-5">
+        <h1 class="mt-5 ">44-517 Course Syllabus</h1>
+      </div>
 
-    <h2>Prerequisites</h2>
-    Undergraduate prerequisites: MATH 17230 or MATH 17316 with a grade of C or better and CSIS 44242 with a grade of C
-    or better.
-    Graduate prerequisites: CSIS 44542 with a grade of B or better, or concurrent enrollment in CSIS 44542, or consent
-    of instructor.
+      <br>
+      <br>
 
-    <h2>Course Professor</h2>
-    Dr. Denise Case
-    <br /> Assistant Professor
-    <br /> 660.562.1136
-    <br />
-    <a target="_top"
-      href="mailto:dcase@nwmissouri.edu?Subject=Put%20Course%20Number%20and%20Section%20Here%20-%20with%20useful%20subject">dcase@nwmissouri.edu</a>
-    <br />
-    <a target="_blank" rel="noopener"
-      href="https://www.nwmissouri.edu/services/facility/pdf/floorplans/Colden%20Hall%202nd%20Floor.pdf">
-      Colden Hall 2280</a>
-    <br />
+      <h2>Course Title</h2>
 
-    <h2>Course Description </h2>
-    An introduction to the design of data-intensive, reliable, scalable, and maintainable systems.
-    This may include concepts such as parallel programming, distributed computing, distributed file systems, MapReduce,
-    regular expressions, and the ingesting and processing of data at-rest and data in motion.
-    Tools used may include Hadoop, HDFS, Pig, Hive, Spark, Storm, Kafka, Mahout, MLlib, etc.
+      44-517 Big Data
 
-    <h2>Course Rationale</h2>
-    This course involves an overview the design and implementation of data intensive systems covering common approaches
-    to processing big data at rest and data in motion.
+      <h2>Course Credit</h2>
 
-    <h2>Student Learning Outcomes</h2>
-    <table class="tg" id="program-outcomes">
-      <tr>
-        <th class="tg-5mgg">Compentency</th>
-        <th class="tg-5mgg">BS Data Science Program Outcome</th>
-        <th class="tg-5mgg">Assessment Methods</th>
-      </tr>
-      <tr>
-        <th class="tg-0lax">Managing Information</th>
-        <th class="tg-0lax">DSI students will access, generate, and reorganize information using contemporary
-          technologies.</th>
-        <td class="tg-0lax">Selected assignment(s)</td>
-      </tr>
-      <tr>
-        <td class="tg-0lax">Teamwork</td>
-        <td class="tg-0lax">DSI Students will work as a team to design, implement, and deliver solutions to problems
-          using best practices with contemporary technologies. </td>
-        <td class="tg-0lax">Selected assignment(s)</td>
-      </tr>
-    </table>
+      3 hours
 
-    <p>Additional student learning outcomes include:</p>
-    <div class="well">
-      <ul class="list-group" style="list-style-type:none">
+      <h2>Placement in Curriculum</h2>
 
-        <li id="1" class="list-group-item list-group-item-action active">Describe the characteristics of data-intensive
-          systems.</li>
-        <li id="2" class="list-group-item list-group-item-action active">Describe key sources of big data.</li>
-        <li id="3" class="list-group-item list-group-item-action active">Describe the V's of big data and identify what
-          are (and are not) big data problems.</li>
-        <li id="4" class="list-group-item list-group-item-action active">Describe the Hadoop framework, HDFS file
-          system, and MapReduce programming model.</li>
-        <li id="5" class="list-group-item list-group-item-action active">Design and execute a process using modern big
-          data tools such as Hadoop and Spark.</li>
-        <li id="6" class="list-group-item list-group-item-action active">Design and implement MapReduce solutions.</li>
-        <li id="7" class="list-group-item list-group-item-action active">Describe distributed systems, their challenges
-          and benefits, and apply concepts of good design to
-          increasingly complex systems.</li>
-        <li id="8" class="list-group-item list-group-item-action active">Describe different ways to represent, store,
-          manage, and process data.</li>
-        <li id="9" class="list-group-item list-group-item-action active">Describe different architectures and their
-          strengths, weaknesses, and application areas.</li>
-        <li id="10" class="list-group-item list-group-item-action active">Describe current and relevant tools for
-          data-intensive systems.</li>
-        <li id="11" class="list-group-item list-group-item-action active">Understand and employ basic regular
-          expressions.</li>
-        <li id="12" class="list-group-item list-group-item-action active">Understand and employ basic shell commands.
+      This course is typically offered in the later years of an undergraduate degree or after the first semester of a
+      graduate program.
+
+      <h2>Prerequisites</h2>
+
+      Undergraduate prerequisites: MATH 17230 or MATH 17316 with a grade of C or better and CSIS 44242 with a grade of C
+      or better.
+      Graduate prerequisites: CSIS 44542 with a grade of B or better, or concurrent enrollment in CSIS 44542, or consent
+      of instructor.
+
+      <h2>Course Professor</h2>
+
+      Dr. Denise Case
+      <br> Assistant Professor
+      <br> 660.562.1136
+      <br>
+      <a rel="noopener" target="_top" href="mailto:dcase@nwmissouri.edu?Subject=44-517">dcase@nwmissouri.edu</a>
+      <a rel="noopener" target="_blank"
+        href="https://www.nwmissouri.edu/services/facility/pdf/floorplans/Colden%20Hall%202nd%20Floor.pdf">
+        Colden Hall 2280</a>
+      <br>
+
+      <h2>Course Description </h2>
+
+      An introduction to the design of data-intensive, reliable, scalable, and maintainable systems.
+      This may include concepts such as parallel programming, distributed computing, distributed file systems,
+      MapReduce, regular expressions, and the ingesting and processing of data at-rest and data in motion.
+      Tools used may include Hadoop, HDFS, Pig, Hive, Spark, Storm, Kafka, Mahout, MLlib, etc.
+
+      <h2>Course Rationale</h2>
+
+      This course involves an overview the design and implementation of data intensive systems covering common
+      approaches to processing big data at rest and data in motion.
+
+      <h2>Student Learning Outcomes</h2>
+
+      <table class="tg" id="program-outcomes">
+        <tr>
+          <th class="tg-5mgg">Compentency</th>
+          <th class="tg-5mgg">BS Data Science Program Outcome</th>
+          <th class="tg-5mgg">Assessment Methods</th>
+        </tr>
+        <tr>
+          <th class="tg-0lax">Managing Information</th>
+          <th class="tg-0lax">DSI students will access, generate, and reorganize information using contemporary
+            technologies.</th>
+          <td class="tg-0lax">Selected assignment(s)</td>
+        </tr>
+        <tr>
+          <td class="tg-0lax">Teamwork</td>
+          <td class="tg-0lax">DSI Students will work as a team to design, implement, and deliver solutions to problems
+            using best practices with contemporary technologies. </td>
+          <td class="tg-0lax">Selected assignment(s)</td>
+        </tr>
+      </table>
+
+      <p> Additional student learning outcomes include:</p>
+
+      <div class="well">
+
+        <ul class="list-group" style="list-style-type:none">
+
+          <li id="1" class="list-group-item list-group-item-action active">
+            Describe the characteristics of data-intensive systems.
+          </li>
+          <li id="2" class="list-group-item list-group-item-action active">
+            Describe key sources of big data.
+          </li>
+          <li id="3" class="list-group-item list-group-item-action active">
+            Describe the V's of big data and identify what are (and are not) big data problems.
+          </li>
+          <li id="4" class="list-group-item list-group-item-action active">
+            Describe the Hadoop framework, HDFS file
+            system, and MapReduce programming model.
+          </li>
+          <li id="5" class="list-group-item list-group-item-action active">
+            Design and execute a process using modern big
+            data tools such as Hadoop and Spark.
+          </li>
+          <li id="6" class="list-group-item list-group-item-action active">
+            Design and implement MapReduce solutions.
+          </li>
+          <li id="7" class="list-group-item list-group-item-action active">
+            Describe distributed systems, their challenges and benefits, and apply concepts of good design to
+            increasingly complex systems.
+          </li>
+          <li id="8" class="list-group-item list-group-item-action active">
+            Describe different ways to represent, store,
+            manage, and process data.
+          </li>
+          <li id="9" class="list-group-item list-group-item-action active">
+            Describe different architectures and their
+            strengths, weaknesses, and application areas.
+          </li>
+          <li id="10" class="list-group-item list-group-item-action active">
+            Describe current and relevant tools for
+            data-intensive systems.
+          </li>
+          <li id="11" class="list-group-item list-group-item-action active">
+            Understand and employ basic regular
+            expressions.
+          </li>
+          <li id="12" class="list-group-item list-group-item-action active">
+            Understand and employ basic shell commands.
+          </li>
+          <li id="13" class="list-group-item list-group-item-action active">
+            Implement big data solutions using standard
+            algorithms.
+          </li>
+          <li id="14" class="list-group-item list-group-item-action active">
+            Implement data intensive systems using
+            relational and nonrelational databases.
+          </li>
+          <li id="15" class="list-group-item list-group-item-action active">
+            Process large amounts of data in batch mode
+            and streaming mode.
+          </li>
+
+        </ul>
+
+      </div>
+
+      <h2>Materials</h2>
+
+      <h3> Recommended references</h3>
+
+      <ul>
+        <li><a target="_blank" rel="noopener"
+            href="https://static.googleusercontent.com/media/research.google.com/en//archive/mapreduce-osdi04.pdf">
+            MapReduce: Simplified Data Processing on Large Clusters by Jeffrey Dean and Sanjay Ghemawat, 2004.
+          </a>
         </li>
-        <li id="13" class="list-group-item list-group-item-action active">Implement big data solutions using standard
-          algorithms.</li>
-        <li id="14" class="list-group-item list-group-item-action active">Implement data intensive systems using
-          relational and nonrelational databases.</li>
-        <li id="15" class="list-group-item list-group-item-action active">Process large amounts of data in batch mode
-          and streaming mode.</li>
+        <li><a target="_blank" rel="noopener"
+            href="https://lintool.github.io/MapReduceAlgorithms/MapReduce-book-final.pdf">
+            Data-Intensive Text Processing with MapReduce by Jimmy Lin and Chris Dyer, 2010.
+          </a>
+        </li>
+        <li><a target="_blank" rel="noopener" href="http://infolab.stanford.edu/~ullman/mmds/book.pdf">
+            Mining of Massive Datasets by Leskovec, Rajaraman, and Ullman, 2014.
+          </a>
+        </li>
       </ul>
-    </div>
 
-    <h2>Materials</h2>
-    <p> Recommended references</p>
-    <ul>
-      <li><a target="_blank" rel="noopener"
-          href="https://static.googleusercontent.com/media/research.google.com/en//archive/mapreduce-osdi04.pdf">
-          MapReduce: Simplified Data Processing on Large Clusters by Jeffrey Dean and Sanjay Ghemawat, 2004.</a></li>
-      <li><a target="_blank" rel="noopener"
-          href="https://lintool.github.io/MapReduceAlgorithms/MapReduce-book-final.pdf">
-          Data-Intensive Text Processing with MapReduce by Jimmy Lin and Chris Dyer, 2010.</a></li>
-      <li><a target="_blank" rel="noopener" href="http://infolab.stanford.edu/~ullman/mmds/book.pdf">
-          Mining of Massive Datasets by Leskovec, Rajaraman, and Ullman, 2014.</a></li>
-    </ul>
+      <h3>Required</h3>
 
-    <p>Students must have access to the following at every course meeting:</p>
-    <ul>
-      <li> A
-        <span class="highlight ">bound notebook with pencil/pen</span> for taking notes and submitting written content
-        (e.g., pop quizzes)</li>
-      <li> Their campus-assigned laptop, in working order, with all required software</li>
-      <li> Free
-        <a target="_blank" rel="noopener" href="https://git-scm.com/">Git</a> distributed version control system</li>
-      <li> Free
-        <a target="_blank" rel="noopener" href="https://tortoisegit.org/">TortoiseGit</a> for integrating Git with
-        Windows File
-        Explorer</li>
-      <li> Free
-        <a target="_blank" rel="noopener"
-          href="https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html">PuTTY</a>
-        for creating
-        SSH public/private key pairs</li>
-      <li> Free
-        <a target="_blank" rel="noopener" href="https://bitbucket.org">BitBucket</a> and
-        <a target="_blank" rel="noopener" href="https://github.com/">GitHub</a> educational accounts</li>
-      <li> Free
-        <a target="_blank" rel="noopener" href="https://education.github.com/pack">GitHub Education Pack</a> (as
-        needed)</li>
-      <li> Free
-        <a target="_blank" rel="noopener" href="https://chocolatey.org/">Chocolatey</a> package manager for Windows</li>
-      <li> Free
-        <a target="_blank" rel="noopener" href="https://notepad-plus-plus.org/">Notepad++</a> text editor</li>
-      <li> Free
-        <a target="_blank" rel="noopener" href="https://code.visualstudio.com/">Visual Studio Code</a> integrated
-        development
-        environment </li>
-      <li> Free
-        <a target="_blank" rel="noopener" href="https://www.virtualbox.org/">VirtualBox</a> hypervisor</li>
-      <li> Free
-        <a target="_blank" rel="noopener" href="https://www.cloudera.com/downloads">Cloudera Quickstart</a> Virtual
-        Machine </li>
-      <li> Free
-        <a target="_blank" rel="noopener" href="https://www.python.org/"> Python</a> programming language </li>
-      <li> Free
-        <a target="_blank" rel="noopener" href="https://codingbat.com">Coding Bat</a> coding practice account for
-        Python practice</li>
-      <li> Free, open-source Apache Kafka, Spark, Storm, Flume, Zookeeper, Hive, Pig and other tools and libraries as
-        directed
-        by the instructor.
-      </li>
-      <li> Typing is a foundational skill for developing software systems. If additional practice would be helpful, try
-        <a target="_blank" rel="noopener" href="https://www.typing.com/">https://www.typing.com/</a>
-      </li>
-    </ul>
+      <p> Students must have access to the following at every course meeting:</p>
 
-    <h2>Course Outline</h2>
-    The course is divided into an initial overview (Module 0) and seven content modules.
-    <table class="tg ">
-      <tr>
-        <th class="tg-5mgg ">Module</th>
-        <th class="tg-5mgg ">Content</th>
-      </tr>
-      <tr>
-        <td class="tg-031e ">0</td>
-        <td class="tg-031e ">Course overview, policies, and information</td>
-      </tr>
-      <tr>
-        <td class="tg-031e ">1</td>
-        <td class="tg-031e ">Big data: sources, Linux, problems and opportunities</td>
-      </tr>
-      <tr>
-        <td class="tg-031e ">2</td>
-        <td class="tg-031e ">Big data algorithms and tools, Hadoop, HDFS, MapReduce, and ecosystem</td>
-      </tr>
-      <tr>
-        <td class="tg-031e ">3</td>
-        <td class="tg-031e ">Text processing, regular expressions, MapReduce projects</td>
-      </tr>
-      <tr>
-        <td class="tg-031e ">4</td>
-        <td class="tg-031e ">CDH, Lambda, Impala, HBase, Kafka, Spark, Streaming data</td>
-      </tr>
-      <tr>
-        <td class="tg-031e ">5</td>
-        <td class="tg-031e ">Kafka, projects</td>
-      </tr>
-      <tr>
-        <td class="tg-yw4l ">6</td>
-        <td class="tg-yw4l ">Workshops</td>
-      </tr>
-      <tr>
-        <td class="tg-yw4l ">7</td>
-        <td class="tg-yw4l ">Project demos, course reflections</td>
-      </tr>
-    </table>
+      <div class="well">
 
-    <h3>Schedule Subject to Change</h3>
-    The schedule is subject to change with instructor notification and students
-    will be responsible for abiding by these changes.
+        <ul class="list-group" style="list-style-type:none">
 
-    <h3>Schedule Links</h3>
-    <ul>
-      <li>
-        <a target="_blank" rel="noopener" href="https://www.nwmissouri.edu/academics/calendar.htm">Academic Calendar</a>
-      </li>
-      <li>
-        <a target="_blank" rel="noopener" href="https://www.nwmissouri.edu/registrar/finals.htm">Final Exams
-          Schedule</a>
-      </li>
-      <li>
-        <a target="_blank" rel="noopener" href="http://calendar.nwmissouri.edu/">University Events</a>
-      </li>
-    </ul>
+          <li id="101" class="list-group-item list-group-item-action active">
+            A <strong>bound notebook with pencil/pen</strong> for taking notes and submitting written
+            content (e.g., pop quizzes)
+          </li>
+          <li id="102" class="list-group-item list-group-item-action active">
+            Their campus-assigned laptop, in working order, with all required software
+          </li>
+          <li id="103" class="list-group-item list-group-item-action active">
+            Free
+            <a rel="noopener" target="_blank" href="https://git-scm.com/">Git</a> distributed version control
+            system
+          </li>
+          <li id="104" class="list-group-item list-group-item-action active">
+            Free
+            <a rel="noopener" target="_blank" href="https://tortoisegit.org/">TortoiseGit</a>
+            for integrating Git with Windows File Explorer
+          </li>
+          <li id="105" class="list-group-item list-group-item-action active">
+            Free
+            <a rel="noopener" target="_blank"
+              href="https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html">PuTTY</a>
+            for creating SSH public/private key pairs
+          </li>
+          <li id="106" class="list-group-item list-group-item-action active">
+            Free
+            <a rel="noopener" target="_blank" href="https://bitbucket.org">BitBucket</a> and
+            <a rel="noopener" target="_blank" href="https://github.com/">GitHub</a> educational accounts
+          </li>
+          <li id="107" class="list-group-item list-group-item-action active">
+            Free
+            <a rel="noopener" target="_blank" href="https://education.github.com/pack">GitHub Education Pack</a>
+            (as
+            needed)
+          </li>
+          <li id="108" class="list-group-item list-group-item-action active">
+            Free
+            <a rel="noopener" target="_blank" href="https://chocolatey.org/">Chocolatey</a> package manager for
+            Windows
+          </li>
+          <li id="109" class="list-group-item list-group-item-action active">
+            Free
+            <a rel="noopener" target="_blank" href="https://notepad-plus-plus.org/">Notepad++</a> text editor
+          </li>
+          <li id="110" class="list-group-item list-group-item-action active">
+            Free
+            <a rel="noopener" target="_blank" href="https://code.visualstudio.com/">Visual Studio Code</a> integrated
+            development environment
+          </li>
+          <li id="111" class="list-group-item list-group-item-action active">
+            Free
+            <a target="_blank" rel="noopener" href="https://www.virtualbox.org/">VirtualBox</a> hypervisor
+          </li>
+          <li id="112" class="list-group-item list-group-item-action active">
+            Free
+            <a target="_blank" rel="noopener" href="https://www.cloudera.com/downloads">Cloudera Quickstart</a>
+            Virtual
+            Machine </li>
+          <li id="113" class="list-group-item list-group-item-action active">
+            Free
+            <a target="_blank" rel="noopener" href="https://www.python.org/"> Python</a> programming language
+          </li>
+          <li id="114" class="list-group-item list-group-item-action active">
+            Free, open-source Apache Kafka, Spark, Storm, Flume, Zookeeper, Hive,
+            Pig and other tools and libraries as
+            directed
+            by the instructor.
+          </li>
+          <li id="115" class="list-group-item list-group-item-action active">
+            Access to our Proxmox Virtual Environment
+          </li>
+          <li id="116" class="list-group-item list-group-item-action active">
+            Access to free cloud accounts including Amazon Web Services (AWS),
+            Google Cloud Platform (GCP), IBM Cloud,
+            Microsoft Azure, and Oracle Cloud as required.
+          </li>
+          <li id="117" class="list-group-item list-group-item-action active">
+            Typing is a foundational skill for developing software systems. If
+            additional practice would be helpful,
+            try
+            <a target="_blank" rel="noopener" href="https://www.typing.com/">https://www.typing.com/</a>
+          </li>
+        </ul>
 
-    <h2>Instructional Methods and Techniques </h2>
-    Instructional methods include lectures, class discussions, individual work,
-    small group work, learner presentations, discussions,
-    guest speakers, and collaborative development.
+      </div>
 
-    <h2> Grading and Evaluation</h2>
-    <p>Graded contributions</p>
-    <table class="tg ">
-      <tr>
-        <th class="tg-5mgg ">Category</th>
-        <th class="tg-5mgg ">Contribution</th>
-      </tr>
-      <tr>
-        <td class="tg-yw4l ">Attendance</td>
-        <td class="tg-yw4l ">2%</td>
-      </tr>
-      <tr>
-        <td class="tg-yw4l ">Workshop</td>
-        <td class="tg-yw4l ">5%</td>
-      </tr>
-      <tr>
-        <td class="tg-yw4l ">Exercises</td>
-        <td class="tg-yw4l ">10%</td>
-      </tr>
-      <tr>
-        <td class="tg-yw4l ">Quizzes</td>
-        <td class="tg-yw4l ">10%</td>
-      </tr>
-      <tr>
-        <td class="tg-yw4l ">Coding Projects</td>
-        <td class="tg-yw4l ">18%</td>
-      </tr>
-      <tr>
-        <td class="tg-yw4l ">Exams</td>
-        <td class="tg-yw4l ">30%</td>
-      </tr>
-      <tr>
-        <td class="tg-yw4l ">Comprehensive Final</td>
-        <td class="tg-yw4l ">25%</td>
-      </tr>
-      <tr>
-        <td class="tg-yw4l ">Total</td>
-        <td class="tg-yw4l ">100%</td>
-      </tr>
-    </table>
+      <h2>Course Outline</h2>
 
-    <p>Grading scale</p>
-    <table class="tg " id="grading-scale">
-      <tr>
-        <th class="tg-5mgg ">Undergraduate Credit</th>
-        <th class="tg-5mgg "></th>
-        <th class="tg-5mgg ">Graduate Credit</th>
-        <th class="tg-5mgg "></th>
-      </tr>
-      <tr>
-        <td class="tg-5mgg ">Percent Range</td>
-        <td class="tg-5mgg ">Grade</td>
-        <td class="tg-5mgg ">Percent Range</td>
-        <td class="tg-5mgg ">Grade</td>
-      </tr>
-      <tr>
-        <td class="tg-yw4l ">88-100%</td>
-        <td class="tg-yw4l ">A</td>
-        <td class="tg-yw4l ">90-100%</td>
-        <td class="tg-yw4l ">A</td>
-      </tr>
-      <tr>
-        <td class="tg-yw4l ">&gt;= 78% and &lt; 88%</td>
-        <td class="tg-yw4l ">B</td>
-        <td class="tg-yw4l ">&gt;= 80% and &lt; 90%</td>
-        <td class="tg-yw4l ">B</td>
-      </tr>
-      <tr>
-        <td class="tg-yw4l ">&gt;= 68% and &lt; 78%</td>
-        <td class="tg-yw4l ">C</td>
-        <td class="tg-yw4l ">&gt;= 70% and &lt; 80%</td>
-        <td class="tg-yw4l ">C</td>
-      </tr>
-      <tr>
-        <td class="tg-yw4l ">&gt;= 58% and &lt; 68%</td>
-        <td class="tg-yw4l ">D</td>
-        <td class="tg-yw4l ">&gt;= 60% and &lt; 70%</td>
-        <td class="tg-yw4l ">D</td>
-      </tr>
-      <tr>
-        <td class="tg-yw4l ">below 58%</td>
-        <td class="tg-yw4l ">F</td>
-        <td class="tg-yw4l ">below 60%</td>
-        <td class="tg-yw4l ">F</td>
-      </tr>
-    </table>
+      <p>The course is divided into seven content modules.</p>
 
-    <!-- Standard  -->
+      <table class="tg ">
+        <tr>
+          <th class="tg-5mgg">Module</th>
+          <th class="tg-5mgg">Weeks</th>
+          <th class="tg-5mgg">Topics</th>
+          <th class="tg-5mgg">Workshops</th>
+        </tr>
+        <tr>
+          <td class="tg-s268">1</td>
+          <td class="tg-s268">1-3</td>
+          <td class="tg-031e ">Course intro, big data: sources, problems and opportunities, Linux</td>
+          <td class="tg-0lax"></td>
+        </tr>
+        <tr>
+          <td class="tg-s268">2</td>
+          <td class="tg-s268">4-5</td>
+          <td class="tg-031e ">Big data algorithms and tools, Hadoop, HDFS, MapReduce, and ecosystem</td>
+          <td class="tg-0lax">1,2</td>
+        </tr>
+        <tr>
+          <td class="tg-s268">3</td>
+          <td class="tg-s268">6-7</td>
+          <td class="tg-031e ">Python, text processing, regular expressions, MapReduce projects</td>
+          <td class="tg-0lax">3,4</td>
+        </tr>
+        <tr>
+          <td class="tg-s268">4</td>
+          <td class="tg-s268">8-9</td>
+          <td class="tg-031e ">CDH, Lambda, Impala, HBase, Kafka, Storm</td>
+          <td class="tg-0lax"></td>
+        </tr>
+        <tr>
+          <td class="tg-s268">5</td>
+          <td class="tg-s268">10-11</td>
+          <td class="tg-031e ">Kappa, Scala, Spark</td>
+          <td class="tg-0lax">5,6</td>
+        </tr>
+        <tr>
+          <td class="tg-yw4l ">6</td>
+          <td class="tg-s268">12-13</td>
+          <td class="tg-yw4l ">Visualization, concurrency, distributed, parallel processing</td>
+          <td class="tg-0lax">7,8</td>
+        </tr>
+        <tr>
+          <td class="tg-yw4l ">7</td>
+          <td class="tg-s268">14-17</td>
+          <td class="tg-yw4l ">Project demos, Thanksgiving break, final, reflections</td>
+          <td class="tg-0lax"></td>
+        </tr>
+      </table>
 
-    <h2>Expectations</h2>
-    This course includes the development of unique, creative applications.
-    Students should expect to spend at least 2-3 hours on out-of-class work for
-    every one hour of instruction.
+      <h3>Schedule Subject to Change</h3>
 
-    <h2> Email Requirements </h2>
-    Professional email practices are required.
-    <ol>
-      <li class="highlight ">Email must include course number and section (e.g.,
-        <strong>44-517-01</strong>) in the subject line. </li>
-      <li>Email should be professional, politely written, and use proper grammar,
-        capitalization, and spelling. </li>
-    </ol>
+      The schedule is subject to change with instructor notification and students
+      will be responsible for abiding by these changes.
 
-    <h2>Course Conduct Guidelines </h2>
-    <ol>
-      <li>Students will behave in a professional manner in all course interactions.</li>
-      <li> Devices including cell phones, ear phones, gadgets, and other items should be silent and put away during
-        class.</li>
-      <li> Unauthorized use of devices during class may result in reduction in scores.</li>
-      <li>Be ready to work when the class is scheduled to begin.</li>
-      <li>Be polite and respective to other people in the class. Do not interrupt someone during a class discussion,
-        and respect others' opinions/comments as you expect them to respect yours.</li>
-    </ol>
+      <h3>Schedule Links</h3>
 
-    <h2> Citation Requirements</h2>
-    <ol>
-      <li class="highlight ">
-        <strong>Cite ALL Sources</strong>. You must provide proper citation for any content including text, images,
-        videos, and code
-        <strong>that you did not personally develop</strong>. </li>
-      <li>Do not copy and paste content for any submissions. </li>
-      <li>Failing to acknowledge assistance including internet photos, clipart, slide content, course files, shared
-        solutions,
-        etc. can be expected to result in a 0 on the assignment, a one-half letter grade reduction, a 0 in the course,
-        and/or
-        a failing the course with an academic integrity violation. </li>
-    </ol>
+      <ul class="text-left">
+        <li>
+          <a target="_blank" rel="noopener" href="https://www.nwmissouri.edu/academics/calendar.htm">Academic
+            Calendar</a>
+        </li>
+        <li>
+          <a target="_blank" rel="noopener" href="https://www.nwmissouri.edu/registrar/finals.htm">Final Exams
+            Schedule</a>
+        </li>
+        <li>
+          <a target="_blank" rel="noopener" href="http://calendar.nwmissouri.edu/">University Events</a>
+        </li>
+      </ul>
 
-    <!-- Standard University -->
+      <h2>Instructional Methods and Techniques </h2>
 
-    <h2>Late Work Policy </h2>
-    Graded activities are expected to be completed by due date. Late work is not
-    accepted and may result in a 0 for the assignment.
-    If you must miss an activity or a deadline, contact the instructor in advance.
+      Instructional methods include lectures, class discussions, individual work,
+      small group work, learner presentations, discussions, guest speakers, and collaborative development.
 
-    <h2>Submissions</h2>
-    All submissions must be unique and creative. All submissions must be your
-    own, creative, unique work.
-    Students may be asked to explain their work during class, in discussions,
-    or in a recorded submission.
+      <h2> Grading and Evaluation</h2>
 
-    <h2> Grade of Incomplete (I)</h2>
-    Following Northwest Missouri State University policy, incomplete grades may
-    only be given in extreme circumstances, such as illness, death in a
-    student's immediate family, or similar circumstances beyond a student's
-    control, and the student was unable to complete a significant portion of the
-    course work.
+      <p> Graded contributions</p>
 
-    <h2>Attendance </h2>
-    Students are expected to attend all classes as specified in the course
-    syllabi for each course.
-    This course has many in-class activities, most of which have points and may
-    not be announced in advance. Students arriving late or missing activities
-    due to unexcused absences may not be able to make up work and may earn zero
-    points for the activity.
-    It is the responsibility of the student to promptly notify their instructor
-    when unable to attend class. Please refer to the university policy on attendance at
-    <a target="_blank" rel="noopener"
-      href="https://www.nwmissouri.edu/policies/academics/Attendance.pdf">https://www.nwmissouri.edu/policies/academics/Attendance.pdf</a>
+      <table class="tg ">
+        <tr>
+          <th class="tg-5mgg ">Category</th>
+          <th class="tg-5mgg ">Contribution</th>
+        </tr>
+        <tr>
+          <td class="tg-yw4l ">Engagement</td>
+          <td class="tg-yw4l ">5%</td>
+        </tr>
+        <tr>
+          <td class="tg-yw4l ">Exercises</td>
+          <td class="tg-yw4l ">10%</td>
+        </tr>
+        <tr>
+          <td class="tg-yw4l">Projects</td>
+          <td class="tg-yw4l">10%</td>
+        </tr>
+        <tr>
+          <td class="tg-yw4l">Quizzes</td>
+          <td class="tg-yw4l">10%</td>
+        </tr>
+        <tr>
+          <td class="tg-yw4l ">Workshop</td>
+          <td class="tg-yw4l ">10%</td>
+        </tr>
+        <tr>
+          <td class="tg-yw4l">Exams</td>
+          <td class="tg-yw4l">55%</td>
+        </tr>
+        <tr>
+          <td class="tg-yw4l ">All</td>
+          <td class="tg-yw4l ">100%</td>
+        </tr>
+      </table>
 
-    <h2>Excused Absences </h2>
-    Excused absences include attendance at a university sponsored event
-    (documented with an excuse signed by the university sponsor prior to the
-    event) or by circumstances considered extenuating by the course instructor.
-    A student may make up class work without penalty for excused absences.
+      <p> Grading scale</p>
 
-    <h2>Final Exams</h2>
-    If an emergency occurs that prevents the administration of a course
-    scheduled final examination, the final course grades will be calculated
-    based on the work in the course completed to that point in time and the
-    faculty member’s considered judgment.
-    Final exams will not be rescheduled, and a grade of “I” will not be given
-    as a result of an institutional cancellation of a final examination.
+      <table class="tg ">
+        <tr>
+          <th class="tg-5mgg ">Credit</th>
+          <th class="tg-5mgg "></th>
+        </tr>
+        <tr>
+          <td class="tg-5mgg ">Percent Range</td>
+          <td class="tg-5mgg ">Grade</td>
+        </tr>
+        <tr>
+          <td class="tg-yw4l ">90-100%</td>
+          <td class="tg-yw4l ">A</td>
+        </tr>
+        <tr>
+          <td class="tg-yw4l ">&gt;= 80% and &lt; 90%</td>
+          <td class="tg-yw4l ">B</td>
+        </tr>
+        <tr>
+          <td class="tg-yw4l ">&gt;= 70% and &lt; 80%</td>
+          <td class="tg-yw4l ">C</td>
+        </tr>
+        <tr>
+          <td class="tg-yw4l ">&gt;= 60% and &lt; 70%</td>
+          <td class="tg-yw4l ">D</td>
+        </tr>
+        <tr>
+          <td class="tg-yw4l ">below 60%</td>
+          <td class="tg-yw4l ">F</td>
+        </tr>
+      </table>
 
-    <h2>Administrative Drop </h2>
-    An instructor may request the Office of the Registrar delete a student from
-    a course roster if the student has not met the prerequisite for the course
-    as stated in the catalog, or as a result of non-attendance in the course.
+      <!-- Standard  -->
 
-    <h2>Course Access</h2>
-    Course content is provided via Canvas and Northwest Online. Access to Northwest Online is at
-    <a target="_blank" rel="noopener"
-      href="https://nwmissouri.instructure.com/">https://nwmissouri.instructure.com/</a>.
+      <h2>Expectations</h2>
 
-    <h2>University Communications </h2>
-    Students are expected to use their Northwest student email account for any electronic correspondence within the
-    university.
-    Students are also strongly advised to check their email and CatPAWS accounts on a regular basis.
+      This course includes the development of unique, creative applications. Students should expect to spend at
+      least 2-3 hours on out-of-class work for every one hour of instruction.
 
-    <h2>Academic Integrity Policy</h2>
-    The students, faculty, and staff at Northwest endeavor to sustain an environment that values honesty in academic
-    work, that acknowledges the authorized aid provided by and intellectual contributions of others,
-    and that enables equitable student evaluation.
-    Please refer to Northwest Missouri State University’s Academic Integrity Policy at
-    <a target="_blank" rel="noopener"
-      href="http://www.nwmissouri.edu/policies/academics/Academic-Integrity.pdf">http://www.nwmissouri.edu/policies/academics/Academic-Integrity.pdf</a>.
-    In addition, students are expected to understand
-    and abide by the Computer Science and Information Systems Academic Integrity Policy at
-    <a target="_blank" rel="noopener"
-      href="http://www.nwmissouri.edu/csis/pdf/AcademicIntegrityCSI.doc">http://www.nwmissouri.edu/csis/pdf/AcademicIntegrityCSI.doc</a>.
-    This document explains types of behavior considered
-    to constitute academic dishonesty. You are responsible for reading this document and abiding by the guidelines
-    described therein.
+      <h2> Email Requirements </h2>
 
-    <h2>Special Accommodations Policy </h2>
-    Northwest Missouri State University complies with Section 504 of the Rehabilitation Act of 1973 and the Americans
-    with Disabilities
-    Act of 1990 [ADA] and the ADA Amendments Act of 2008 [ADAAA].
-    If a student has a disability that qualifies under the ADA/ADAAA and requires accommodations,
-    they should contact the Office for Equity and Accessibility for information
-    on appropriate policies and procedures at
-    <a href="tel:+16605621639">660.562.1639</a>, or
-    <a target="_top" href="mailto:pjp@nwmissouri.edu?Subject=Special%20accomodations">pjp@nwmissouri.edu</a> /
-    <a target="_top" href="mailto:ADA@nwmissouri.edu?Subject=Special%20accomodations">ADA@nwmissouri.edu</a>.
-    For the university policy on disability accommodation refer to
-    <a target="_blank" rel="noopener"
-      href="http://www.nwmissouri.edu/policies/student/Disability-Accommodation.pdf">http://www.nwmissouri.edu/policies/student/Disability-Accommodation.pdf</a>.
+      <p>Professional email practices are required.</p>
+      <ol>
+        <li class="highlight ">Email must include course number and section (e.g.,
+          <strong>44-517-01</strong>) in the subject line. </li>
+        <li>Email should be professional, politely written, and use proper grammar, capitalization, and
+          spelling.
+        </li>
+      </ol>
 
-    <h2>Non-Discrimination and Anti-Harrassment Policy </h2>
-    Northwest Missouri State University is committed to maintaining an environment for all faculty, staff, students,
-    and third
-    parties that is free of illegal discrimination and harassment. Please refer to the Non-Discrimination and
-    Anti-Harassment
-    Policy at
-    <a target="_blank" rel="noopener"
-      href="http://www.nwmissouri.edu/diversity/titlevi.htm">http://www.nwmissouri.edu/diversity/titlevi.htm</a>.
+      <h2>Course Conduct Guidelines </h2>
 
-    <h2> Family Educational Rights and Privacy Act (FERPA) </h2>
-    Family Educational Rights and Privacy Act of 1974, as amended (commonly
-    known as the Buckley Amendment), is a federal law which provides that
-    colleges and universities will maintain the confidentiality of student
-    education records.
-    Please refer to the Family Educational Rights and Privacy Act (FERPA) Policy at
-    <a target="_blank" rel="noopener"
-      href="http://www.nwmissouri.edu/policies/academics/Family-Educational-Rights-and-Privacy-Act.pdf">http://www.nwmissouri.edu/policies/academics/Family-Educational-Rights-and-Privacy-Act.pdf</a>
+      <ol>
+        <li>Students will behave in a professional manner in all course interactions.</li>
+        <li>Devices including cell phones, ear phones, gadgets, and other items should be silent and put away
+          during class.</li>
+        <li>Unauthorized use of devices during class may result in reduction in scores.</li>
+        <li>Be ready to work when the class is scheduled to begin.</li>
+        <li>Be polite and respectful to others in the class. Do not interrupt someone during a class discussion,
+          and respect others' opinions/comments as you expect them to respect yours.</li>
+      </ol>
 
-    <h2>Course Evaluation</h2>
-    At the end of this course, you will be encouraged to complete a course evaluation.
+      <h2> Citation Requirements</h2>
 
-    <h2> Syllabus Subject to Change</h2>
-    The syllabus is subject to change with instructor notification and students
-    will be responsible for abiding by these changes.
-    <br />
-    <br />
+      <ol>
+        <li class="highlight ">
+          <strong>Cite ALL Sources</strong>. You must provide proper citation for any content including text,
+          images, videos, and code <strong>that you did not personally develop</strong>. </li>
+        <li>Do not copy and paste content for any submissions. </li>
+        <li>Failing to acknowledge assistance including internet photos, clipart, slide content, course files,
+          shared solutions, etc. can be expected to result in a 0 on the assignment, a one-half letter grade reduction,
+          a 0 in the course, and/or a failing the course with an academic integrity violation. </li>
+      </ol>
 
-  </main>
+      <h2>Late Work Policy </h2>
 
-  <footer class="footer ">
-    <div class="container ">
-      <span>
-        <a target="_blank" rel="noopener" href="https://www.linkedin.com/in/denisecase/">Denise Case </a>&nbsp; &#9670;
-        &nbsp;
-        <a target="_blank" rel="noopener" href="https://profcase.github.io/44-517-bigdata-syllabus">Site</a>
-        &nbsp; &#9670; &nbsp;
-        <a target="_blank" rel="noopener" href="https://github.com/profcase/44-517-bigdata-syllabus">Source</a>
-      </span>
-    </div>
-  </footer>
+      Graded activities are expected to be completed by due date.
+      If you must miss class or a due date, contact the instructor in advance or as early as possible.
+      Due dates get you ready for coming material. Keeping up is critical.
 
-  <!-- Placed at the end of the document so the pages load faster -->
-  <!-- Use defer to wait until HTML finishes loading -->
-  <!-- https://fezvrasta.github.io/bootstrap-material-design/docs/4.0/getting-started/introduction/ -->
+      On rare occassions, special challenges or obligations may make it difficult to submit on time.
+      You typically have a one-week grace period where the work may still be submitted and graded.
+      Late penalties will be desribed in the rubric.
+      No late submissions will be accepted for the final submission.
 
-  <!-- Optional JavaScript -->
-  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-    crossorigin="anonymous"></script>
-  <script src="https://unpkg.com/popper.js@1.12.6/dist/umd/popper.js"
-    integrity="sha384-fA23ZRQ3G/J53mElWqVJEGJzU0sTs+SvzG8fXVWP+kJQ1lwFAOkcUOysnlKJC33U"
-    crossorigin="anonymous"></script>
-  <script src="https://unpkg.com/bootstrap-material-design@4.1.1/dist/js/bootstrap-material-design.js"
-    integrity="sha384-CauSuKpEqAFajSpkdjv3z9t8E7RlpJ1UP0lKM/+NdtSarroVKu069AlsRPKkFBz9"
-    crossorigin="anonymous"></script>
-  <script>$(document).ready(function () { $('body').bootstrapMaterialDesign(); });</script>
+      <h2>Submissions</h2>
 
-  <script src="https://cdn.jsdelivr.net/npm/mark.js@8.11.1/dist/jquery.mark.min.js"
-    integrity="sha256-4HLtjeVgH0eIB3aZ9mLYF6E8oU5chNdjU6p6rrXpl9U=" crossorigin="anonymous"></script>
-  <script src="scripts/main.js"></script>
+      All submissions must be your own, creative, unique work.
+      You may be asked to explain your work during class,
+      in discussions, or in a recorded submission.
+
+      <h2>Grading</h2>
+
+      Grades will generally be posted within 2-7 days of the due date.
+      If you wish to petition for additional points, please wait 24 hours.
+      Petitions must be emailed, and must include the specific changes you are requesting,
+      along with your reasoning on why the higher score is warranted.
+      Challenges must be raised within seven days of the grade being posted;
+      after seven days, grades are considered final.
+
+      <h2>Save Your Content</h2>
+
+      The course site will not be available after the end of the semester.
+      Save the syllabus and any materials you wish to access after the course,
+      you may need to submit this to a potential employer or another university in the future.
+      We do not provide materials after completion of the course.
+
+      <!-- Standard University -->
+
+      <h2>Late Work Policy </h2>
+      Graded activities are expected to be completed by due date. Late work is not
+      accepted and may result in a 0 for the assignment.
+      If you must miss an activity or a deadline, contact the instructor in advance.
+
+      <h2>Submissions</h2>
+      All submissions must be unique and creative. All submissions must be your
+      own, creative, unique work.
+      Students may be asked to explain their work during class, in discussions,
+      or in a recorded submission.
+
+      <!-- Standard University -->
+
+      <h2> Grade of Incomplete (I)</h2>
+
+      Following Northwest Missouri State University policy,
+      incomplete grades may only be given in extreme circumstances,
+      such as illness, death in a student's immediate family,
+      or similar circumstances beyond a student's control, and
+      the student was unable to complete a significant portion of the course work.
+
+      <h2>Attendance </h2>
+
+      Students are expected to attend all classes as specified in the course syllabi for each course.
+      This course has many in-class activities,
+      most of which have points and may not be announced in advance.
+      Students arriving late or missing activities due to unexcused absences may not be able to
+      make up certain types of work and may earn zero points for the activity.
+      Notify your instructor when unable to attend class.
+      Please refer to the university policy on attendance at
+      <a rel="noopener" target="_blank" href="https://www.nwmissouri.edu/policies/academics/Attendance.pdf">
+        https://www.nwmissouri.edu/policies/academics/Attendance.pdf</a>.
+
+      <h2>Excused Absences </h2>
+
+      Excused absences include attendance at a university sponsored event
+      (documented with an excuse signed by the university sponsor prior to the event)
+      or by circumstances considered extenuating by the course instructor.
+      A student may make up class work without penalty for excused absences.
+
+      <h2>Final Exams</h2>
+
+      If an emergency occurs that prevents the administration of a course scheduled final examination,
+      the final course grades will be calculated based on the work in the course completed to that
+      point in time and the faculty member's considered judgment.
+      Final exams will not be rescheduled,
+      and a grade of “I” will not be given as a result of an institutional cancellation of a final examination.
+
+      <h2>Administrative Drop </h2>
+
+      An instructor may request the Office of the Registrar delete a student from a course roster
+      if the student has not met the prerequisite for the course as stated in the catalog,
+      or as a result of non-attendance in the course.
+
+      <h2>Course Access</h2>
+
+      Course content is provided via Canvas and Northwest Online. Access to Northwest Online is at
+      <a rel="noopener" href="https://nwmissouri.instructure.com/">https://nwmissouri.instructure.com/</a>.
+
+      <h2>University Communications </h2>
+
+      Students are expected to use their Northwest student email account
+      for any electronic correspondence within the university.
+      Students are also strongly advised to check their email and CatPAWS accounts on a regular basis.
+
+      <h2>Academic Integrity Policy</h2>
+
+      The students, faculty, and staff at Northwest endeavor to sustain an environment
+      that values honesty in academic work,
+      that acknowledges the authorized aid provided by and intellectual contributions of others,
+      and that enables equitable student evaluation.
+      Please refer to Northwest Missouri State University’s Academic Integrity Policy at
+      <a rel="noopener" target="_blank"
+        href="http://www.nwmissouri.edu/policies/academics/Academic-Integrity.pdf">http://www.nwmissouri.edu/policies/academics/Academic-Integrity.pdf</a>.
+      In addition, students are expected to understand and abide by the
+      Computer Science and Information Systems Academic Integrity Policy at
+      <a rel="noopener" target="_blank"
+        href="http://www.nwmissouri.edu/csis/pdf/AcademicIntegrityCSI.doc">http://www.nwmissouri.edu/csis/pdf/AcademicIntegrityCSI.doc</a>.
+      This document explains types of behavior considered to constitute academic dishonesty.
+      You are responsible for reading this document and abiding by the guidelines described therein.
+
+      <h2>Special Accommodations Policy </h2>
+
+      Northwest Missouri State University complies with Section 504 of the Rehabilitation Act of 1973
+      and the Americans with Disabilities Act of 1990 [ADA] and the ADA Amendments Act of 2008 [ADAAA].
+      If a student has a disability that qualifies under the ADA/ADAAA and requires accommodations, they
+      should contact the Office for Equity and Accessibility
+      for information on appropriate policies and procedures at
+      <a rel="noopener" href="tel:+16605621639">660.562.1639</a>, or
+      <a rel="noopener" target="_top" href="mailto:pjp@nwmissouri.edu?Subject=Accomodations">pjp@nwmissouri.edu</a>
+      or
+      <a rel="noopener" target="_top" href="mailto:ADA@nwmissouri.edu?Subject=Accomodations">ADA@nwmissouri.edu</a>.
+      For the university policy on disability accommodation refer to
+      <a rel="noopener" target="_blank"
+        href="http://www.nwmissouri.edu/policies/student/Disability-Accommodation.pdf">http://www.nwmissouri.edu/policies/student/Disability-Accommodation.pdf</a>.
+
+      <h2>Non-Discrimination and Anti-Harrassment Policy </h2>
+
+      Northwest Missouri State University is committed to maintaining an environment for all faculty,
+      staff, students, and third parties that is free of illegal discrimination and harassment.
+      Please refer to the Non-Discrimination and Anti-Harassment Policy at
+      <a rel="noopener" target="_blank"
+        href="http://www.nwmissouri.edu/diversity/titlevi.htm">http://www.nwmissouri.edu/diversity/titlevi.htm</a>.
+
+      <h2> Family Educational Rights and Privacy Act (FERPA) </h2>
+
+      Family Educational Rights and Privacy Act of 1974, as amended (commonly known as the Buckley Amendment),
+      is a federal law which provides that colleges and universities will maintain the confidentiality
+      of student education records.
+      Please refer to the Family Educational Rights and Privacy Act (FERPA) Policy at
+      <a rel="noopener" target="_blank"
+        href="http://www.nwmissouri.edu/policies/academics/Family-Educational-Rights-and-Privacy-Act.pdf">http://www.nwmissouri.edu/policies/academics/Family-Educational-Rights-and-Privacy-Act.pdf</a>.
+
+      <h2>Course Evaluation</h2>
+
+      At the end of this course, you will be encouraged to complete a course evaluation.
+
+      <h2> Syllabus Subject to Change</h2>
+
+      The syllabus is subject to change with instructor notification and students will be responsible for
+      abiding by these changes.
+
+      <br>
+      <br>
+
+    </div> <!-- end container -->
+
+    <!-- Sticky footer with padding (py level 3) on y-axis (top and bottom) -->
+
+    <footer class="footer bg-light py-3 text-center ">
+
+      <a target="_blank" rel="noopener" href="https://www.linkedin.com/in/denisecase/">Denise Case </a>
+      &nbsp; &#9670; &nbsp;
+      <a target="_blank" rel="noopener" href="https://profcase.github.io/44-517-bigdata-syllabus">Site</a>
+      &nbsp; &#9670; &nbsp;
+      <a target="_blank" rel="noopener" href="https://github.com/profcase/44-517-bigdata-syllabus">Source</a>
+
+    </footer>
+
+    <!-- SCRIPTS -->
+
+    <!-- Placed at the end so the page loads faster -->
+    <!-- Add the 'defer' attribute for improved performance (script will be read after HTML finishes loading) -->
+
+    <!-- Copy in content from https://mdbootstrap.com/md-bootstrap-cdn/ -->
+
+    <!-- JQuery -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!-- Bootstrap tooltips -->
+    <script defer type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script defer type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <!-- MDB core JavaScript -->
+    <script defer type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.7/js/mdb.min.js"></script>
+
+    <!-- Copy in content from https://www.jsdelivr.com/package/npm/mark.js -->
+
+    <script defer src="https://cdn.jsdelivr.net/npm/mark.js@8.11.1/dist/jquery.mark.min.js"
+      integrity="sha256-4HLtjeVgH0eIB3aZ9mLYF6E8oU5chNdjU6p6rrXpl9U=" crossorigin="anonymous"></script>
+
+    <!-- Include custom scripts -->
+
+    <script defer src="./scripts/main.js"></script>
+    <script defer src="./scripts/active-checks.js"></script>
+
 </body>
 
 </html>

@@ -1,44 +1,18 @@
-body {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  background-color: white;
+@font-face {
+  font-family: 'Roboto', sans-serif;
+  font-display: fallback;
+  src:  url('https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.7/font/roboto/Roboto-Regular.woff2') 
 }
 
-main {
-   /* expand vertically without hiding any */
-  flex: 1 1 0;
-  padding: 60px 15px 0;
-  max-width: 700px;
-  margin-right: auto;
-  margin-left: auto;
+@font-face {
+  font-family: 'Roboto', sans-serif;
+  font-display: fallback;
+  src:  url('https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.7/font/roboto/Roboto-Light.woff2') 
 }
-
-footer {
-  /* shrink vertically without hiding any */
-  flex: 0 1 auto;
-  line-height: 60px;
-  background-color: #f5f5f5;
-  text-align: left;
-}
-
-footer>.container {
-  padding-right: 1rem;
-  padding-left: 1rem;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-}
-
 
 a {
   color: #006747;
 }
-
-.text-muted {
-  color: #006747;
-}
-
 
 h2 {
   margin-top: 2rem;
@@ -46,17 +20,23 @@ h2 {
 }
 
 h3 {
-  margin-top: 2rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
   color: rgb(121, 121, 121);
-}
-
-.img-thumbnail {
-  border-width: 0px;
-  margin-right: 5px;
 }
 
 code {
   font-size: 80%;
+}
+
+.checklist > li {
+  list-style-type: none;
+}
+
+.img-thumbnail {
+  border-width: 0px;
+  margin: 0.125in;
+  min-width: 1in;
 }
 
 .bg-nw-green {
@@ -122,4 +102,8 @@ mark {
   flex-direction: column;
   flex-basis: 100%;
   flex: 1;
+}
+
+input {
+  margin-right: 2em;
 }
