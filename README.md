@@ -1,6 +1,6 @@
 # [44-517 Big Data Syllabus](https://profcase.github.io/44-517-bigdata-syllabus)
 
-[![Lighthouse score: 92/100](https://lighthouse-badge.appspot.com/?score=92&category=Performance)](https://github.com/ebidel/lighthouse-badge)
+[![Lighthouse score: 91/100](https://lighthouse-badge.appspot.com/?score=92&category=Performance)](https://github.com/ebidel/lighthouse-badge)
 [![Lighthouse score: 100/100](https://lighthouse-badge.appspot.com/?score=100&compact&category=Accessibility)](https://github.com/ebidel/lighthouse-badge)
 [![Lighthouse score: 93/100](https://lighthouse-badge.appspot.com/?score=93&compact&category=Best%20Practices)](https://github.com/ebidel/lighthouse-badge)
 [![Lighthouse score: 100/100](https://lighthouse-badge.appspot.com/?score=100&compact&category=SEO)](https://github.com/ebidel/lighthouse-badge)
