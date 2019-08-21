@@ -35,22 +35,24 @@ if (workbox) {
   const appName = '44-517-bigdata-syllabus'
   const appVersion = 'v1'
   const maxAgeDay = 1 * 24 * 60 * 60
+  const maxAgeWeek = maxAgeDay * 7
+  const maxEntries = 60 // limit to 60 items
   // eslint-disable-next-line no-unused-vars
   const httpResponseOpaque = 0 // CORS
   const httpReponseOk = 200 // good
 
   // test Regular Expressions at https://regexr.com/
-
   const reStatic = /\.(?:js|css)$/
   const reImages = /\.(?:png|gif|jpg|jpeg|webp|svg)$/
   const reCdnFont = /https:\/\/use\.fontawesome\.com\/.*all\.css$/
   const reCdnStyles = /https:\/\/cdnjs\.cloudflare\.com\/.*\.css$/
 
+  // set a prefix & suffix so local host caches remain unique
   workbox.core.setCacheNameDetails({
     prefix: appName,
     suffix: appVersion,
-    precache: 'custom-precache-name',
-    runtime: 'custom-runtime-name'
+    precache: 'install-cache',
+    runtime: 'runtime-cache'
   })
 
   const precacheCacheName = workbox.core.cacheNames.precache
@@ -66,7 +68,12 @@ if (workbox) {
     new workbox.strategies.StaleWhileRevalidate()
   )
 
+  console.log(
+    `Workbox registered fonts ${reCdnFont} with Stale While Revalidate strategy`
+  )
+
   // use stale cached cdn style files while downloading new
+  // set the max age of the cached files and the max number of entries it can hold
 
   workbox.routing.registerRoute(
     reCdnStyles,
@@ -74,8 +81,8 @@ if (workbox) {
       cacheName: `${appName}-cdn-css`,
       plugins: [
         new workbox.expiration.Plugin({
-          maxEntries: 90,
-          maxAgeSeconds: maxAgeDay,
+          maxAgeSeconds: maxAgeWeek,
+          maxEntries: maxEntries,
           purgeOnQuotaError: true
         }),
         new workbox.cacheableResponse.Plugin({
@@ -83,6 +90,10 @@ if (workbox) {
         })
       ]
     })
+  )
+
+  console.log(
+    `Workbox registered styles ${reCdnStyles} with Stale While Revalidate strategy`
   )
 
   // Use stale local static files (js/css) while downloading new
@@ -93,12 +104,16 @@ if (workbox) {
       cacheName: `${appName}-static-css-js`,
       plugins: [
         new workbox.expiration.Plugin({
-          maxEntries: 90,
           maxAgeSeconds: maxAgeDay,
+          maxEntries: maxEntries,
           purgeOnQuotaError: true
         })
       ]
     })
+  )
+
+  console.log(
+    `Workbox registered static assets ${reStatic} with Stale While Revalidate strategy`
   )
 
   // Fetch images, try local cache first
@@ -109,12 +124,15 @@ if (workbox) {
       cacheName: `${appName}-images`,
       plugins: [
         new workbox.expiration.Plugin({
-          maxEntries: 60,
-          maxAgeSeconds: maxAgeDay,
+          maxAgeSeconds: maxAgeWeek, // keep images for a week
+          maxEntries: maxEntries,
           purgeOnQuotaError: true
         })
       ]
     })
+  )
+  console.log(
+    `Workbox registered static images ${reImages} with Cache First strategy`
   )
 
   // Define a common handler if any of the fetching methods fail
@@ -131,27 +149,42 @@ if (workbox) {
 
   self.addEventListener('install', event => {
     event.waitUntil(
-      caches.open(`${appName}-static`).then(cache => {
-        return cache.addAll([
-          '.',
-          'index.html',
-          'styles/case-syllabus.css',
-          'styles/active-checks.css',
-          'scripts/main.js',
-          'scripts/active-checks.js'
-        ])
-      })
+      caches
+        .open(`${appName}-static`)
+        .then(cache => {
+          console.log(`Workbox got content from cache ${appName}-static `)
+          return cache.addAll([
+            '.',
+            'index.html',
+            'styles/case-syllabus.css',
+            'styles/active-checks.css',
+            'scripts/main.js',
+            'scripts/register-sw.js',
+            'scripts/active-checks.js'
+          ])
+        })
+        .catch(error => {
+          console.error(`Error in install event: ${error} `)
+        })
     )
   })
 
   self.addEventListener('fetch', event => {
     event.respondWith(
-      caches.match(event.request).then(response => {
-        if (response) {
-          return response
-        }
-        return fetch(event.request)
-      })
+      caches
+        .match(event.request)
+        .then(response => {
+          if (response) {
+            console.log(`Workbox got fetch response ${response} `)
+            return response
+          }
+          return fetch(event.request)
+        })
+        .catch(error => {
+          console.error(`Error on fetch: ${error} `)
+        })
     )
   })
+} else {
+  console.log(`Error: Workbox didn't load.`)
 }
