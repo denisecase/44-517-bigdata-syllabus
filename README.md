@@ -72,6 +72,15 @@ npm run lint
 
 This syllabus is a progressive web app, and can be installed on mobile and other devices.
 
+## Semester Updates
+
+- Update the CDN styles in index.html.
+- Update the Canvas course URL in the navigation bar.
+- Update outcomes.
+- Update tools and requirements.
+- Update schedule.
+- Update office hours.
+
 ## See Also
 
 For more information about generating custom icons, formatting, linting, and more, see [Web Apps Syllabus README.md](https://github.com/profcase/44-563-webapps-syllabus).

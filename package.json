@@ -12,7 +12,8 @@
     "husky": "latest",
     "prettier": "latest",
     "prettier-eslint": "latest",
-    "pretty-quick": "latest"
+    "pretty-quick": "latest",
+    "sort-package-json": "^1.31.0"
   },
   "husky": {
     "hooks": {
@@ -32,13 +33,15 @@
     "url": "https://github.com/profcase/44-517-bigdata-syllabus"
   },
   "keywords": [
-    "JavaScript",
-    "HTML",
-    "CSS",
+    "Big Data",
+    "Hadoop",
+    "Java",
     "PWA",
     "Prettier",
-    "web",
-    "app"
+    "python",
+    "Scala",
+    "Spark",
+    "syllabus"
   ],
   "dependencies": {}
 }
