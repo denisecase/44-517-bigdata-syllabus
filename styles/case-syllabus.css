@@ -113,3 +113,13 @@ mark {
 input {
   margin-right: 2em;
 }
+
+.tap-target-a {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.tap-target-li {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
