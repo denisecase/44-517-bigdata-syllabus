@@ -4,9 +4,9 @@
  */
 
 // eslint-disable-next-line space-before-function-paren
-;(function($) {
+;(function ($) {
   // eslint-disable-next-line space-before-function-paren
-  $('.list-group-item').each(function() {
+  $('.list-group-item').each(function () {
     // Settings
     const $widget = $(this)
     const $checkbox = $('<input type="checkbox" class="hidden" />')
@@ -71,7 +71,7 @@
     init()
   })
 
-  $('#get-checked-data').on('click', event => {
+  $('#get-checked-data').on('click', (event) => {
     event.preventDefault()
     const checkedItems = {}
     let counter = 0

@@ -1,5 +1,5 @@
 // eslint-disable-next-line space-before-function-paren
-$(function() {
+$(function () {
   const btnClear = $('#reset')
   const btnCount = $('#count')
   const inputElement = $('#keyword')
@@ -18,7 +18,7 @@ $(function() {
       done: () => {
         $('.context').mark(searchVal, {
           separateWordSearch: true,
-          done: count => {
+          done: (count) => {
             btnCount.html(count.toString())
           }
         })

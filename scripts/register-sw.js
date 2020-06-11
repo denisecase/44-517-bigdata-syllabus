@@ -3,12 +3,12 @@ if ('serviceWorker' in navigator) {
     // register returns a promise
     navigator.serviceWorker
       .register('service-worker.js')
-      .then(registration => {
+      .then((registration) => {
         console.log(
           `Service worker registered with scope=${registration.scope}.`
         )
       })
-      .catch(error => {
+      .catch((error) => {
         console.log(`Service worker registration failed with ${error}.`)
       })
   })

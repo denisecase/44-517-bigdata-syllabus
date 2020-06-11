@@ -147,11 +147,11 @@ if (workbox) {
 
   // respond with 200 (ok) even when offline
 
-  self.addEventListener('install', event => {
+  self.addEventListener('install', (event) => {
     event.waitUntil(
       caches
         .open(`${appName}-static`)
-        .then(cache => {
+        .then((cache) => {
           console.log(`Workbox got content from cache ${appName}-static `)
           return cache.addAll([
             '.',
@@ -163,24 +163,24 @@ if (workbox) {
             'scripts/active-checks.js'
           ])
         })
-        .catch(error => {
+        .catch((error) => {
           console.error(`Error in install event: ${error} `)
         })
     )
   })
 
-  self.addEventListener('fetch', event => {
+  self.addEventListener('fetch', (event) => {
     event.respondWith(
       caches
         .match(event.request)
-        .then(response => {
+        .then((response) => {
           if (response) {
             console.log(`Workbox got fetch response ${response} `)
             return response
           }
           return fetch(event.request)
         })
-        .catch(error => {
+        .catch((error) => {
           console.error(`Error on fetch: ${error} `)
         })
     )
