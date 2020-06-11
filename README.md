@@ -5,6 +5,12 @@
 [![MIT Licensed](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 ![GitHub repo size](https://img.shields.io/github/repo-size/denisecase/44-517-bigdata-syllabus?style=flat)
 
+[![Lighthouse Performance Badge](./test_results/lighthouse_performance.svg)](https://github.com/emazzotta/lighthouse-badges)
+[![Lighthouse Accessibility Badge](./test_results/lighthouse_accessibility.svg)](https://github.com/emazzotta/lighthouse-badges)
+[![Lighthouse Best Practices Badge](./test_results//lighthouse_best-practices.svg)](https://github.com/emazzotta/lighthouse-badges)
+[![Lighthouse SEO Badge](./test_results/lighthouse_seo.svg)](https://github.com/emazzotta/lighthouse-badges)
+[![Lighthouse PWA Badge](./test_results/lighthouse_pwa.svg)](https://github.com/emazzotta/lighthouse-badges)
+
 - Denise Case
 - Assistant Professor
 - Northwest Missouri State University
@@ -36,12 +42,12 @@
 - [JsDoc Cheatsheet](https://devhints.io/jsdoc)
 - [Test JavaScript Regular Expressions](https://regexr.com/)
 - [PurifyCSS](https://github.com/purifycss/purifycss) - reduce size
-
+- [Lighthouse Badges](https://github.com/emazzotta/lighthouse-badges)
 
 Example
 
 ```PowerShell
-purifycss MDB-Free_4.19.0/css/*.min.css index.html --min --info --out dist/index.css
+npx lighthouse-badges --urls https://denisecase.github.io/44-517-bigdata-syllabus/ -o test_results
 
 ```
 
