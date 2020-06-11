@@ -39,6 +39,11 @@ if (workbox) {
   const httpResponseOpaque = 0 // CORS
   const httpReponseOk = 200 // good
 
+  // Incrementing OFFLINE_VERSION will kick off the install event and force
+  // previously cached resources to be updated from the network.
+  const OFFLINE_VERSION = 1;
+  const OFFLINE_URL = 'index.html';
+
   // test Regular Expressions at https://regexr.com/
   const reStatic = /\.(?:js|css|html)$/
   const reImages = /\.(?:png|gif|jpg|jpeg|webp|svg)$/
@@ -154,6 +159,7 @@ if (workbox) {
           return cache.addAll([
             '.',
             'index.html',
+            'error-page.html',
             'styles/case-syllabus.css',
             'styles/active-checks.css',
             'scripts/main.js',
@@ -179,7 +185,10 @@ if (workbox) {
           return fetch(event.request)
         })
         .catch((error) => {
-          console.error(`Error on fetch: ${error} `)
+          console.error(`Fetch failed; returning offline page instead: ${error} `)
+          const cache = await caches.open(precacheCacheName)
+          const cachedResponse = await cache.match(OFFLINE_URL)
+          return cachedResponse
         })
     )
   })
