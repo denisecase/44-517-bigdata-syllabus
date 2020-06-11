@@ -179,10 +179,7 @@ if (workbox) {
           return fetch(event.request)
         })
         .catch((error) => {
-          console.error(`Fetch failed; returning offline page instead: ${error} `)
-          const cache = await caches.open(CACHE_NAME)
-          const cachedResponse = await cache.match(OFFLINE_URL)
-          return cachedResponse
+          console.error(`Error on fetch: ${error} `)
         })
     )
   })
