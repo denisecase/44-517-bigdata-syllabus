@@ -135,7 +135,7 @@ if (workbox) {
 
   // Define a common handler if any of the fetching methods fail
 
-  setCatchHandler(({ event }) => {
+  workbox.routing.setCatchHandler(({ event }) => {
     console.error(`Error: ${event.error}`)
     if (event.request.mode === 'navigate') {
       return caches.match('/error-page.html')
