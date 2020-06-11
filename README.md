@@ -35,6 +35,15 @@
 - [Google Workbox](https://developers.google.com/web/tools/workbox/)
 - [JsDoc Cheatsheet](https://devhints.io/jsdoc)
 - [Test JavaScript Regular Expressions](https://regexr.com/)
+- [PurifyCSS](https://github.com/purifycss/purifycss) - reduce size
+
+
+Example
+
+```PowerShell
+purifycss MDB-Free_4.19.0/css/*.min.css index.html --min --info --out dist/index.css
+
+```
 
 ## Getting Started
 
