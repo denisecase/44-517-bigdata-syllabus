@@ -83,7 +83,7 @@ if (workbox) {
           maxEntries: maxEntries,
           purgeOnQuotaError: true
         }),
-        new workbox.cacheableResponse.Plugin({
+        new workbox.cacheableResponse.CacheableResponsePlugin({
           statuses: [httpReponseOk]
         })
       ]
@@ -101,7 +101,7 @@ if (workbox) {
     new workbox.strategies.StaleWhileRevalidate({
       cacheName: `${appName}-static-css-js`,
       plugins: [
-        new workbox.expiration.Plugin({
+        new workbox.cacheableResponse.CacheableResponsePlugin({
           maxAgeSeconds: maxAgeDay,
           maxEntries: maxEntries,
           purgeOnQuotaError: true
@@ -121,7 +121,7 @@ if (workbox) {
     new workbox.strategies.CacheFirst({
       cacheName: `${appName}-images`,
       plugins: [
-        new workbox.expiration.Plugin({
+        new workbox.cacheableResponse.CacheableResponsePlugin({
           maxAgeSeconds: maxAgeWeek, // keep images for a week
           maxEntries: maxEntries,
           purgeOnQuotaError: true
