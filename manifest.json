@@ -1,7 +1,7 @@
 {
   "name": "NW 44-517 Syllabus",
   "short_name": "NW 44-517",
-  "start_url": "/?source=pwa",
+  "start_url": "/index.html?source=pwa",
   "display": "standalone",
   "orientation": "portrait",
   "background_color": "#fff",
