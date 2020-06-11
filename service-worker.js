@@ -30,6 +30,10 @@ importScripts('https://storage.googleapis.com/workbox-cdn/releases/5.1.2/workbox
 if (workbox) {
   console.log('Service worker Workbox loaded', workbox.routing)
 
+  import {registerRoute} from 'workbox-routing';
+  import {CacheFirst, StaleWhileRevalidate} from 'workbox-strategies';
+  import {ExpirationPlugin} from 'workbox-expiration';
+
   const appName = '44-517-bigdata-syllabus'
   const appVersion = 'v1'
   const maxAgeDay = 1 * 24 * 60 * 60
@@ -61,9 +65,9 @@ if (workbox) {
 
   // use stale cached cdn font files while downloading new
 
-  workbox.routing.registerRoute(
+  registerRoute(
     reCdnFont,
-    new workbox.strategies.StaleWhileRevalidate()
+    new StaleWhileRevalidate()
   )
 
   console.log(
@@ -73,9 +77,9 @@ if (workbox) {
   // use stale cached cdn style files while downloading new
   // set the max age of the cached files and the max number of entries it can hold
 
-  workbox.routing.registerRoute(
+ registerRoute(
     reCdnStyles,
-    new workbox.strategies.StaleWhileRevalidate({
+    new StaleWhileRevalidate({
       cacheName: `${appName}-cdn-css`,
       plugins: [
         new workbox.cacheableResponse.CacheableResponsePlugin({
@@ -96,9 +100,9 @@ if (workbox) {
 
   // Use stale local static files (js/css) while downloading new
 
-  workbox.routing.registerRoute(
+  registerRoute(
     reStatic,
-    new workbox.strategies.StaleWhileRevalidate({
+    new StaleWhileRevalidate({
       cacheName: `${appName}-static-css-js`,
       plugins: [
         new workbox.cacheableResponse.CacheableResponsePlugin({
@@ -116,9 +120,9 @@ if (workbox) {
 
   // Fetch images, try local cache first
 
-  workbox.routing.registerRoute(
+ registerRoute(
     reImages,
-    new workbox.strategies.CacheFirst({
+    new CacheFirst({
       cacheName: `${appName}-images`,
       plugins: [
         new workbox.cacheableResponse.CacheableResponsePlugin({
@@ -135,7 +139,7 @@ if (workbox) {
 
   // Define a common handler if any of the fetching methods fail
 
-  workbox.routing.setCatchHandler(({ event }) => {
+  setCatchHandler(({ event }) => {
     console.error(`Error: ${event.error}`)
     if (event.request.mode === 'navigate') {
       return caches.match('/error-page.html')
