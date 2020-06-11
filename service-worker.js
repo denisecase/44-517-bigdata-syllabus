@@ -63,7 +63,7 @@ if (workbox) {
 
   workbox.routing.registerRoute(
     reCdnFont,
-    new workbox.strategy.StaleWhileRevalidate()
+    new workbox.strategies.StaleWhileRevalidate()
   )
 
   console.log(
@@ -75,7 +75,7 @@ if (workbox) {
 
   workbox.routing.registerRoute(
     reCdnStyles,
-    new workbox.strategy.StaleWhileRevalidate({
+    new workbox.strategies.StaleWhileRevalidate({
       cacheName: `${appName}-cdn-css`,
       plugins: [
         new workbox.cacheableResponse.CacheableResponsePlugin({
@@ -98,7 +98,7 @@ if (workbox) {
 
   workbox.routing.registerRoute(
     reStatic,
-    new workbox.strategy.StaleWhileRevalidate({
+    new workbox.strategies.StaleWhileRevalidate({
       cacheName: `${appName}-static-css-js`,
       plugins: [
         new workbox.cacheableResponse.CacheableResponsePlugin({
@@ -118,7 +118,7 @@ if (workbox) {
 
   workbox.routing.registerRoute(
     reImages,
-    new workbox.strategy.CacheFirst({
+    new workbox.strategies.CacheFirst({
       cacheName: `${appName}-images`,
       plugins: [
         new workbox.cacheableResponse.CacheableResponsePlugin({
