@@ -21,7 +21,7 @@
  *
  *  @author       Denise Case
  *
- * @requires     EXTERNAL:@link{https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js}
+ * @requires     EXTERNAL:@link{https://storage.googleapis.com/workbox-cdn/releases/5.1.2/workbox-sw.js}
  */
 
 // eslint-disable-next-line no-undef
@@ -78,7 +78,7 @@ if (workbox) {
     new workbox.strategies.StaleWhileRevalidate({
       cacheName: `${appName}-cdn-css`,
       plugins: [
-        new workbox.expiration.Plugin({
+        new workbox.cacheableResponse.CacheableResponsePlugin({
           maxAgeSeconds: maxAgeWeek,
           maxEntries: maxEntries,
           purgeOnQuotaError: true
