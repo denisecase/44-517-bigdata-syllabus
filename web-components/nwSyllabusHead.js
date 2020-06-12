@@ -15,21 +15,18 @@ class nwSyllabusHead extends HTMLElement {
       gtag('js', new Date())
       gtag('config', 'UA-65828104-10')
     </script>
-    <meta charset="utf-8" />
-    <meta http-equiv="x-ua-compatible" content="ie=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
 
     <meta name="author" content="Denise Case" />
     <meta name="theme-color" content="#006747" />
     <meta name="msapplication-TileColor" content="#006747" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-  
-    <link rel="icon" href="./favicon.ico" />
+ 
     <link rel="apple-touch-icon" sizes="180x180" href="./images/favicon_io/apple-touch-icon.png" />
     <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon_io/favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="./images/favicon_io/favicon-16x16.png" />
-    <link rel="manifest" href="./manifest.json" />
+  
 
     <!-- https://mdbootstrap.com/md-bootstrap-cdn/ -->
   <!-- Material Design for Bootstrap fonts and icons -->
