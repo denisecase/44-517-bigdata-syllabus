@@ -36,10 +36,7 @@ class nwSyllabusHead extends HTMLElement {
 
   
 
-  <!-- Service worker -->
-  <!-- If the browser (navigator) enables service workers, then after loading, register -->
-  <!-- Use chrome://inspect/#service-workers to inspect -->
-  <script src="./scripts/register-sw.js"></script>
+
 
   <!-- Security Note -->
   <!-- When adding links, use rel="noopener" to prevent linked page from being able to access window.opener property. -->
