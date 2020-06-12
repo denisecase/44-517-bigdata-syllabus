@@ -18,7 +18,7 @@ class nwSyllabusHead extends HTMLElement {
 
 
     <meta name="author" content="Denise Case" />
-    <meta name="theme-color" content="#006747" />
+
     <meta name="msapplication-TileColor" content="#006747" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
