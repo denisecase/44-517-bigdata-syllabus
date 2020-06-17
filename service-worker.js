@@ -134,7 +134,7 @@ if (workbox) {
 
   // respond with 200 (ok) even when offline
 
-  workbox.self.addEventListener('install', (event) => {
+  self.addEventListener('install', (event) => {
     event.waitUntil(
       caches
         .open(precacheCacheName)
@@ -159,7 +159,7 @@ if (workbox) {
     );
   });
 
-  workbox.self.addEventListener('fetch', (event) => {
+  self.addEventListener('fetch', (event) => {
     event.respondWith(
       caches
         .match(event.request)
