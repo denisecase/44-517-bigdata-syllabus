@@ -1,0 +1,34 @@
+{
+  "name": "44-517-bigdata-syllabus",
+  "version": "1.0.0",
+  "description": "Syllabus for 44-517 Big Data Course",
+  "main": "service-worker.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/denisecase/44-517-bigdata-syllabus.git"
+  },
+  "keywords": [
+    "syllabus",
+    "bigdata",
+    "html",
+    "css",
+    "JavaScript",
+    "progressive",
+    "web",
+    "app"
+  ],
+  "author": "Denise Case",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/denisecase/44-517-bigdata-syllabus/issues"
+  },
+  "homepage": "https://github.com/denisecase/44-517-bigdata-syllabus#readme",
+  "devDependencies": {
+    "eslint": "latest",
+    "eslint-config-airbnb-base": "latest",
+    "eslint-plugin-import": "latest"
+  }
+}
