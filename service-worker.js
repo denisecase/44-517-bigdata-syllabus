@@ -43,7 +43,8 @@ if (workbox) {
   const reStatic = /\.(?:js|css|html)$/
   const reImages = /\.(?:png|gif|jpg|jpeg|webp|svg)$/
   const reCdnFont = /https:\/\/use\.fontawesome\.com\/.*all\.css$/
-  const reCdnStyles = /https:\/\/cdnjs\.cloudflare\.com\/.*\.css$/
+  const reGoogleFont = /https:\/\/fonts\.googleapis\.com\/*$/
+  const reCdnStyles = /https:\/\/stackpath\.bootstrapcdn\.com\/.*\.css$/
 
   // set a prefix & suffix so local host caches remain unique
   workbox.core.setCacheNameDetails({
@@ -63,6 +64,11 @@ if (workbox) {
 
   workbox.routing.registerRoute(
     reCdnFont,
+    new workbox.strategies.StaleWhileRevalidate()
+  )
+
+  workbox.routing.registerRoute(
+    reGoogleFont,
     new workbox.strategies.StaleWhileRevalidate()
   )
 
