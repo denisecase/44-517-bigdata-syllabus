@@ -1,6 +1,6 @@
 class nwSyllabusNWStandard extends HTMLElement {
-  constructor () {
-    super ()
+  constructor() {
+    super();
     this.innerHTML = `
       <!-- Standard University -->
 
@@ -130,10 +130,8 @@ class nwSyllabusNWStandard extends HTMLElement {
       <br />
       <br />
 
-      `
-    }
+      `;
   }
-  
-  window.customElements.define('nw-syllabus-nw-standard', nwSyllabusNWStandard)
-  
-  
+}
+
+window.customElements.define('nw-syllabus-nw-standard', nwSyllabusNWStandard);

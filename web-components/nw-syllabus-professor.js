@@ -1,6 +1,6 @@
 class nwSyllabusProfessor extends HTMLElement {
   constructor() {
-    super()
+    super();
     this.innerHTML = `
 <h2>Course Professor</h2>
 
@@ -18,8 +18,8 @@ Assistant Professor <br />
 <a href="https://docs.google.com/spreadsheets/d/1dGFW0ybTrUKMN6U4vu8I9G9efUE1ZJz8ktDyOTJTOA0/edit?usp=sharing">Office
   Hours Link</a><br />
 MTWH noon to 1PM<br />
-`
+`;
   }
 }
 
-window.customElements.define('nw-syllabus-professor',nwSyllabusProfessor)
+window.customElements.define('nw-syllabus-professor', nwSyllabusProfessor);

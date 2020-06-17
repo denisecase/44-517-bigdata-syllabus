@@ -1,7 +1,6 @@
-
 class nwSyllabusOutline extends HTMLElement {
-  constructor () {
-    super ()
+  constructor() {
+    super();
     this.innerHTML = `
     <h2>Course Outline</h2>
 
@@ -83,9 +82,8 @@ class nwSyllabusOutline extends HTMLElement {
 
     
     
-    `
+    `;
   }
 }
 
-window.customElements.define('nw-syllabus-outline', nwSyllabusOutline)
-
+window.customElements.define('nw-syllabus-outline', nwSyllabusOutline);

@@ -1,7 +1,6 @@
-
 class nwSyllabusHeader extends HTMLElement {
-  constructor () {
-    super ()
+  constructor() {
+    super();
     this.innerHTML = `
     <header>
 <!-- Fixed navbar -->
@@ -45,11 +44,8 @@ class nwSyllabusHeader extends HTMLElement {
   <!-- Additional container -->
 </nav>
 </header>
-    
-    
-    `
+    `;
   }
 }
 
-window.customElements.define('nw-syllabus-header', nwSyllabusHeader)
-
+window.customElements.define('nw-syllabus-header', nwSyllabusHeader);

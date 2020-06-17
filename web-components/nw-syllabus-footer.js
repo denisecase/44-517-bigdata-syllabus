@@ -1,7 +1,6 @@
-
 class nwSyllabusFooter extends HTMLElement {
-  constructor () {
-    super ()
+  constructor() {
+    super();
     this.innerHTML = `
     <!-- Sticky footer with padding (py level 3) on y-axis (top and bottom) -->
 
@@ -13,9 +12,8 @@ class nwSyllabusFooter extends HTMLElement {
     &nbsp; &#9670; &nbsp;
     <a target="_blank" rel="noopener" href=${this.getAttribute('sourceURL')}>Source</a>
   </footer>
-    `
+    `;
   }
 }
 
-window.customElements.define('nw-syllabus-footer', nwSyllabusFooter)
-
+window.customElements.define('nw-syllabus-footer', nwSyllabusFooter);

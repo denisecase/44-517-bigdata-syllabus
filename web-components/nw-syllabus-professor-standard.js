@@ -1,6 +1,6 @@
 class nwSyllabusProfessorStandard extends HTMLElement {
-  constructor () {
-    super ()
+  constructor() {
+    super();
     this.innerHTML = `
     <!-- Professor Standard  -->
 
@@ -100,10 +100,8 @@ class nwSyllabusProfessorStandard extends HTMLElement {
     university in the future. We do not provide materials after completion
     of the course.
 
-      `
-    }
+      `;
   }
-  
-  window.customElements.define('nw-syllabus-professor-standard', nwSyllabusProfessorStandard)
-  
-  
+}
+
+window.customElements.define('nw-syllabus-professor-standard', nwSyllabusProfessorStandard);
