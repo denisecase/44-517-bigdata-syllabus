@@ -11,9 +11,9 @@ $(() => {
   const mark = () => {
     const searchVal = $("input[name='keyword']").val();
 
-    document.querySelectorAll('.context').unmark({
+    $('.context').unmark({
       done: () => {
-        document.querySelectorAll('.context').mark(searchVal, {
+        $('.context').mark(searchVal, {
           separateWordSearch: true,
           done: (count) => {
             btnCount.html(count.toString());
