@@ -54,7 +54,7 @@ class nwSyllabusProfessorStandard extends HTMLElement {
       <li>
         <span class="highlight"><strong>Cite ALL Sources</strong>. You must provide proper citation
         for any content including text, images, videos, and code
-        <strong>that you did not personally develop.</span>
+        that you did not personally develop.</span>
       </li>
       <li>Do not copy and paste content for any submissions.</li>
       <li>
