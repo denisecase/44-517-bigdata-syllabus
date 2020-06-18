@@ -45,7 +45,7 @@
 - [Test JavaScript Regular Expressions](https://regexr.com/)
 - [PurifyCSS](https://github.com/purifycss/purifycss) - reduce size
 - [Lighthouse Badges](https://github.com/emazzotta/lighthouse-badges)
-- [ESLint](https://eslint.org/docs/user-guide/getting-started) - npm install -g eslint
+- [ESLint](https://eslint.org/docs/user-guide/getting-started) 
 
 Example
 
