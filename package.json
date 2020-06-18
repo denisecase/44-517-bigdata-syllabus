@@ -4,7 +4,7 @@
   "description": "Syllabus for 44-517 Big Data Course",
   "main": "service-worker.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "npx lighthouse-badges --urls https://denisecase.github.io/44-517-bigdata-syllabus/ -o test_results"
   },
   "repository": {
     "type": "git",
@@ -15,10 +15,11 @@
     "bigdata",
     "html",
     "css",
-    "JavaScript",
-    "progressive",
-    "web",
-    "app"
+    "javascript",
+    "pwa",
+    "lighthouse-badges",
+    "codacy-badge",
+    "eslint"
   ],
   "author": "Denise Case",
   "license": "MIT",
