@@ -22,7 +22,7 @@ code {
 }
 
 .img-thumbnail {
-  border-width: 0px;
+  border-width: 0;
   margin: 0.125in;
   min-width: 1in;
 }
@@ -89,7 +89,6 @@ mark {
   display: flex;
   flex-direction: column;
   flex-basis: 100%;
-  flex: 1;
 }
 
 input {

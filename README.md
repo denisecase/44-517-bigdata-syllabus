@@ -1,4 +1,4 @@
-# [44-517 Big Data Syllabus](https://denisecase.github.io/44-517-bigdata-syllabus)
+# [44-517 Big Data Syllabus](https://denisecase.github.io/44-517-bigdata-syllabus/)
 
 [![Codacy Badge](https://app.codacy.com/project/badge/Grade/cb78aa41e60e4986af847532a92930e4)](https://www.codacy.com/manual/denisecase/44-517-bigdata-syllabus?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=denisecase/44-517-bigdata-syllabus&amp;utm_campaign=Badge_Grade)
 [![MIT Licensed](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
@@ -14,14 +14,17 @@
 - Assistant Professor
 - Northwest Missouri State University
 
+
 ## Links
 
 - Site: <https://denisecase.github.io/44-517-bigdata-syllabus>
 - Source: <https://github.com/denisecase/44-517-bigdata-syllabus>
 
+
 ## Prerequistes
 
 - [Follow these guides for Windows users](https://denisecase.github.io/windows-dev-list/) to get set up for development.
+
 
 ## Recommended
 
@@ -51,6 +54,7 @@ npx lighthouse-badges --urls https://denisecase.github.io/44-517-bigdata-syllabu
 
 ```
 
+
 ## Getting Started
 
 - Fork contents to a new repository.
@@ -60,9 +64,11 @@ npx lighthouse-badges --urls https://denisecase.github.io/44-517-bigdata-syllabu
 - Open GitHub repository, under Settings / GitHub Pages, set Source to master branch and click Save.
 - Go to your Google Analytics dashboard. Add a new property for your GitHub Page, generate your tracking id, and replace the analytics code in index.html with yours.
 
+
 ## Progressive Web App
 
 This syllabus is a progressive web app, and can be installed on mobile and other devices.
+
 
 ## Semester Updates
 
@@ -72,6 +78,7 @@ This syllabus is a progressive web app, and can be installed on mobile and other
 - Update tools and requirements.
 - Update schedule.
 - Update office hours.
+
 
 ## See Also
 
