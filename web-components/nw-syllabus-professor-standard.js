@@ -15,9 +15,9 @@ class nwSyllabusProfessorStandard extends HTMLElement {
     <p>Professional email practices are required.</p>
 
     <ol>
-      <li class="highlight">
-        Email must include course number and section (e.g.,
-        <strong>${this.getAttribute('emailSubject')}</strong>) in the subject line.
+      <li>
+      <span class="highlight">Email must include course number and section (e.g.,
+        <strong>${this.getAttribute('emailSubject')}</strong>) in the subject line.</span>
       </li>
       <li>
         Email should be professional, politely written, and use proper
@@ -51,10 +51,10 @@ class nwSyllabusProfessorStandard extends HTMLElement {
     <h2>Course Citation Requirements</h2>
 
     <ol>
-      <li class="highlight">
-        <strong>Cite ALL Sources</strong>. You must provide proper citation
+      <li>
+        <span class="highlight"><strong>Cite ALL Sources</strong>. You must provide proper citation
         for any content including text, images, videos, and code
-        <strong>that you did not personally develop</strong>.
+        <strong>that you did not personally develop.</span>
       </li>
       <li>Do not copy and paste content for any submissions.</li>
       <li>
@@ -74,8 +74,8 @@ class nwSyllabusProfessorStandard extends HTMLElement {
     critical. On rare occasions, special challenges or obligations may make
     it difficult to submit on time. You typically have a one-week grace
     period where the work may still be submitted and graded. Late penalties
-    will be described in the rubric. No late submissions will be accepted
-    for the final submission.
+    will be described in the rubric. <span class="highlight">
+    No late submissions will be accepted for the final submission.</span>
 
     <h2>Course Submissions</h2>
 
