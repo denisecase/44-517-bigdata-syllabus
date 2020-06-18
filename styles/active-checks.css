@@ -7,13 +7,25 @@
   visibility: hidden;
 }
 
-.list-group-item-primary {
+.list-group-item {
   color: rgb(255, 255, 255);
   background-color: #006747 !important;
 }
 
-.list-group-item-primary > a {
+.list-group-item > a {
   color: rgb(255, 255, 255);
   background-color: #006747 !important;
   text-decoration: underline;
 }
+
+.list-group-item-primary {
+  color: 006747;
+  background-color:white !important;
+}
+
+.list-group-item-primary > a {
+  color: 006747;
+  background-color:white !important;
+  text-decoration: underline;
+}
+
