@@ -6,53 +6,53 @@ class nwSyllabusOutline extends HTMLElement {
 
     <p>The course is divided into seven content modules.</p>
 
-    <table class="tg">
+    <table class="table table-bordered">
       <tr>
-        <th class="tg-5mgg">Module</th>
-        <th class="tg-5mgg">Days</th>
-        <th class="tg-5mgg">Topics</th>
+        <th >Module</th>
+        <th >Days</th>
+        <th >Topics</th>
       </tr>
       <tr>
-        <td class="tg-s268">1</td>
-        <td class="tg-s268">1-2</td>
+        <td >1</td>
+        <td >1-2</td>
         <td class="tg-031e">
           Course intro, big data, shell processing
         </td>
       </tr>
       <tr>
-        <td class="tg-s268">2</td>
-        <td class="tg-s268">3-4</td>
+        <td >2</td>
+        <td >3-4</td>
         <td class="tg-031e">
           Hadoop (HDFS + MapReduce), ecosystem, Pig, Hive, Impala, Hue
         </td>
       </tr>
       <tr>
-        <td class="tg-s268">3</td>
-        <td class="tg-s268">5-6</td>
+        <td >3</td>
+        <td >5-6</td>
         <td class="tg-031e">
           ZooKeeper, Kafka, Java apps
         </td>
       </tr>
       <tr>
-        <td class="tg-s268">4</td>
-        <td class="tg-s268">7-8</td>
+        <td >4</td>
+        <td >7-8</td>
         <td class="tg-031e">Python, map-reduce, architecture</td>
       </tr>
       <tr>
-        <td class="tg-s268">5</td>
-        <td class="tg-s268">9-10</td>
+        <td >5</td>
+        <td >9-10</td>
         <td class="tg-031e">Apache Spark</td>
       </tr>
       <tr>
         <td class="tg-yw4l">6</td>
-        <td class="tg-s268">11-12</td>
+        <td >11-12</td>
         <td class="tg-yw4l">
           Demonstrations and peer review
         </td>
       </tr>
       <tr>
         <td class="tg-yw4l">7</td>
-        <td class="tg-s268">13-14</td>
+        <td >13-14</td>
         <td class="tg-yw4l">
           Optional certifications or Splunk, final reflection
         </td>
