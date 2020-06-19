@@ -27,7 +27,9 @@
  */
 
 // eslint-disable-next-line no-undef
-importScripts('https://storage.googleapis.com/workbox-cdn/releases/5.1.2/workbox-sw.js');
+importScripts(
+  'https://storage.googleapis.com/workbox-cdn/releases/5.1.2/workbox-sw.js',
+);
 
 if (workbox) {
   // console.log('Service worker Workbox loaded', workbox.routing);
@@ -138,21 +140,23 @@ if (workbox) {
     event.waitUntil(
       caches
         .open(precacheCacheName)
-        .then((cache) => cache.addAll([
-          '.',
-          'index.html',
-          'styles/case-syllabus.css',
-          'styles/active-checks.css',
-          'scripts/main.js',
-          'scripts/register-sw.js',
-          'scripts/active-checks.js',
-          'web-components/nw-syllabus-footer.js',
-          'web-components/nw-syllabus-header.js',
-          'web-components/nw-syllabus-nw-standard.js',
-          'web-components/nw-syllabus-outline.js',
-          'web-components/nw-syllabus-professor.js',
-          'web-components/nw-syllabus-professor-standard.js',
-        ]))
+        .then((cache) =>
+          cache.addAll([
+            '.',
+            'index.html',
+            'styles/case-syllabus.css',
+            'styles/active-checks.css',
+            'scripts/main.js',
+            'scripts/register-sw.js',
+            'scripts/active-checks.js',
+            'web-components/nw-syllabus-footer.js',
+            'web-components/nw-syllabus-header.js',
+            'web-components/nw-syllabus-nw-standard.js',
+            'web-components/nw-syllabus-outline.js',
+            'web-components/nw-syllabus-professor.js',
+            'web-components/nw-syllabus-professor-standard.js',
+          ]),
+        )
         .catch((error) => {
           console.error(`Error in install event: ${error} `);
         }),

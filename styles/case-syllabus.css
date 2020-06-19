@@ -4,8 +4,7 @@
   font-style: normal;
   font-weight: 400;
   src: local('Roboto'), local('Roboto-Regular'),
-       url('../fonts/roboto-v20-latin-regular.woff2') format('woff2'); /* Chrome 26+, Opera 23+, Firefox 39+ */
-
+    url('../fonts/roboto-v20-latin-regular.woff2') format('woff2'); /* Chrome 26+, Opera 23+, Firefox 39+ */
 }
 
 a {
@@ -54,7 +53,7 @@ code {
 .tg td {
   font-family: Arial, sans-serif;
   font-size: 14px;
-  padding: 2px ;
+  padding: 2px;
   border-style: solid;
   border-width: 1px;
   overflow: hidden;
@@ -66,7 +65,7 @@ code {
   font-family: Arial, sans-serif;
   font-size: 14px;
   font-weight: normal;
-  padding: 2px ;
+  padding: 2px;
   border-style: solid;
   border-width: 1px;
   overflow: hidden;
@@ -76,11 +75,12 @@ code {
 }
 
 .thead-dark {
-background-color: #006747;
-color: white;
+  background-color: #006747;
+  color: white;
 }
 
-td, th {
+td,
+th {
   word-break: break-all;
 }
 

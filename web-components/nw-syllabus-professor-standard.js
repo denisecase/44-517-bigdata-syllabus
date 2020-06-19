@@ -17,7 +17,9 @@ class nwSyllabusProfessorStandard extends HTMLElement {
     <ol>
       <li>
       <span class="highlight">Email must include course number and section (e.g.,
-        <strong>${this.getAttribute('emailSubject')}</strong>) in the subject line.</span>
+        <strong>${this.getAttribute(
+          'emailSubject',
+        )}</strong>) in the subject line.</span>
       </li>
       <li>
         Email should be professional, politely written, and use proper
@@ -104,4 +106,7 @@ class nwSyllabusProfessorStandard extends HTMLElement {
   }
 }
 
-window.customElements.define('nw-syllabus-professor-standard', nwSyllabusProfessorStandard);
+window.customElements.define(
+  'nw-syllabus-professor-standard',
+  nwSyllabusProfessorStandard,
+);

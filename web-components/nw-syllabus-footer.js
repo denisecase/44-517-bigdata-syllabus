@@ -8,9 +8,13 @@ class nwSyllabusFooter extends HTMLElement {
     <a target="_blank" rel="noopener" href="https://www.linkedin.com/in/denisecase/">Denise Case
     </a>
     &nbsp; &#9670; &nbsp;
-    <a target="_blank" rel="noopener" href=${this.getAttribute('siteURL')}>Site</a>
+    <a target="_blank" rel="noopener" href=${this.getAttribute(
+      'siteURL',
+    )}>Site</a>
     &nbsp; &#9670; &nbsp;
-    <a target="_blank" rel="noopener" href=${this.getAttribute('sourceURL')}>Source</a>
+    <a target="_blank" rel="noopener" href=${this.getAttribute(
+      'sourceURL',
+    )}>Source</a>
   </footer>
     `;
   }

@@ -2,17 +2,6 @@
   "name": "44-517-bigdata-syllabus",
   "version": "1.0.0",
   "description": "Syllabus for 44-517 Big Data Course",
-  "main": "service-worker.js",
-  "scripts": {
-    "prettier": "prettier --write \"**/*.{js,css,html,json}\"",
-    "lint": "eslint .",
-    "lint-fix": "eslint --fix .",
-    "test": "npx lighthouse-badges --urls https://denisecase.github.io/44-517-bigdata-syllabus/ -o test_results"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/denisecase/44-517-bigdata-syllabus.git"
-  },
   "keywords": [
     "syllabus",
     "bigdata",
@@ -25,20 +14,23 @@
     "eslint",
     "prettier"
   ],
-  "author": "Denise Case",
-  "license": "MIT",
+  "homepage": "https://github.com/denisecase/44-517-bigdata-syllabus#readme",
   "bugs": {
     "url": "https://github.com/denisecase/44-517-bigdata-syllabus/issues"
   },
-  "homepage": "https://github.com/denisecase/44-517-bigdata-syllabus#readme",
-  "devDependencies": {
-    "eslint": "latest",
-    "eslint-config-airbnb-base": "latest",
-    "eslint-plugin-import": "latest",
-    "husky": "latest",
-    "prettier": "latest",
-    "prettier-eslint": "latest",
-    "pretty-quick": "latest"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/denisecase/44-517-bigdata-syllabus.git"
+  },
+  "license": "MIT",
+  "author": "Denise Case",
+  "main": "service-worker.js",
+  "scripts": {
+    "lint": "eslint .",
+    "lint-fix": "eslint --fix .",
+    "prettier": "prettier --write .",
+    "sort": "npx npx sort-package-json",
+    "test": "npx lighthouse-badges --urls https://denisecase.github.io/44-517-bigdata-syllabus/ -o test_results"
   },
   "husky": {
     "hooks": {
@@ -47,5 +39,14 @@
   },
   "dependencies": {
     "sort-package-json": "latest"
+  },
+  "devDependencies": {
+    "eslint": "7.2.0",
+    "eslint-config-airbnb-base": "latest",
+    "eslint-plugin-import": "latest",
+    "husky": "latest",
+    "prettier": "latest",
+    "prettier-eslint": "latest",
+    "pretty-quick": "latest"
   }
 }
