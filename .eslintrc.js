@@ -8,7 +8,6 @@ module.exports = {
   ],
   globals: {
     workbox: true,
-    self: true,
     $: true,
     jQuery: true,
   },

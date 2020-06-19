@@ -10,7 +10,7 @@ class nwSyllabusOutline extends HTMLElement {
     <thead class="thead-dark">
       <tr class="d-flex">
         <th class="col-3 ">Module</th>
-        <th class="col-3 ">Days</th>
+        <th class="col-3 ">Weeks</th>
         <th class="col-6 ">Topics</th>
       </tr>
       </thead>

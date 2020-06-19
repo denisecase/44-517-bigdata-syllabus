@@ -4,6 +4,9 @@
   "description": "Syllabus for 44-517 Big Data Course",
   "main": "service-worker.js",
   "scripts": {
+    "prettier": "prettier --write \"**/*.{js,css,html,json}\"",
+    "lint": "eslint .",
+    "lint-fix": "eslint --fix .",
     "test": "npx lighthouse-badges --urls https://denisecase.github.io/44-517-bigdata-syllabus/ -o test_results"
   },
   "repository": {
@@ -19,7 +22,8 @@
     "pwa",
     "lighthouse-badges",
     "codacy-badge",
-    "eslint"
+    "eslint",
+    "prettier"
   ],
   "author": "Denise Case",
   "license": "MIT",
@@ -30,6 +34,18 @@
   "devDependencies": {
     "eslint": "latest",
     "eslint-config-airbnb-base": "latest",
-    "eslint-plugin-import": "latest"
+    "eslint-plugin-import": "latest",
+    "husky": "latest",
+    "prettier": "latest",
+    "prettier-eslint": "latest",
+    "pretty-quick": "latest"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "pretty-quick --staged"
+    }
+  },
+  "dependencies": {
+    "sort-package-json": "latest"
   }
 }

@@ -44,7 +44,7 @@ if (workbox) {
   // test Regular Expressions at https://regexr.com/
   const reStatic = /\.(?:js|css|html)$/;
   const reImages = /\.(?:png|gif|jpg|jpeg|webp|svg)$/;
-  const reCdnFont = /https:\/\/use\.fontawesome\.com\/.*all\.css$/;
+  const reCdnFont = /https:\/\/cdnjs\.cloudflare\.com\/.*all\.min\.css$/;
   const reGoogleFont = /https:\/\/fonts\.googleapis\.com\/*$/;
   const reCdnStyles = /https:\/\/stackpath\.bootstrapcdn\.com\/.*\.css$/;
 
@@ -134,7 +134,7 @@ if (workbox) {
 
   // respond with 200 (ok) even when offline
 
-  self.addEventListener('install', (event) => {
+  this.addEventListener('install', (event) => {
     event.waitUntil(
       caches
         .open(precacheCacheName)
@@ -159,7 +159,7 @@ if (workbox) {
     );
   });
 
-  self.addEventListener('fetch', (event) => {
+  this.addEventListener('fetch', (event) => {
     event.respondWith(
       caches
         .match(event.request)

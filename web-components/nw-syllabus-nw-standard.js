@@ -78,9 +78,9 @@ class nwSyllabusNWStandard extends HTMLElement {
       academic dishonesty. You are responsible for reading this document and
       abiding by the guidelines described therein.
 
-      <h2>Special Accommodations Policy</h2>
+      <h2 id="sap-head">Special Accommodations Policy <i class="fas fa-volume-up" id="sap-icon"></i></h2> 
 
-      Northwest Missouri State University complies with Section 504 of the
+      <div id="sap-content">Northwest Missouri State University complies with Section 504 of the
       Rehabilitation Act of 1973 and the Americans with Disabilities Act of
       1990 [ADA] and the ADA Amendments Act of 2008 [ADAAA]. 
       If a student has a disability that qualifies under the ADA/ADAAA and requires
@@ -92,7 +92,7 @@ class nwSyllabusNWStandard extends HTMLElement {
       <a rel="noopener" target="_top" href="mailto:ADA@nwmissouri.edu?Subject=Accomodations">ADA@nwmissouri.edu</a>. For
       the university policy on disability accommodation refer to
       <a rel="noopener" target="_blank"
-        href="http://www.nwmissouri.edu/policies/student/Disability-Accommodation.pdf">Disability-Accommodation.pdf</a>.
+        href="http://www.nwmissouri.edu/policies/student/Disability-Accommodation.pdf">Disability-Accommodation.pdf</a>.</div>
 
       <h2>Non-Discrimination and Anti-Harrassment Policy</h2>
 
