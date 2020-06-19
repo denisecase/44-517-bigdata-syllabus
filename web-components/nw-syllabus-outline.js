@@ -7,53 +7,55 @@ class nwSyllabusOutline extends HTMLElement {
     <p>The course is divided into seven content modules.</p>
 
     <table class="table table-bordered">
-      <tr>
-        <th >Module</th>
-        <th >Days</th>
-        <th >Topics</th>
+    <thead class="thead-dark">
+      <tr class="d-flex">
+        <th class="col-3 ">Module</th>
+        <th class="col-3 ">Days</th>
+        <th class="col-6 ">Topics</th>
       </tr>
-      <tr>
-        <td >1</td>
-        <td >1-2</td>
-        <td class="tg-031e">
+      </thead>
+      <tr class="d-flex">
+        <td class="col-3 ">1</td>
+        <td class="col-3 ">1-2</td>
+        <td class="col-6 ">
           Course intro, big data, shell processing
         </td>
       </tr>
-      <tr>
-        <td >2</td>
-        <td >3-4</td>
-        <td class="tg-031e">
+      <tr class="d-flex">
+        <td class="col-3 ">2</td>
+        <td class="col-3 ">3-4</td>
+        <td class="col-6 ">
           Hadoop (HDFS + MapReduce), ecosystem, Pig, Hive, Impala, Hue
         </td>
       </tr>
-      <tr>
-        <td >3</td>
-        <td >5-6</td>
-        <td class="tg-031e">
+      <tr class="d-flex">
+        <td class="col-3 ">3</td>
+        <td class="col-3 ">5-6</td>
+        <td class="col-6 ">
           ZooKeeper, Kafka, Java apps
         </td>
       </tr>
-      <tr>
-        <td >4</td>
-        <td >7-8</td>
-        <td class="tg-031e">Python, map-reduce, architecture</td>
+      <tr class="d-flex">
+        <td class="col-3 ">4</td>
+        <td class="col-3 ">7-8</td>
+        <td class="col-6 ">Python, map-reduce, architecture</td>
       </tr>
-      <tr>
-        <td >5</td>
-        <td >9-10</td>
-        <td class="tg-031e">Apache Spark</td>
+      <tr class="d-flex">
+        <td class="col-3 ">5</td>
+        <td class="col-3 ">9-10</td>
+        <td class="col-6 ">Apache Spark</td>
       </tr>
-      <tr>
-        <td class="tg-yw4l">6</td>
-        <td >11-12</td>
-        <td class="tg-yw4l">
+      <tr class="d-flex">
+        <td class="col-3 ">6</td>
+        <td class="col-3 ">11-12</td>
+        <td class="col-6 ">
           Demonstrations and peer review
         </td>
       </tr>
-      <tr>
-        <td class="tg-yw4l">7</td>
-        <td >13-14</td>
-        <td class="tg-yw4l">
+      <tr class="d-flex">
+        <td class="col-3 ">7</td>
+        <td class="col-3 ">13-14</td>
+        <td class="col-6 ">
           Optional certifications or Splunk, final reflection
         </td>
       </tr>

@@ -19,10 +19,9 @@ class nwSyllabusNWStandard extends HTMLElement {
       Students receiving veterans' benefits should consult with the coordinator of Veterans' Affairs 
       for the additional attendance requirements.
       
-      Please
-      refer to the university policy on attendance at
+      Please review the 
       <a rel="noopener" target="_blank" href="https://www.nwmissouri.edu/policies/academics/Attendance.pdf">
-        https://www.nwmissouri.edu/policies/academics/Attendance.pdf</a>.
+      university policy on attendance</a>.
 
       <h2>Excused Absences</h2>
 
@@ -66,14 +65,15 @@ class nwSyllabusNWStandard extends HTMLElement {
       The students, faculty, and staff at Northwest endeavor to sustain an
       environment that values honesty in academic work, that acknowledges the
       authorized aid provided by and intellectual contributions of others, and
-      that enables equitable student evaluation. Please refer to Northwest
-      Missouri State University’s Academic Integrity Policy at
+      that enables equitable student evaluation. Please refer to 
       <a rel="noopener" target="_blank"
-        href="http://www.nwmissouri.edu/policies/academics/Academic-Integrity.pdf">http://www.nwmissouri.edu/policies/academics/Academic-Integrity.pdf</a>.
+        href="http://www.nwmissouri.edu/policies/academics/Academic-Integrity.pdf">
+      Northwest Missouri State University’s Academic Integrity Policy</a>.
       In addition, students are expected to understand and abide by the
-      Computer Science and Information Systems Academic Integrity Policy at
       <a rel="noopener" target="_blank"
-        href="http://www.nwmissouri.edu/csis/pdf/AcademicIntegrityCSI.doc">http://www.nwmissouri.edu/csis/pdf/AcademicIntegrityCSI.doc</a>.
+      href="http://www.nwmissouri.edu/csis/pdf/AcademicIntegrityCSI.doc">
+      Computer Science and Information Systems Academic Integrity Policy
+      </a>.
       This document explains types of behavior considered to constitute
       academic dishonesty. You are responsible for reading this document and
       abiding by the guidelines described therein.
@@ -92,26 +92,26 @@ class nwSyllabusNWStandard extends HTMLElement {
       <a rel="noopener" target="_top" href="mailto:ADA@nwmissouri.edu?Subject=Accomodations">ADA@nwmissouri.edu</a>. For
       the university policy on disability accommodation refer to
       <a rel="noopener" target="_blank"
-        href="http://www.nwmissouri.edu/policies/student/Disability-Accommodation.pdf">http://www.nwmissouri.edu/policies/student/Disability-Accommodation.pdf</a>.
+        href="http://www.nwmissouri.edu/policies/student/Disability-Accommodation.pdf">Disability-Accommodation.pdf</a>.
 
       <h2>Non-Discrimination and Anti-Harrassment Policy</h2>
 
       Northwest Missouri State University is committed to maintaining an
       environment for all faculty, staff, students, and third parties that is
       free of illegal discrimination and harassment. Please refer to the
-      Non-Discrimination and Anti-Harassment Policy at
       <a rel="noopener" target="_blank"
-        href="http://www.nwmissouri.edu/diversity/titlevi.htm">http://www.nwmissouri.edu/diversity/titlevi.htm</a>.
+        href="http://www.nwmissouri.edu/diversity/titlevi.htm">
+      Non-Discrimination and Anti-Harassment Policy</a>.
 
       <h2>Family Educational Rights and Privacy Act (FERPA)</h2>
 
       Family Educational Rights and Privacy Act of 1974, as amended (commonly
       known as the Buckley Amendment), is a federal law which provides that
       colleges and universities will maintain the confidentiality of student
-      education records. Please refer to the Family Educational Rights and
-      Privacy Act (FERPA) Policy at
+      education records. Please refer to the 
       <a rel="noopener" target="_blank"
-        href="http://www.nwmissouri.edu/policies/academics/Family-Educational-Rights-and-Privacy-Act.pdf">http://www.nwmissouri.edu/policies/academics/Family-Educational-Rights-and-Privacy-Act.pdf</a>.
+      href="http://www.nwmissouri.edu/policies/academics/Family-Educational-Rights-and-Privacy-Act.pdf"> 
+      Family Educational Rights and Privacy Act (FERPA) Policy</a>
 
       <h2>Course Evaluation</h2>
 
