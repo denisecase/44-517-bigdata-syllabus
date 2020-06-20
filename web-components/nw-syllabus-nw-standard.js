@@ -86,8 +86,7 @@ class nwSyllabusNWStandard extends HTMLElement {
       If a student has a disability that qualifies under the ADA/ADAAA and requires
       accommodations, they should contact the Office for Equity and
       Accessibility for information on appropriate policies and procedures at
-      <a rel="noopener" href="tel:+16605621639">660.562.1639</a>, or
-      <a rel="noopener" target="_top" href="mailto:pjp@nwmissouri.edu?Subject=Accomodations">pjp@nwmissouri.edu</a>
+      <a rel="noopener" href="tel:+16605621639">660.562.1639</a>
       or
       <a rel="noopener" target="_top" href="mailto:ADA@nwmissouri.edu?Subject=Accomodations">ADA@nwmissouri.edu</a>. For
       the university policy on disability accommodation refer to
