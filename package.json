@@ -81,9 +81,9 @@
     },
     "globals": {
       "$": true,
+      "found": true,
       "jQuery": true,
-      "workbox": true,
-      "found": true
+      "workbox": true
     }
   },
   "devDependencies": {
