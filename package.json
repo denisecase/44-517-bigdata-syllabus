@@ -36,8 +36,7 @@
   "husky": {
     "hooks": {
       "pre-commit": "pretty-quick --staged && npm run sort && npm run lint-fix",
-      "pre-push": "echo not running tests",
-      "post-push": "npx lighthouse-badges --urls https://denisecase.github.io/44-517-bigdata-syllabus/ -o test_results"
+      "pre-push": "echo not running tests"
     }
   },
   "prettier": {
