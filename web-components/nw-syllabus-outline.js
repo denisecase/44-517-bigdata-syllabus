@@ -10,56 +10,38 @@ class nwSyllabusOutline extends HTMLElement {
     <thead class="thead-dark">
       <tr class="d-flex">
         <th class="col-3 ">Module</th>
-        <th class="col-3 ">Weeks</th>
-        <th class="col-6 ">Topics</th>
+        <th class="col-9 ">Content</th>
       </tr>
-      </thead>
-      <tr class="d-flex">
-        <td class="col-3 ">1</td>
-        <td class="col-3 ">1-2</td>
-        <td class="col-6 ">
-          Course intro, big data, shell processing
-        </td>
-      </tr>
-      <tr class="d-flex">
-        <td class="col-3 ">2</td>
-        <td class="col-3 ">3-4</td>
-        <td class="col-6 ">
-          Hadoop (HDFS + MapReduce), ecosystem, Pig, Hive, Impala, Hue
-        </td>
-      </tr>
-      <tr class="d-flex">
-        <td class="col-3 ">3</td>
-        <td class="col-3 ">5-6</td>
-        <td class="col-6 ">
-          ZooKeeper, Kafka, Java apps
-        </td>
-      </tr>
-      <tr class="d-flex">
-        <td class="col-3 ">4</td>
-        <td class="col-3 ">7-8</td>
-        <td class="col-6 ">Python, map-reduce, architecture</td>
-      </tr>
-      <tr class="d-flex">
-        <td class="col-3 ">5</td>
-        <td class="col-3 ">9-10</td>
-        <td class="col-6 ">Apache Spark</td>
-      </tr>
-      <tr class="d-flex">
-        <td class="col-3 ">6</td>
-        <td class="col-3 ">11-12</td>
-        <td class="col-6 ">
-          Demonstrations and peer review
-        </td>
-      </tr>
-      <tr class="d-flex">
-        <td class="col-3 ">7</td>
-        <td class="col-3 ">13-14</td>
-        <td class="col-6 ">
-          Optional certifications or Splunk, final reflection
-        </td>
-      </tr>
-    </table>
+    </thead>
+    <tr class="d-flex">
+      <td class="col-3 ">1</td>
+      <td class="col-9 "> ${this.getAttribute('mod1')} </td>
+    </tr>
+    <tr class="d-flex">
+      <td class="col-3 ">2</td>
+      <td class="col-9 "> ${this.getAttribute('mod2')} </td>
+    </tr>
+    <tr class="d-flex">
+      <td class="col-3 ">3</td>
+      <td class="col-9 "> ${this.getAttribute('mod3')} </td>
+    </tr>
+    <tr class="d-flex">
+      <td class="col-3 ">4</td>
+      <td class="col-9 "> ${this.getAttribute('mod4')} </td>
+    </tr>
+    <tr class="d-flex">
+      <td class="col-3 ">5</td>
+      <td class="col-9 "> ${this.getAttribute('mod5')} </td>
+    </tr>
+    <tr class="d-flex">
+      <td class="col-3 ">6</td>
+      <td class="col-9 "> ${this.getAttribute('mod6')} </td>
+    </tr>
+    <tr class="d-flex">
+      <td class="col-3 ">7</td>
+      <td class="col-9 "> ${this.getAttribute('mod7')} </td>
+    </tr>
+  </table>
 
     <h3>Schedule Subject to Change</h3>
 
