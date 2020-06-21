@@ -77,7 +77,8 @@
             "error"
           ]
         }
-      ]
+      ],
+      "import/extensions": 0
     },
     "globals": {
       "$": true,
