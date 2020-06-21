@@ -11,113 +11,95 @@ class nwSyllabusSchedule extends HTMLElement {
   <table class="table table-bordered">
   <thead class="thead-dark">
     <tr class="d-flex">
-      <th class="col-2 ">Week</th>
-      <th class="col-2 ">Start</th>
+      <th class="col-2 ">Wk</th>
+      <th class="col-4 ">Start</th>
       <th class="col-6 ">Notes</th>
-      <th class="col-2 ">See</th>
     </tr>
   </thead>
   <tr class="d-flex">
     <td class="col-2 ">1</td>
-    <td class="col-2 ">Wed 8-19</td>
+    <td class="col-4 ">Wed 8-19</td>
     <td class="col-6 ">Module 1 begins, assignments due first day</td>
-    <td class="col-2 ">Engage 01</td>
   </tr>
   <tr class="d-flex">
   <td class="col-2 ">2</td>
-  <td class="col-2 ">Mon 8-24</td>
+  <td class="col-4 ">Mon 8-24</td>
   <td class="col-6 ">Module 1 continues</td>
-  <td class="col-2 "></td>
 </tr>
 <tr class="d-flex">
 <td class="col-2 ">3</td>
-<td class="col-2 ">Mon 8-31</td>
+<td class="col-4 ">Mon 8-31</td>
 <td class="col-6 ">Module 1 continues</td>
-<td class="col-2 "></td>
 </tr>
 <tr class="d-flex">
 <td class="col-2 ">4</td>
-<td class="col-2 ">Mon 9-7</td>
+<td class="col-4 ">Mon 9-7</td>
 <td class="col-6 ">No class Monday, Module 2 begins</td>
-<td class="col-2 ">Engage 02</td>
 </tr>
 <tr class="d-flex">
 <td class="col-2 ">5</td>
-<td class="col-2 ">Mon 9-14</td>
+<td class="col-4 ">Mon 9-14</td>
 <td class="col-6 ">Module 2 continues</td>
-<td class="col-2 "></td>
 </tr>
 <tr class="d-flex">
 <td class="col-2 ">6</td>
-<td class="col-2 ">Mon 9-21</td>
+<td class="col-4 ">Mon 9-21</td>
 <td class="col-6 ">Module 3 begins</td>
-<td class="col-2 ">Engage 03</td>
 </tr>
 <tr class="d-flex">
 <td class="col-2 ">7</td>
-<td class="col-2 ">Mon 9-28</td>
+<td class="col-4 ">Mon 9-28</td>
 <td class="col-6 ">Module 3 continues</td>
-<td class="col-2 "></td>
 </tr>
 <tr class="d-flex">
 <td class="col-2 ">8</td>
-<td class="col-2 ">Mon 10-5</td>
+<td class="col-4 ">Mon 10-5</td>
 <td class="col-6 ">Module 4 begins, no class Friday (walkout)</td>
-<td class="col-2 ">Engage 04</td>
 </tr>
 <tr class="d-flex">
 <td class="col-2 ">9</td>
-<td class="col-2 ">Mon 10-12</td>
+<td class="col-4 ">Mon 10-12</td>
 <td class="col-6 ">Module 4 continues</td>
-<td class="col-2 "></td>
 </tr>
 <tr class="d-flex">
 <td class="col-2 ">10</td>
-<td class="col-2 ">Mon 10-19</td>
+<td class="col-4 ">Mon 10-19</td>
 <td class="col-6 ">Module 5 begins</td>
-<td class="col-2 ">Engage 05</td>
 </tr>
 <tr class="d-flex">
 <td class="col-2 ">11</td>
-<td class="col-2 ">Mon 10-26</td>
+<td class="col-4 ">Mon 10-26</td>
 <td class="col-6 ">Module 5 continues</td>
-<td class="col-2 "></td>
 </tr>
 <tr class="d-flex">
 <td class="col-2 ">12</td>
-<td class="col-2 ">Mon 11-2</td>
+<td class="col-4 ">Mon 11-2</td>
 <td class="col-6 ">Module 6 begins</td>
-<td class="col-2 ">Engage 06</td>
 </tr>
 <tr class="d-flex">
 <td class="col-2 ">13</td>
-<td class="col-2 ">Mon 11-9</td>
+<td class="col-4 ">Mon 11-9</td>
 <td class="col-6 ">Module 6 continues</td>
-<td class="col-2 "></td>
 </tr>
 <tr class="d-flex">
 <td class="col-2 ">14</td>
-<td class="col-2 ">Mon 11-16</td>
+<td class="col-4 ">Mon 11-16</td>
 <td class="col-6 ">Module 7 begins</td>
-<td class="col-2 ">Engage 07</td>
 </tr>
 <tr class="d-flex">
 <td class="col-2 ">15</td>
-<td class="col-2 ">Mon 11-23</td>
+<td class="col-4 ">Mon 11-23</td>
 <td class="col-6 ">Thanksgiving break (no class)</td>
-<td class="col-2 "></td>
 </tr>
 <tr class="d-flex">
 <td class="col-2 ">16</td>
-<td class="col-2 ">Mon 1-30</td>
+<td class="col-4 ">Mon 1-30</td>
 <td class="col-6 ">Prep week (no new content)</td>
-<td class="col-2 "></td>
 </tr>
 <tr class="d-flex">
 <td class="col-2 ">17</td>
-<td class="col-2 ">Mon 12-7</td>
+<td class="col-4 ">Mon 12-7</td>
 <td class="col-6 ">Finals week (no late submissions)</td>
-<td class="col-2 "></td>
 </tr>
 
 </table>
