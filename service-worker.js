@@ -39,7 +39,7 @@ if (workbox) {
   const appName = '44-517-bigdata-syllabus';
   const appVersion = 'v1';
   const maxAge10MinInSeconds = 10 * 60;
-  // const maxAge1Day_inSeconds = 1 * 24 * 60 * 60;
+  const maxAge1DayInSeconds = 1 * 24 * 60 * 60;
   // const maxAge1Week_inSeconds = maxAgeDay * 7;
   // const httpResponseOpaque = 0; // CORS
   const httpReponseOk = 200; // good
@@ -47,8 +47,8 @@ if (workbox) {
   // test Regular Expressions at https://regexr.com/
   const reStatic = /\.(?:js|css|html)$/;
   const reImages = /\.(?:png|gif|jpg|jpeg|webp|svg)$/;
-  const reCdnFont = /https:\/\/cdnjs\.cloudflare\.com\/.*all\.min\.css$/;
-  const reGoogleFont = /https:\/\/fonts\.googleapis\.com\/*$/;
+  const reCdnFont = /https:\/\/cdnjs\.cloudflare\.com\/.*css$/;
+  //const reGoogleFont = /https:\/\/fonts\.googleapis\.com\/*$/;
   const reCdnStyles = /https:\/\/stackpath\.bootstrapcdn\.com\/.*\.css$/;
 
   // set a prefix & suffix so local host caches remain unique
@@ -61,7 +61,9 @@ if (workbox) {
 
   const precacheCacheName = workbox.core.cacheNames.precache;
 
-  // use stale cached cdn font files while downloading new
+  // CDN Fonts:
+  // use stale cached files while downloading new for next time
+  // set the max age of the cached files
 
   workbox.routing.registerRoute(
     reCdnFont,
@@ -78,11 +80,6 @@ if (workbox) {
     }),
   );
 
-  workbox.routing.registerRoute(
-    reGoogleFont,
-    new workbox.strategies.StaleWhileRevalidate(),
-  );
-
   // CDN styles:
   // use stale cached files while downloading new for next time
   // set the max age of the cached files
@@ -93,7 +90,7 @@ if (workbox) {
       cacheName: precacheCacheName,
       plugins: [
         new workbox.cacheableResponse.CacheableResponsePlugin({
-          maxAgeSeconds: maxAge10MinInSeconds,
+          maxAgeSeconds: maxAge1DayInSeconds,
         }),
         new workbox.cacheableResponse.CacheableResponsePlugin({
           statuses: [httpReponseOk],
@@ -121,11 +118,12 @@ if (workbox) {
   // Images:
   // use stale cached files while downloading new for next time
   // set the max age of the cached files
+  // use different cache for images
 
   workbox.routing.registerRoute(
     reImages,
     new workbox.strategies.StaleWhileRevalidate({
-      cacheName: precacheCacheName,
+      cacheName: `${precacheCacheName}-images`,
       plugins: [
         new workbox.cacheableResponse.CacheableResponsePlugin({
           maxAgeSeconds: maxAge10MinInSeconds,
@@ -157,7 +155,6 @@ if (workbox) {
             'styles/case-syllabus.css',
             'styles/active-checks.css',
             'scripts/main.js',
-            'scripts/register-sw.js',
             'scripts/active-checks.js',
             'web-components/nw-syllabus-footer.js',
             'web-components/nw-syllabus-header.js',
