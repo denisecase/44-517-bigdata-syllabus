@@ -48,7 +48,7 @@ if (workbox) {
   const reStatic = /\.(?:js|css|html)$/;
   const reImages = /\.(?:png|gif|jpg|jpeg|webp|svg)$/;
   const reCdnFont = /https:\/\/cdnjs\.cloudflare\.com\/.*css$/;
-  //const reGoogleFont = /https:\/\/fonts\.googleapis\.com\/*$/;
+  // const reGoogleFont = /https:\/\/fonts\.googleapis\.com\/*$/;
   const reCdnStyles = /https:\/\/stackpath\.bootstrapcdn\.com\/.*\.css$/;
 
   // set a prefix & suffix so local host caches remain unique
@@ -159,7 +159,7 @@ if (workbox) {
             'web-components/nw-syllabus-footer.js',
             'web-components/nw-syllabus-header.js',
             'web-components/nw-syllabus-nw-standard.js',
-            'web-components/nw-syllabus-modules-outline.js',
+            'web-components/nw-syllabus-outline.js',
             'web-components/nw-syllabus-professor.js',
             'web-components/nw-syllabus-professor-standard.js',
             'web-components/nw-syllabus-schedule.js',
