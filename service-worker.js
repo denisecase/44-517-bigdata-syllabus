@@ -152,9 +152,10 @@ if (workbox) {
             'web-components/nw-syllabus-footer.js',
             'web-components/nw-syllabus-header.js',
             'web-components/nw-syllabus-nw-standard.js',
-            'web-components/nw-syllabus-outline.js',
+            'web-components/nw-syllabus-modules-outline.js',
             'web-components/nw-syllabus-professor.js',
             'web-components/nw-syllabus-professor-standard.js',
+            'web-components/nw-syllabus-schedule.js',
           ]),
         )
         .catch((error) => {
