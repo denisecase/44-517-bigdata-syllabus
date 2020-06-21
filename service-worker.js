@@ -17,13 +17,15 @@
  * Use Chrome Dev Tools / Application / ServiceWorker to debug.
  * Check "update on reload" to force service worker update on page reload.
  *
- * Use Chrome Dev Tools / Audit to evaluate.
+ * Use Chrome Dev Tools / Lighthouse to evaluate.
  *
  * JSDoc comments are written in Markdown.
  *
- *  @author       Denise Case
+ * Use shorter cache times during active development.
  *
- * @requires     EXTERNAL:@link{https://storage.googleapis.com/workbox-cdn/releases/5.1.2/workbox-sw.js}
+ * @author  Denise Case
+ *
+ * @requires EXTERNAL:@link{https://storage.googleapis.com/workbox-cdn/releases/5.1.2/workbox-sw.js}
  */
 
 // eslint-disable-next-line no-undef
@@ -36,11 +38,10 @@ if (workbox) {
 
   const appName = '44-517-bigdata-syllabus';
   const appVersion = 'v1';
-  const maxAgeDay = 1 * 24 * 60 * 60;
-  const maxAgeWeek = maxAgeDay * 7;
-  const maxEntries = 60; // limit to 60 items
-  // eslint-disable-next-line no-unused-vars
-  const httpResponseOpaque = 0; // CORS
+  const maxAge10MinInSeconds = 10 * 60;
+  // const maxAge1Day_inSeconds = 1 * 24 * 60 * 60;
+  // const maxAge1Week_inSeconds = maxAgeDay * 7;
+  // const httpResponseOpaque = 0; // CORS
   const httpReponseOk = 200; // good
 
   // test Regular Expressions at https://regexr.com/
@@ -64,26 +65,11 @@ if (workbox) {
 
   workbox.routing.registerRoute(
     reCdnFont,
-    new workbox.strategies.StaleWhileRevalidate(),
-  );
-
-  workbox.routing.registerRoute(
-    reGoogleFont,
-    new workbox.strategies.StaleWhileRevalidate(),
-  );
-
-  // use stale cached cdn style files while downloading new
-  // set the max age of the cached files and the max number of entries it can hold
-
-  workbox.routing.registerRoute(
-    reCdnStyles,
     new workbox.strategies.StaleWhileRevalidate({
       cacheName: precacheCacheName,
       plugins: [
         new workbox.cacheableResponse.CacheableResponsePlugin({
-          maxAgeSeconds: maxAgeWeek,
-          maxEntries,
-          purgeOnQuotaError: true,
+          maxAgeSeconds: maxAge10MinInSeconds,
         }),
         new workbox.cacheableResponse.CacheableResponsePlugin({
           statuses: [httpReponseOk],
@@ -92,7 +78,33 @@ if (workbox) {
     }),
   );
 
-  // Use stale local static files (js/css) while downloading new
+  workbox.routing.registerRoute(
+    reGoogleFont,
+    new workbox.strategies.StaleWhileRevalidate(),
+  );
+
+  // CDN styles:
+  // use stale cached files while downloading new for next time
+  // set the max age of the cached files
+
+  workbox.routing.registerRoute(
+    reCdnStyles,
+    new workbox.strategies.StaleWhileRevalidate({
+      cacheName: precacheCacheName,
+      plugins: [
+        new workbox.cacheableResponse.CacheableResponsePlugin({
+          maxAgeSeconds: maxAge10MinInSeconds,
+        }),
+        new workbox.cacheableResponse.CacheableResponsePlugin({
+          statuses: [httpReponseOk],
+        }),
+      ],
+    }),
+  );
+
+  // Static assets:
+  // use stale cached files while downloading new for next time
+  // set the max age of the cached files
 
   workbox.routing.registerRoute(
     reStatic,
@@ -100,25 +112,23 @@ if (workbox) {
       cacheName: precacheCacheName,
       plugins: [
         new workbox.cacheableResponse.CacheableResponsePlugin({
-          maxAgeSeconds: maxAgeDay,
-          maxEntries,
-          purgeOnQuotaError: true,
+          maxAgeSeconds: maxAge10MinInSeconds,
         }),
       ],
     }),
   );
 
-  // Fetch images, try local cache first
+  // Images:
+  // use stale cached files while downloading new for next time
+  // set the max age of the cached files
 
   workbox.routing.registerRoute(
     reImages,
-    new workbox.strategies.CacheFirst({
+    new workbox.strategies.StaleWhileRevalidate({
       cacheName: precacheCacheName,
       plugins: [
         new workbox.cacheableResponse.CacheableResponsePlugin({
-          maxAgeSeconds: maxAgeWeek, // keep images for a week
-          maxEntries,
-          purgeOnQuotaError: true,
+          maxAgeSeconds: maxAge10MinInSeconds,
         }),
       ],
     }),
