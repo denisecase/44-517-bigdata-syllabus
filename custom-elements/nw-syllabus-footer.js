@@ -12,9 +12,9 @@ class nwSyllabusFooter extends HTMLElement {
       'siteURL',
     )}>Site</a>
     &nbsp; &#9670; &nbsp;
-    <a target="_blank" rel="noopener" href=${this.getAttribute(
+    <a class="btn btn-light btn-sm" href=${this.getAttribute(
       'sourceURL',
-    )}>Source</a>
+    )} target="_blank" rel="nofollow" role="button">Star us on github<i class="fab fa-github ml-1"></i></a>
   </footer>
     `;
   }
