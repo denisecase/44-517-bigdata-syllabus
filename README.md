@@ -4,6 +4,7 @@
 [![MIT Licensed](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 ![GitHub repo size](https://img.shields.io/github/repo-size/denisecase/44-517-bigdata-syllabus?style=flat)
 [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
+[![Code Style](https://badgen.net/badge/code%20style/airbnb/ff5a5f?icon=airbnb)](https://github.com/airbnb/javascript)
 
 [![Lighthouse Performance Badge](./test_results/lighthouse_performance.svg)](https://github.com/emazzotta/lighthouse-badges)
 [![Lighthouse Accessibility Badge](./test_results/lighthouse_accessibility.svg)](https://github.com/emazzotta/lighthouse-badges)
