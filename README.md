@@ -86,6 +86,10 @@ Analytics
 
 - [Google Analytics](https://analytics.google.com/analytics/web/)
 
+Speech Synthesis
+
+- [Built-in Speech Synthesis](SpeechSynthesisUtterance)
+
 As Needed
 
 - [Tables Generator (HTML)](https://www.tablesgenerator.com/html_tables)

@@ -37,7 +37,7 @@ class nwSyllabusHeader extends HTMLElement {
         <!-- Right Search - input group by itself makes it look nice -->
         <div class="input-group"></div>
   
-        <input name="keyword" class="form-control mr-sm-2 my-1" type="text"
+        <input id="keyword" name="keyword" class="form-control mr-sm-2 my-1" type="text"
           placeholder="Search" aria-label="Search" />
         <button class="btn btn-outline-success " id="count">0</button>
         <button class="btn btn-success " id="reset">&#8634;</button>

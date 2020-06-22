@@ -3,6 +3,7 @@
  * @name case-syllabus
  * @author Denise Case
  * @requires @https://markjs.io/
+ * @uses SpeechSynthesisUtterance
  */
 
 document.querySelector('#sap-icon').addEventListener('click', () => {
@@ -16,31 +17,30 @@ document.querySelector('#sap-icon').addEventListener('click', () => {
   window.speechSynthesis.speak(utterance2);
 });
 
-const btnClear = document.querySelector('#reset');
-const btnCount = document.querySelector('#count');
-const inputElement = document.querySelector('#keyword');
-
-btnClear.addEventListener('click', () => {
-  inputElement.value = ' ';
-  inputElement.focus();
-  found.unmark();
-});
-
-const mark = () => {
-  const searchVal = document.querySelector("input[name='keyword']").value;
+document.querySelector('#reset').addEventListener('click', () => {
+  document.querySelector('#keyword').value = '';
+  document.querySelector('#keyword').focus();
   const context = document.querySelector('.context');
   // eslint-disable-next-line no-undef
-  const instance = new Mark(context);
-  instance.unmark({
-    done: () => {
-      instance.mark(searchVal, {
-        separateWordSearch: true,
-        done: (count) => {
-          btnCount.html(count.toString());
-        },
-      });
-    },
-  });
-};
+  const markInstance = new Mark(context);
+  markInstance.unmark();
+});
 
-document.querySelector("input[name='keyword']").addEventListener('input', mark);
+document
+  .querySelector("input[name='keyword']")
+  .addEventListener('input', () => {
+    const searchVal = document.querySelector("input[name='keyword']").value;
+    const context = document.querySelector('.context');
+    // eslint-disable-next-line no-undef
+    const markInstance = new Mark(context);
+    markInstance.unmark({
+      done: () => {
+        markInstance.mark(searchVal, {
+          separateWordSearch: true,
+          done: (count) => {
+            document.querySelector('#count').innerHTML = count.toString();
+          },
+        });
+      },
+    });
+  });
