@@ -57,6 +57,7 @@ Code Tools
 - [Prettier](https://prettier.io/) - formats JavaScript, CSS, JSON, and more
 - [ESLint](https://eslint.org/docs/user-guide/getting-started) - linting
 - [Sort package.json](https://www.npmjs.com/package/sort-package-json) - consistant, std format
+- [Mark.js](https://markjs.io/) - JS keyword highlighter
 
 Responsive Design
 
@@ -91,6 +92,7 @@ As Needed
 - [PurifyCSS](https://github.com/purifycss/purifycss) - reduce size
 - [PurifyCSS](https://purifycss.online/) - online
 - [Icons8](https://icons8.com)
+- [JSDoc](https://jsdoc.app/)
 - [JsDoc Cheatsheet](https://devhints.io/jsdoc)
 - [Test JavaScript Regular Expressions](https://regexr.com/)
 - [Code styles guide](https://medium.com/@uistephen/style-guides-for-linting-ecmascript-2015-eslint-common-google-airbnb-6c25fd3dff0)

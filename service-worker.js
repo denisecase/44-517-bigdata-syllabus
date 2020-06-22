@@ -155,7 +155,7 @@ if (workbox) {
             'init-outline.js',
             'init-outcomes.js',
             'styles/case-syllabus.css',
-            'scripts/main.js',
+            'scripts/case-syllabus.js',
             'scripts/active-checks.js',
             'custom-elements/nw-syllabus-footer.js',
             'custom-elements/nw-syllabus-header.js',
