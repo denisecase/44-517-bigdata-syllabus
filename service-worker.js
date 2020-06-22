@@ -161,6 +161,7 @@ if (workbox) {
             'custom-elements/nw-syllabus-footer.js',
             'custom-elements/nw-syllabus-header.js',
             'custom-elements/nw-syllabus-nw-standard.js',
+            'custom-elements/nw-syllabus-outcomes-list.js',
             'custom-elements/nw-syllabus-outline.js',
             'custom-elements/nw-syllabus-professor.js',
             'custom-elements/nw-syllabus-professor-standard.js',
