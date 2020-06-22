@@ -1,82 +1,53 @@
+/* eslint-disable no-param-reassign */
 /**
  * See original at:
  * https://bootsnipp.com/snippets/featured/checked-list-group
  */
 
-(($) => {
-  // eslint-disable-next-line space-before-function-paren
-  $('.list-group-item').each(function update() {
-    const widget = $(this);
-    const $checkbox = $('<input type="checkbox" class="hidden" />');
-    const color = widget.data('color') ? widget.data('color') : 'primary';
-    const style =
-      widget.data('style') === 'button' ? 'btn-' : 'list-group-item-';
-    const settings = {
-      on: { icon: 'fa fa-check-square' },
-      off: { icon: 'far fa-square' },
-    };
+(() => {
+  /** Iterate over all list-group-item elements */
+  document
+    .querySelectorAll('.requirement-li')
+    // eslint-disable-next-line no-unused-vars
+    .forEach((requirementListItem, index) => {
+      const liClassChecked =
+        'list-group-item list-group-item-action list-group-item-primary active';
+      const liClassUnchecked = 'list-group-item list-group-item-action';
+      const cbClassChecked = 'state-icon fa fa-check-square';
+      const cbClassUnchecked = 'state-icon far fa-square';
 
-    widget.css('cursor', 'pointer');
-    widget.append($checkbox);
+      // create an init function & then call it as we load
 
-    // Actions
-    function updateDisplay() {
-      const isChecked = $checkbox.is(':checked');
-
-      // Set the button's state
-      widget.data('state', isChecked ? 'on' : 'off');
-
-      // Set the button's icon
-      widget
-        .find('.state-icon')
-        .removeClass()
-        .addClass(`state-icon ${settings[widget.data('state')].icon}`);
-
-      // Update the button's color
-      if (isChecked) {
-        widget.addClass(`${style + color} active`);
-      } else {
-        widget.removeClass(`${style + color} active`);
-      }
-    }
-
-    // Event Handlers
-    widget.on('click', () => {
-      $checkbox.prop('checked', !$checkbox.is(':checked'));
-      $checkbox.triggerHandler('change');
-      updateDisplay();
-    });
-    $checkbox.on('change', () => {
-      updateDisplay();
-    });
-
-    // Initialization
-    function init() {
-      if (widget.data('checked') === true) {
-        $checkbox.prop('checked', !$checkbox.is(':checked'));
-      }
-      updateDisplay();
-
-      // Inject the icon if applicable
-      if (widget.find('.state-icon').length === 0) {
-        widget.prepend(
-          `<span class="state-icon ${
-            settings[widget.data('state')].icon
-          }"></span>`,
+      function init() {
+        const newCheckBox = document.createElement('span');
+        const isStoredAsChecked =
+          localStorage.getItem(requirementListItem.id) ?? false;
+        if (isStoredAsChecked) {
+          requirementListItem.className = liClassChecked;
+          newCheckBox.className = cbClassChecked;
+        } else {
+          requirementListItem.className = liClassUnchecked;
+          newCheckBox.className = cbClassUnchecked;
+        }
+        requirementListItem.insertBefore(
+          newCheckBox,
+          requirementListItem.firstChild,
         );
       }
-    }
-    init();
-  });
+      init();
 
-  $('#get-checked-data').on('click', (event) => {
-    event.preventDefault();
-    const checkedItems = {};
-    let counter = 0;
-    $('#check-list-box li.active').each((idx, li) => {
-      checkedItems[counter] = $(li).text();
-      counter += 1;
+      requirementListItem.addEventListener('click', () => {
+        const wasChecked =
+          localStorage.getItem(requirementListItem.id) === 'true';
+        const isNowChecked = !wasChecked;
+        localStorage.setItem(requirementListItem.id, isNowChecked);
+        if (isNowChecked === true) {
+          requirementListItem.className = liClassChecked;
+          requirementListItem.firstChild.className = cbClassChecked;
+        } else {
+          requirementListItem.className = liClassUnchecked;
+          requirementListItem.firstChild.className = cbClassUnchecked;
+        }
+      });
     });
-    $('#display-json').html(JSON.stringify(checkedItems, null, '\t'));
-  });
-})(jQuery);
+})();

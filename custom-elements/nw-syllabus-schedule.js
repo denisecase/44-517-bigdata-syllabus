@@ -89,17 +89,17 @@ class nwSyllabusSchedule extends HTMLElement {
 <tr class="d-flex">
 <td class="col-2 ">15</td>
 <td class="col-4 ">Mon 11-23</td>
-<td class="col-6 ">Thanksgiving break (no class)</td>
+<td class="col-6 ">Thanksgiving break (no class Wed-Thr-Fri)</td>
 </tr>
 <tr class="d-flex">
 <td class="col-2 ">16</td>
 <td class="col-4 ">Mon 1-30</td>
-<td class="col-6 ">Prep week (no new content)</td>
+<td class="col-6 ">Online prep week (no new content, no in-person classes)</td>
 </tr>
 <tr class="d-flex">
 <td class="col-2 ">17</td>
 <td class="col-4 ">Mon 12-7</td>
-<td class="col-6 ">Finals week (no late submissions)</td>
+<td class="col-6 ">Online finals week (no late submissions)</td>
 </tr>
 
 </table>
