@@ -63,6 +63,8 @@ Responsive Design
 - [Bootstrap](https://getbootstrap.com/) - responsive design
 - [Material Design for Bootstrap](https://mdbootstrap.com/) - nice looking styles, great tutorials
 - [Bootstrap 5 alpha](https://mdbootstrap.com/docs/standard/bootstrap-5/) - drops jQuery
+- [CSS Variables](https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties) (custom properties)
+- [2020 JavaScript](https://auth0.com/blog/javascript-whats-new-es2020/) - dynamic imports, ??, and more
 
 Audits
 

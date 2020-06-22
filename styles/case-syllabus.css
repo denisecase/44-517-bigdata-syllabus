@@ -7,13 +7,17 @@
     url('../fonts/roboto-v20-latin-regular.woff2') format('woff2'); /* Chrome 26+, Opera 23+, Firefox 39+ */
 }
 
+:root {
+  --nw-green: #006747;
+}
+
 a {
-  color: #006747;
+  color: var(--nw-green);
 }
 
 h2 {
   margin-top: 2rem;
-  color: #006747;
+  color: var(--nw-green);
 }
 
 h3 {
@@ -37,7 +41,7 @@ code {
 }
 
 .bg-nw-green {
-  background-color: #006747 !important;
+  background-color: var(--nw-green) !important;
 }
 
 .highlight {
@@ -70,12 +74,12 @@ code {
   border-width: 1px;
   overflow: hidden;
   border-color: darkgrey;
-  background-color: #006747;
+  background-color: var(--nw-green);
   color: white;
 }
 
 .thead-dark {
-  background-color: #006747;
+  background-color: var(--nw-green);
   color: white;
 }
 
@@ -113,4 +117,24 @@ input {
 .tap-target-li {
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
+}
+
+.state-icon {
+  margin-left: -5px;
+  margin-right: 5px;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+.list-group-item-primary {
+  color: rgb(255, 255, 255);
+  background-color: var(--nw-green) !important;
+}
+
+.list-group-item-primary > a {
+  color: rgb(255, 255, 255);
+  background-color: var(--nw-green) !important;
+  text-decoration: underline;
 }
