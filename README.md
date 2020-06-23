@@ -17,15 +17,12 @@
 - Assistant Professor
 - Northwest Missouri State University
 
-## Links
-
 - Site: <https://denisecase.github.io/44-517-bigdata-syllabus>
 - Source: <https://github.com/denisecase/44-517-bigdata-syllabus>
 
 ## Table of Contents
 
 - [<a href="https://denisecase.github.io/44-517-bigdata-syllabus/" rel="nofollow">44-517 Big Data Syllabus</a>](#44-517-big-data-syllabus)
-  - [Links](#links)
   - [Table of Contents](#table-of-contents)
   - [Prerequistes](#prerequistes)
   - [Recommended](#recommended)
@@ -45,7 +42,7 @@ Created by [gh-md-toc](https://github.com/ekalinin/github-markdown-toc)
 
 ## Prerequistes
 
-- [Follow these guides for Windows users](https://denisecase.github.io/windows-dev-list/) to get set up for development.
+- [If Windows 10, first follow this guide](https://denisecase.github.io/windows-setup/) to get your computer ready for development.
 
 ## Recommended
 

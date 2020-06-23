@@ -31,29 +31,20 @@
     "lint-fix": "eslint --fix .",
     "prettier": "prettier --write .",
     "sort": "npx npx sort-package-json",
+    "toc": "bash ./tools/gh-md-toc.sh ./README.md > ./tools/toc.md",
     "test": "npx lighthouse-badges --urls https://denisecase.github.io/44-517-bigdata-syllabus/ -o test_results"
   },
   "husky": {
     "hooks": {
-      "pre-commit": "pretty-quick --staged && npm run sort && npm run lint-fix",
+      "pre-commit": "npm run toc && echo npm run splice-readme && pretty-quick --staged && npm run sort && npm run lint-fix",
       "pre-push": "echo not running tests"
     }
   },
   "prettier": {
     "semi": true,
     "singleQuote": true,
-    "trailingComma": "all",
-    "overrides": [
-      {
-        "files": [
-          "*.html",
-          "*.js*",
-          "*.md",
-          "web-components/*.js",
-          "scripts/*.js"
-        ]
-      }
-    ]
+    "tabWidth": 2,
+    "trailingComma": "all"
   },
   "eslintConfig": {
     "env": {

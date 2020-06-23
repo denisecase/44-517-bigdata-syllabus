@@ -150,7 +150,6 @@ if (workbox) {
         .open(precacheCacheName)
         .then((cache) =>
           cache.addAll([
-            '.',
             'index.html',
             'init-outline.js',
             'init-outcomes.js',
