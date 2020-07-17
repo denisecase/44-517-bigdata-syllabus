@@ -74,7 +74,7 @@
     "globals": {
       "$": true,
       "found": true,
-      "jQuery": true,
+      "google": true,
       "workbox": true
     }
   },
