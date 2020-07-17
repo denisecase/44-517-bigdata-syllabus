@@ -1,6 +1,6 @@
 # Table of Contents
 
-- [<a href="https://denisecase.github.io/44-517-bigdata-syllabus/" rel="nofollow">44-517 Big Data Syllabus</a>](#44-517-big-data-syllabus)
+- [<a href="https://denisecase.github.io/44-517-bigdata-syllabus/" rel="noopener">44-517 Big Data Syllabus</a>](#44-517-big-data-syllabus)
   - [Table of Contents](#table-of-contents)
   - [Prerequistes](#prerequistes)
   - [Recommended](#recommended)

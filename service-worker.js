@@ -45,8 +45,9 @@ if (workbox) {
   // test Regular Expressions at https://regexr.com/
   const reStatic = /\.(?:js|css|html)$/;
   const reImages = /\.(?:png|gif|jpg|jpeg|webp|svg)$/;
-  const reCdnFont = /https:\/\/cdnjs\.cloudflare\.com\/.*css$/;
-  const reCdnStyles = /https:\/\/stackpath\.bootstrapcdn\.com\/.*\.css$/;
+  const reCdnFont = /https:\/\/fonts\.googleapis\.com\/.*css*/;
+  const reCdnStyles = /https:\/\/cdnjs\.cloudflare\.com\/.*\.css$/;
+  const reCdnFontAwesome = /https:\/\/use\.fontawesome\.com\/.*css$/;
 
   // set a prefix & suffix so local host caches remain unique
   workbox.core.setCacheNameDetails({
@@ -83,6 +84,25 @@ if (workbox) {
 
   workbox.routing.registerRoute(
     reCdnStyles,
+    new workbox.strategies.StaleWhileRevalidate({
+      cacheName: precacheCacheName,
+      plugins: [
+        new workbox.cacheableResponse.CacheableResponsePlugin({
+          maxAgeSeconds: maxAge1DayInSeconds,
+        }),
+        new workbox.cacheableResponse.CacheableResponsePlugin({
+          statuses: [httpReponseOk],
+        }),
+      ],
+    }),
+  );
+
+  // Fontawesome:
+  // use stale cached files while downloading new for next time
+  // set the max age of the cached files
+
+  workbox.routing.registerRoute(
+    reCdnFontAwesome,
     new workbox.strategies.StaleWhileRevalidate({
       cacheName: precacheCacheName,
       plugins: [
