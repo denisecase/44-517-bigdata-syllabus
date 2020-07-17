@@ -2,6 +2,9 @@ class nwSyllabusProfessor extends HTMLElement {
   constructor() {
     super();
     this.innerHTML = `
+    <br>(<a rel="noopener" target="_blank"
+    href="https://www.nwmissouri.edu/services/facility/pdf/floorplans/Colden%20Hall%201st%20Floor.pdf">map</a>)
+    
 <h2>Course Professor</h2>
 
 Dr. Denise Case

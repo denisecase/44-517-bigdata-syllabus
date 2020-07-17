@@ -40,15 +40,12 @@ if (workbox) {
   const appVersion = 'v1';
   const maxAge10MinInSeconds = 10 * 60;
   const maxAge1DayInSeconds = 1 * 24 * 60 * 60;
-  // const maxAge1Week_inSeconds = maxAgeDay * 7;
-  // const httpResponseOpaque = 0; // CORS
   const httpReponseOk = 200; // good
 
   // test Regular Expressions at https://regexr.com/
   const reStatic = /\.(?:js|css|html)$/;
   const reImages = /\.(?:png|gif|jpg|jpeg|webp|svg)$/;
   const reCdnFont = /https:\/\/cdnjs\.cloudflare\.com\/.*css$/;
-  // const reGoogleFont = /https:\/\/fonts\.googleapis\.com\/*$/;
   const reCdnStyles = /https:\/\/stackpath\.bootstrapcdn\.com\/.*\.css$/;
 
   // set a prefix & suffix so local host caches remain unique
