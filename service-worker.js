@@ -168,12 +168,15 @@ if (workbox) {
         .then((cache) =>
           cache.addAll([
             'index.html',
+            'init-contributions.js',
             'init-outline.js',
             'init-outcomes.js',
             'styles/case-syllabus.css',
             'scripts/case-syllabus.js',
             'scripts/active-checks.js',
+            'custom-elements/nw-syllabus-contributions.js',
             'custom-elements/nw-syllabus-footer.js',
+            'custom-elements/nw-syllabus-grade-scale-standard.js',
             'custom-elements/nw-syllabus-header.js',
             'custom-elements/nw-syllabus-nw-standard.js',
             'custom-elements/nw-syllabus-outcomes-list.js',
