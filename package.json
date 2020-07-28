@@ -47,13 +47,13 @@
     "trailingComma": "all"
   },
   "remarkConfig": {
+    "plugins": [
+      "remark-preset-lint-recommended"
+    ],
     "settings": {
       "listItemIndent": "1",
       "skipOffline": true
-    },
-    "plugins": [
-      "remark-preset-lint-recommended"
-    ]
+    }
   },
   "devDependencies": {
     "eslint": "latest",
