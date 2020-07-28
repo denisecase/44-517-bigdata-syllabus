@@ -46,6 +46,12 @@
     "tabWidth": 2,
     "trailingComma": "all"
   },
+  "remarkConfig": {
+    "plugins": [
+      "remark-preset-lint-recommended"
+    ],
+    "skipOffline": true
+  },
   "devDependencies": {
     "eslint": "latest",
     "eslint-config-airbnb-base": "latest",
@@ -54,6 +60,7 @@
     "prettier": "latest",
     "prettier-eslint": "latest",
     "pretty-quick": "latest",
+    "remark-lint": "latest",
     "sort-package-json": "latest"
   }
 }
