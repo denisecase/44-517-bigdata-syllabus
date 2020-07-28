@@ -72,7 +72,7 @@ class nwSyllabusProfessorStandard extends HTMLElement {
           a 0 on the assignment, 
           a one-half letter grade reduction, 
           a 0 in the course, 
-          or a failing the course with an academic integrity violation.
+          or failing the course with an academic integrity violation.
         </li>
       </ol>
     </div>
