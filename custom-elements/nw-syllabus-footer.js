@@ -2,7 +2,7 @@
  * A custom HTML element class for a standard syllabus footer.
  * @class nwSyllabusFooter
  * @extends HTMLElement
- * @uses RegExp - replaces any character not matching the allowed characters
+ * @uses RegExp - replaces any character not matching the allowed characters (escapes the .)
  * @author Denise Case
  * @attribute {string} siteURL The web address (URL) of the interactive syllabus.
  * @attribute {string} sourceURL The web address (URL) of the source code repository.
@@ -11,11 +11,11 @@ class nwSyllabusFooter extends HTMLElement {
   constructor() {
     super();
     const siteURL = this.getAttribute('siteURL').replace(
-      /[^:/a-zA-Z0-9-, ]/g,
+      /[^:/.a-zA-Z0-9-, ]/g,
       '',
     );
     const sourceURL = this.getAttribute('sourceURL').replace(
-      /[^:/a-zA-Z0-9-, ]/g,
+      /[^:/.a-zA-Z0-9-, ]/g,
       '',
     );
     this.innerHTML = `
