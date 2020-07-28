@@ -58,12 +58,12 @@
   "devDependencies": {
     "eslint": "latest",
     "eslint-config-airbnb-base": "latest",
+    "eslint-config-prettier": "latest",
     "eslint-plugin-import": "latest",
     "eslint-plugin-scanjs-rules": "latest",
     "eslint-plugin-xss": "latest",
     "husky": "latest",
     "prettier": "latest",
-    "prettier-eslint": "latest",
     "pretty-quick": "latest",
     "remark-lint": "latest",
     "sort-package-json": "latest"
