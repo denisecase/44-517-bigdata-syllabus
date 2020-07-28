@@ -2,15 +2,15 @@
 
 ## Security is Critical
 
-This project is a program. 
-It reads data from source files to create custom versions. 
-All programs should be considered potential security issues. 
-When working on custom versions, follow secure coding practices. 
-Carefully review all propsed modifications before merging..
+This project is a program.
+It reads data from source files to create custom versions.
+All programs may introduce potential security issues.
+When working on custom versions, follow secure coding practices.
+Carefully review all propsed modifications before merging.
 
 ## Dependencies
 
-This project uses code from reputable external sources. 
+This project uses code from reputable external sources.
 The project uses automated tools to scan for third-party issues and help mitigate potential vulnerabilites.
 
 ## Reporting a Vulnerability

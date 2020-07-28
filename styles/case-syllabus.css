@@ -48,6 +48,11 @@ code {
   background-color: yellow;
 }
 
+td,
+th {
+  word-break: break-all;
+}
+
 .tg {
   border-collapse: collapse;
   border-spacing: 0;
@@ -83,11 +88,6 @@ code {
   color: white;
 }
 
-td,
-th {
-  word-break: break-all;
-}
-
 mark {
   background: rgb(0, 255, 34);
 }
@@ -103,7 +103,6 @@ mark {
   display: flex;
   flex-direction: column;
   flex-basis: 100%;
-  flex: 1;
 }
 
 .contribution-row {
