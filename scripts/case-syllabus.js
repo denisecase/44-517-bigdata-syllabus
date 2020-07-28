@@ -1,21 +1,9 @@
 /**
- * Code for working with interactive syllabus.
+ * Code for working with search features in the interactive syllabus.
  * @name case-syllabus
  * @author Denise Case
  * @requires @https://markjs.io/
- * @uses SpeechSynthesisUtterance
  */
-
-document.querySelector('#sap-icon').addEventListener('click', () => {
-  const heading = document.querySelector('#sap-head').innerHTML;
-  const content = document.querySelector('#sap-content').innerHTML;
-  const utterance1 = new SpeechSynthesisUtterance();
-  const utterance2 = new SpeechSynthesisUtterance();
-  utterance1.text = heading;
-  utterance2.text = content;
-  window.speechSynthesis.speak(utterance1);
-  window.speechSynthesis.speak(utterance2);
-});
 
 document.querySelector('#reset').addEventListener('click', () => {
   document.querySelector('#keyword').value = '';

@@ -1,3 +1,9 @@
+/**
+ * A custom HTML element class to display course grading scale.
+ * @class nwSyllabusGradeScaleStandard
+ * @extends HTMLElement
+ * @author Denise Case
+ */
 class nwSyllabusGradeScaleStandard extends HTMLElement {
   constructor() {
     super();
