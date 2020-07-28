@@ -46,37 +46,6 @@
     "tabWidth": 2,
     "trailingComma": "all"
   },
-  "eslintConfig": {
-    "env": {
-      "browser": true,
-      "es2020": true,
-      "node": true
-    },
-    "parserOptions": {
-      "ecmaVersion": 11,
-      "sourceType": "module"
-    },
-    "extends": [
-      "airbnb-base"
-    ],
-    "rules": {
-      "no-console": [
-        "error",
-        {
-          "allow": [
-            "warn",
-            "error"
-          ]
-        }
-      ],
-      "import/extensions": 0
-    },
-    "globals": {
-      "$": true,
-      "found": true,
-      "google": true
-    }
-  },
   "devDependencies": {
     "eslint": "latest",
     "eslint-config-airbnb-base": "latest",

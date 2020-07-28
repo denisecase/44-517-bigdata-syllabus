@@ -73,9 +73,11 @@ export default class nwSyllabusContributions extends HTMLElement {
 
     // pie chart.........................................
 
+    /* global google */
+
     // Draw the chart and set the chart values
     function drawChart() {
-      // Create the data table.
+      // Create the data table
       const data = new google.visualization.DataTable();
       data.addColumn('string', 'Contribution');
       data.addColumn('number', 'Percent');
