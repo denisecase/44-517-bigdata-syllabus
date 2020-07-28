@@ -6,7 +6,7 @@ This project is a program.
 It reads data from source files to create custom versions.
 All programs may introduce potential security issues.
 When working on custom versions, follow secure coding practices.
-Carefully review all propsed modifications before merging.
+Review all propsed modifications carefully before merging.
 
 ## Dependencies
 

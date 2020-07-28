@@ -142,9 +142,9 @@ Paste from the updated content into the Table of Contents section above.
 
 ## Progressive Web App
 
-This syllabus is a progressive web app and can be installed on mobile and other devices.
+This syllabus is a progressive web app, installable on mobile and other devices.
 
-Track your outcomes with local storage.
+Outcome completion is tracked using local storage.
 
 ## Semester Updates
 
@@ -179,7 +179,7 @@ Copy favicon.ico into the root project folder (the one that has the index.html f
 
 Full set of PWA icons built with [PWA Builder App Image Generator](https://www.pwabuilder.com/imageGenerator). Upload your largest favicon (e.g., the 512 size created above) and update settings as desired (these used 0.3 padding with custom color #006747). Check all the boxes. Click the button below the color option to generate a zipfile. Save the AppImages.zip file to images folder. Extract and delete the zipfile.
 
-Update icons property in manifest.json as needed (if the names are the same, updates can be copied from a reference project).
+Update icons property in manifest.json as needed (or copy from a similar project).
 
 ### Third, create additional Android icons (optional)
 
@@ -210,8 +210,8 @@ npm run lint-fix
 
 - Removing jQuery to increase performance
 - Moving to JavaScript modules
-- Shared custom elements using only JavaScript (components use general page styling)
-- Shared web components encapsulate their own styles (not currrently used)
+- Shared custom elements built with JavaScript
+- Possible: Moving to shared web components, which encapsulate their own styling (not currrently needed)
 
 ## See also
 
