@@ -56,6 +56,8 @@
     "eslint": "latest",
     "eslint-config-airbnb-base": "latest",
     "eslint-plugin-import": "latest",
+    "eslint-plugin-scanjs-rules": "latest",
+    "eslint-plugin-xss": "latest",
     "husky": "latest",
     "prettier": "latest",
     "prettier-eslint": "latest",

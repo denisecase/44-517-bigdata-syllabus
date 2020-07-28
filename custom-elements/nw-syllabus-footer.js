@@ -2,6 +2,7 @@
  * A custom HTML element class for a standard syllabus footer.
  * @class nwSyllabusFooter
  * @extends HTMLElement
+ * @uses encodeURI
  * @uses RegExp - replaces any character not matching the allowed characters (escapes the .)
  * @author Denise Case
  * @attribute {string} siteURL The web address (URL) of the interactive syllabus.
@@ -10,13 +11,11 @@
 class nwSyllabusFooter extends HTMLElement {
   constructor() {
     super();
-    const siteURL = this.getAttribute('siteURL').replace(
-      /[^:/.a-zA-Z0-9-, ]/g,
-      '',
+    const siteURL = encodeURI(
+      this.getAttribute('siteURL').replace(/[^:/.a-zA-Z0-9-, ]/g, ''),
     );
-    const sourceURL = this.getAttribute('sourceURL').replace(
-      /[^:/.a-zA-Z0-9-, ]/g,
-      '',
+    const sourceURL = encodeURI(
+      this.getAttribute('sourceURL').replace(/[^:/.a-zA-Z0-9-, ]/g, ''),
     );
     this.innerHTML = `
     <!-- Sticky footer with padding (py level 3) on y-axis (top and bottom) -->
