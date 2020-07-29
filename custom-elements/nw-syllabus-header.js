@@ -4,7 +4,8 @@ class nwSyllabusHeader extends HTMLElement {
     this.innerHTML = `
     <!-- Fixed navbar -->
     <nav
-      class="navbar navbar-expand-md navbar-dark fixed-top bg-dark bg-nw-green p-2">
+      class="navbar navbar-expand-md navbar-dark fixed-top bg-dark bg-nw-green 
+      p-2">
   
       <!-- Navbar brand -->
       <a rel="noopener" class="navbar-brand bg-nw-green"
@@ -37,15 +38,13 @@ class nwSyllabusHeader extends HTMLElement {
         <!-- Right Search - input group by itself makes it look nice -->
         <div class="input-group"></div>
   
-        <input id="keyword" name="keyword" class="form-control mr-sm-2 my-1" type="text"
-          placeholder="Search" aria-label="Search" />
+        <input id="keyword" name="keyword" class="form-control mr-sm-2 my-1" 
+        type="text" placeholder="Search" aria-label="Search" />
         <button class="btn btn-outline-success " id="count">0</button>
         <button class="btn btn-success " id="reset">&#8634;</button>
   
       </div>
-  
     </nav>
-  
     `;
   }
 }

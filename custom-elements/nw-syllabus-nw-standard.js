@@ -21,9 +21,12 @@ class nwSyllabusNWStandard extends HTMLElement {
 
       <h2>University Attendance Recommendations</h2>
 
-      Students are expected to attend all classes as specified in the course syllabi for each course. 
-      It is the responsibility of the student to promptly notify his or her instructor when unable to attend class. 
-      Students receiving veterans' benefits should consult with the coordinator of Veterans' Affairs 
+      Students are expected to attend all classes as specified in the 
+      course syllabi for each course. 
+      It is the responsibility of the student to promptly notify 
+      their instructor when unable to attend class. 
+      Students receiving veterans' benefits should consult with the 
+      coordinator of Veterans' Affairs 
       for the additional attendance requirements.
       
       Please review the 
@@ -58,7 +61,8 @@ class nwSyllabusNWStandard extends HTMLElement {
 
       Course content is provided via Canvas and Northwest Online. Access to
       Northwest Online is at
-      <a rel="noopener" href="https://nwmissouri.instructure.com/">https://nwmissouri.instructure.com/</a>.
+      <a rel="noopener" href="https://nwmissouri.instructure.com/">https://nwmissouri.instructure.com/
+      </a>.
 
       <h2>University Communications</h2>
 
@@ -85,20 +89,27 @@ class nwSyllabusNWStandard extends HTMLElement {
       academic dishonesty. You are responsible for reading this document and
       abiding by the guidelines described therein.
 
-      <h2 id="sap-head">Special Accommodations Policy <i class="fas fa-volume-up" id="sap-icon"></i></h2> 
+      <h2 id="sap-head">Special Accommodations Policy <i 
+      class="fas fa-volume-up" id="sap-icon"></i></h2> 
 
       <div id="sap-content">
-      Northwest Missouri State University complies with Section 504 of the Rehabilitation Act of 1973 and the 
-      Americans with Disabilities Act of 1990 (ADA) and the ADA Amendments Act of 2008 (ADAAA). 
-      If a student has a disability that qualifies under ADA/ADAAA and requires accommodations, 
-      they should contact the Office for Equity and Accessibility for information 
+      Northwest Missouri State University complies with 
+      Section 504 of the Rehabilitation Act of 1973 and the 
+      Americans with Disabilities Act of 1990 (ADA) and the 
+      ADA Amendments Act of 2008 (ADAAA). 
+      If a student has a disability that qualifies under ADA/ADAAA 
+      and requires accommodations, they should contact 
+      the Office for Equity and Accessibility for information 
       on appropriate policies and procedures at
       <a rel="noopener" href="tel:+16605621639">660.562.1639</a>
       or
-      <a rel="noopener" target="_top" href="mailto:ADA@nwmissouri.edu?Subject=Accomodations">ADA@nwmissouri.edu</a>. 
+      <a rel="noopener" target="_top" 
+        href="mailto:ADA@nwmissouri.edu?Subject=Accomodations">
+        ADA@nwmissouri.edu</a>. 
       For the university policy on disability accommodation refer to
-      <a rel="noopener" target="_blank"
-        href="http://www.nwmissouri.edu/policies/student/Disability-Accommodation.pdf">Disability-Accommodation.pdf</a>.
+      <a rel="noopener" target="_blank" href=
+       "http://www.nwmissouri.edu/policies/student/Disability-Accommodation.pdf"
+       >Disability-Accommodation.pdf</a>.
       </div>
 
       <h2>Non-Discrimination and Anti-Harrassment Policy</h2>
@@ -116,15 +127,15 @@ class nwSyllabusNWStandard extends HTMLElement {
       known as the Buckley Amendment), is a federal law which provides that
       colleges and universities will maintain the confidentiality of student
       education records. Please refer to the 
-      <a rel="noopener" target="_blank"
-      href="http://www.nwmissouri.edu/policies/academics/Family-Educational-Rights-and-Privacy-Act.pdf"> 
-      Family Educational Rights and Privacy Act (FERPA) Policy</a>
+      <a rel="noopener" target="_blank" href=
+      "http://www.nwmissouri.edu/policies/academics/Family-Educational-Rights-and-Privacy-Act.pdf"
+      >Family Educational Rights and Privacy Act (FERPA) Policy</a>
 
       <h2>Course Evaluation</h2>
 
       <p>
-        At the end of this course, you will be encouraged to complete a course
-        evaluation.
+        At the end of this course, 
+        you will be encouraged to complete a course evaluation.
       </p>
 
       <h2>Syllabus Subject to Change</h2>
@@ -134,9 +145,8 @@ class nwSyllabusNWStandard extends HTMLElement {
         students will be responsible for abiding by these changes.
       </p>
 
-      <br />
-      <br />
-
+      <br>
+      <br>
       `;
 
     document.querySelector('#sap-icon').addEventListener('click', () => {

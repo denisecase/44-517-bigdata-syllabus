@@ -64,9 +64,9 @@ export default class nwSyllabusContributions extends HTMLElement {
     const newKeyNode = document.createElement('td');
     newKeyNode.innerHTML = 'All';
     const newValueNode = document.createElement('td');
-    newValueNode.innerHTML = `${Object.values(cleanDataObject).reduce(
-      (sum, curr) => sum + curr,
-    )}%`;
+    newValueNode.innerHTML = `
+    ${Object.values(cleanDataObject).reduce((sum, curr) => sum + curr)}%
+    `;
     newTableRow.appendChild(newKeyNode);
     newTableRow.appendChild(newValueNode);
     this.querySelector('#contributions-table').appendChild(newTableRow);

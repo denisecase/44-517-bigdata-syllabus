@@ -40,12 +40,6 @@
       "pre-push": "echo not running tests"
     }
   },
-  "prettier": {
-    "semi": true,
-    "singleQuote": true,
-    "tabWidth": 2,
-    "trailingComma": "all"
-  },
   "remarkConfig": {
     "plugins": [
       "remark-preset-lint-recommended"
@@ -60,6 +54,7 @@
     "eslint-config-airbnb-base": "latest",
     "eslint-config-prettier": "latest",
     "eslint-plugin-import": "latest",
+    "eslint-plugin-prettier": "latest",
     "eslint-plugin-scanjs-rules": "latest",
     "eslint-plugin-xss": "latest",
     "husky": "latest",

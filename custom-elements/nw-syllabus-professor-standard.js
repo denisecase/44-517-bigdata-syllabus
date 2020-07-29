@@ -23,7 +23,8 @@ class nwSyllabusProfessorStandard extends HTMLElement {
 
     <ol>
       <li>
-      <span class="highlight">Email must include course number and section (e.g.,
+      <span class="highlight">
+      Email must include course number and section (e.g.,
         <strong>${this.getAttribute(
           'emailSubject',
         )}</strong>) in the subject line.</span>
@@ -38,7 +39,8 @@ class nwSyllabusProfessorStandard extends HTMLElement {
 
     <ol>
       <li>
-        Students will behave in a professional manner in all course interactions.
+        Students will behave in a professional manner 
+        in all course interactions.
       </li>
       <li>
         Devices including cell phones, ear phones, gadgets, and other items
@@ -52,22 +54,26 @@ class nwSyllabusProfessorStandard extends HTMLElement {
       <li>
         Be polite and respectful to others in the class. 
         Do not interrupt someone during a class discussion, 
-        and respect others' opinions/comments as you expect them to respect yours.
+        and respect others' opinions/comments 
+        as you expect them to respect yours.
       </li>
     </ol>
 
-    <h2 id="cite-head">Course Citation Requirements <i class="fas fa-volume-up" id="cite-icon"></i></h2>
+    <h2 id="cite-head">Course Citation Requirements <i 
+    class="fas fa-volume-up" id="cite-icon"></i></h2>
     <div id="cite-content">
       <ol>
         <li>
           <span class="highlight"><strong>Cite ALL Sources</strong>. 
-          You must provide proper citation for any content including text, images, videos, and code
+          You must provide proper citation for any content including text, 
+          images, videos, and code
           that you did not personally develop.</span>
         </li>
         <li>Do not copy and paste content for any submission.</li>
         <li>
           Failing to acknowledge assistance including 
-          internet photos, clipart, slide content, course files, shared solutions, etc. 
+          internet photos, clipart, slide content, course files, 
+          shared solutions, etc. 
           can be expected to result in 
           a 0 on the assignment, 
           a one-half letter grade reduction, 
@@ -86,7 +92,8 @@ class nwSyllabusProfessorStandard extends HTMLElement {
     Keeping up is critical. 
     On rare occasions, 
     special challenges or obligations may make it difficult to submit on time. 
-    You typically have a one-week grace period where the work may still be submitted and graded. 
+    You typically have a one-week grace period 
+    where the work may still be submitted and graded. 
     Late penalties will be described in the rubric. 
     <span class="highlight">
     No late submissions will be accepted for the final submission.
