@@ -11,10 +11,12 @@
         "tight": true
       }
     ],
-    "remark-lint-no-dead-urls",
-    {
-      "skipOffline": true
-    }
+    [
+      "remark-lint-no-dead-urls",
+      {
+        "skipOffline": true
+      }
+    ]
   ],
   "settings": {
     "listItemIndent": "1"
