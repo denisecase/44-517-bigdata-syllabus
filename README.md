@@ -217,3 +217,4 @@ npm run lint-fix
 
 - Source: <https://github.com/denisecase/44-563-webapps-syllabus>
 - Article: [Combining Prettier with ESLint + Airbnb Style Guide](https://blog.echobind.com/integrating-prettier-eslint-airbnb-style-guide-in-vscode-47f07b5d7d6a)
+- Article: Managing caching strategies with service workers - [The Offline Cookbook](https://developers.google.com/web/fundamentals/instant-and-offline/offline-cookbook)

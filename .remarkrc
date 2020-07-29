@@ -1,0 +1,22 @@
+{
+  "plugins": [
+    "remark-preset-lint-recommended",
+    [
+      "remark-lint-list-item-indent",
+      false
+    ],
+    [
+      "remark-toc",
+      {
+        "tight": true
+      }
+    ],
+    "remark-lint-no-dead-urls",
+    {
+      "skipOffline": true
+    }
+  ],
+  "settings": {
+    "listItemIndent": "1"
+  }
+}
