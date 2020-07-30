@@ -30,7 +30,8 @@ class nwSyllabusNWStandard extends HTMLElement {
       for the additional attendance requirements.
       
       Please review the 
-      <a rel="noopener" target="_blank" href="https://www.nwmissouri.edu/policies/academics/Attendance.pdf">
+      <a rel="noopener" target="_blank" href=
+      "https://www.nwmissouri.edu/policies/academics/Attendance.pdf">
       university policy on attendance</a>.
 
       <h2>Excused Absences</h2>
@@ -57,27 +58,47 @@ class nwSyllabusNWStandard extends HTMLElement {
       course as stated in the catalog, or as a result of non-attendance in the
       course.
 
+      <h2>Academic Administrative Withdrawal</h2>
+      
+      When it is in the best interest of Northwest Missouri State University 
+      for a student to withdraw, 
+      a student will be given a W, 
+      put on administrative hold, 
+      and given notice that they are about to be withdrawn. 
+      This action will result in removal of all credits associated with courses 
+      that have yet to be completed in the semester in question 
+      and the student will be administratively withdrawn from the University. 
+      An Administrative Withdrawal does not affect 
+      the student’s grade point average. 
+      Please refer to Northwest Missouri State University’s 
+      <a rel="noopener" target="_blank" href=
+      "https://www.nwmissouri.edu/policies/academics/Adding-Dropping-Withdrawals.pdf">
+      Academic Administrative Withdrawal Policy
+      </a>.
+
       <h2>Course Access</h2>
 
       Course content is provided via Canvas and Northwest Online. Access to
       Northwest Online is at
-      <a rel="noopener" href="https://nwmissouri.instructure.com/">https://nwmissouri.instructure.com/
+      <a rel="noopener" href="https://nwmissouri.instructure.com/">
+      https://nwmissouri.instructure.com/
       </a>.
 
       <h2>University Communications</h2>
 
       Students are expected to use their Northwest student email account for
-      any electronic correspondence within the university. Students are also
-      strongly advised to check their email and CatPAWS accounts on a regular
-      basis.
+      any electronic correspondence within the university. 
+      Students are also strongly advised to check their email 
+      and CatPAWS accounts on a regular basis.
 
       <h2>Academic Integrity Policy</h2>
 
-      The students, faculty, and staff at Northwest endeavor to sustain an
-      environment that values honesty in academic work, that acknowledges the
-      authorized aid provided by and intellectual contributions of others, and
-      that enables equitable student evaluation. Please refer to 
-      <a rel="noopener" target="_blank"
+      The students, faculty, and staff at Northwest endeavor to sustain 
+      an environment that values honesty in academic work, 
+      that acknowledges the authorized aid provided by 
+      and intellectual contributions of others, 
+      and that enables equitable student evaluation. 
+      Please refer to <a rel="noopener" target="_blank"
         href="http://www.nwmissouri.edu/policies/academics/Academic-Integrity.pdf">
       Northwest Missouri State University’s Academic Integrity Policy</a>.
       In addition, students are expected to understand and abide by the
@@ -116,7 +137,8 @@ class nwSyllabusNWStandard extends HTMLElement {
 
       Northwest Missouri State University is committed to maintaining an
       environment for all faculty, staff, students, and third parties that is
-      free of illegal discrimination and harassment. Please refer to the
+      free of illegal discrimination and harassment. 
+      Please refer to the
       <a rel="noopener" target="_blank"
         href="http://www.nwmissouri.edu/diversity/titlevi.htm">
       Non-Discrimination and Anti-Harassment Policy</a>.
@@ -126,10 +148,55 @@ class nwSyllabusNWStandard extends HTMLElement {
       Family Educational Rights and Privacy Act of 1974, as amended (commonly
       known as the Buckley Amendment), is a federal law which provides that
       colleges and universities will maintain the confidentiality of student
-      education records. Please refer to the 
+      education records. 
+      Please refer to the 
       <a rel="noopener" target="_blank" href=
       "http://www.nwmissouri.edu/policies/academics/Family-Educational-Rights-and-Privacy-Act.pdf"
       >Family Educational Rights and Privacy Act (FERPA) Policy</a>
+
+
+      <h2>COVID-19 Classroom Mitigation</h2> 
+      
+      Northwest is committed to the health and safety of the 
+      University community 
+      and has therefore adopted COVID-19 mitigation policies. 
+      Every student must wear a face covering 
+      (such as a cloth facemask, bandana, scarf, neck gaiter, or medical mask) 
+      over their nose and mouth at all times in all academic building spaces, 
+      including classrooms (unless directed not to by the instructor), 
+      offices, hallways, and restrooms. 
+      Face shields may be worn in addition to, but not in place of, 
+      a face covering. 
+      Students without face coverings will not be allowed in the classroom 
+      until they comply with expectations. 
+      Students must also follow directions regarding entries, exits, 
+      and furniture, and maintain at least 6 feet of social distancing 
+      whenever possible. 
+      Northwest further asks all students to practice good hygiene 
+      and not enter academic buildings or attend face-to-face classes 
+      when they feel sick or have been instructed to quarantine/isolate; 
+      students who miss class should communicate with their instructors. 
+      Students who do not comply with these requirements 
+      will be subject to standard disciplinary procedures 
+      according to the Northwest Student Code of Conduct 
+      (i.e. verbal and written warnings followed by a hearing, if necessary). 
+      We thank you for doing your part to maintain our learning environment 
+      and to protect the health of fellow Bearcats.
+
+      <h2>Change in Course Delivery</h2>
+
+      It is our goal as a University 
+      to continue all courses as planned on campus.  
+      However, due to unforeseeable impacts of COVID-19, 
+      faculty and students must be prepared 
+      to move all courses to a remote/online learning format 
+      anytime during the semester, 
+      either permanently or for a short term. 
+      The type of format (synchronous or asynchronous) 
+      will be at the discretion of each faculty member. 
+      The University and faculty will communicate with students 
+      in the event such action is deemed necessary 
+      to preserve the health and safety of students and employees.
 
       <h2>Course Evaluation</h2>
 
