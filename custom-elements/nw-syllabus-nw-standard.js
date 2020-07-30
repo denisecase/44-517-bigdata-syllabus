@@ -118,19 +118,36 @@ class nwSyllabusNWStandard extends HTMLElement {
       Section 504 of the Rehabilitation Act of 1973 and the 
       Americans with Disabilities Act of 1990 (ADA) and the 
       ADA Amendments Act of 2008 (ADAAA). 
+      
       If a student has a disability that qualifies under ADA/ADAAA 
       and requires accommodations, they should contact 
-      the Office for Equity and Accessibility for information 
-      on appropriate policies and procedures at
-      <a rel="noopener" href="tel:+16605621639">660.562.1639</a>
-      or
+      the accessibility office for information on 
+      appropriate policies and procedures. 
+      Disabilities covered by the ADA may include 
+      learning, psychiatric, physical disabilities, or chronic health disorders.
+
+      Students requiring special classroom accommodations 
+      should meet with me during office hours so that we can discuss 
+      how to meet your needs this semester. 
+      Prior to our meeting be sure you have contacted 
+      the Accessibility Coordinator in the 
+      Title IX and Equity, Accessibility and Accommodations Office at 
       <a rel="noopener" target="_top" 
-        href="mailto:ADA@nwmissouri.edu?Subject=Accomodations">
-        ADA@nwmissouri.edu</a>. 
-      For the university policy on disability accommodation refer to
-      <a rel="noopener" target="_blank" href=
-       "http://www.nwmissouri.edu/policies/student/Disability-Accommodation.pdf"
-       >Disability-Accommodation.pdf</a>.
+      href="mailto:ADA@nwmissouri.edu?Subject=Accomodations">
+      ADA@nwmissouri.edu</a>. 
+      
+      More information can be found at the University 
+      Title IX and Equity, Accessibility & Accommodations website at
+      <a rel="noopener" href=
+      "https://www.nwmissouri.edu/titleixequity/accessibility/index.htm">
+      https://www.nwmissouri.edu/titleixequity/accessibility/index.htm
+      </a>.
+       
+      If you have been approved for an accommodation, 
+      if you have emergency medical information to share with me, 
+      or if you need special arrangements 
+      in case the building must be evacuated, please inform me immediately.
+
       </div>
 
       <h2>Non-Discrimination and Anti-Harrassment Policy</h2>
@@ -138,21 +155,22 @@ class nwSyllabusNWStandard extends HTMLElement {
       Northwest Missouri State University is committed to maintaining an
       environment for all faculty, staff, students, and third parties that is
       free of illegal discrimination and harassment. 
-      Please refer to the
+      Please refer to the Non-Discrimination and Anti-Harassment Policy at 
       <a rel="noopener" target="_blank"
         href="http://www.nwmissouri.edu/diversity/titlevi.htm">
-      Non-Discrimination and Anti-Harassment Policy</a>.
+        http://www.nwmissouri.edu/diversity/titlevi.htm</a>.
 
       <h2>Family Educational Rights and Privacy Act (FERPA)</h2>
 
-      Family Educational Rights and Privacy Act of 1974, as amended (commonly
-      known as the Buckley Amendment), is a federal law which provides that
+      Family Educational Rights and Privacy Act of 1974, 
+      as amended (commonly known as the Buckley Amendment), 
+      is a federal law which provides that
       colleges and universities will maintain the confidentiality of student
       education records. 
       Please refer to the 
       <a rel="noopener" target="_blank" href=
       "http://www.nwmissouri.edu/policies/academics/Family-Educational-Rights-and-Privacy-Act.pdf"
-      >Family Educational Rights and Privacy Act (FERPA) Policy</a>
+      >Family Educational Rights and Privacy Act (FERPA) Policy</a>.
 
 
       <h2>COVID-19 Classroom Mitigation</h2> 
