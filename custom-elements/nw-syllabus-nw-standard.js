@@ -110,7 +110,7 @@ class nwSyllabusNWStandard extends HTMLElement {
       academic dishonesty. You are responsible for reading this document and
       abiding by the guidelines described therein.
 
-      <h2 id="sap-head">Special Accommodations Policy <i 
+      <h2 id="sap-head">Learning or Living Accommodations Request Process <i 
       class="fas fa-volume-up" id="sap-icon"></i></h2> 
 
       <div id="sap-content">
@@ -119,35 +119,23 @@ class nwSyllabusNWStandard extends HTMLElement {
       Americans with Disabilities Act of 1990 (ADA) and the 
       ADA Amendments Act of 2008 (ADAAA). 
       
-      If a student has a disability that qualifies under ADA/ADAAA 
-      and requires accommodations, they should contact 
-      the accessibility office for information on 
-      appropriate policies and procedures. 
-      Disabilities covered by the ADA may include 
-      learning, psychiatric, physical disabilities, or chronic health disorders.
-
-      Students requiring special classroom accommodations 
-      should meet with me during office hours so that we can discuss 
-      how to meet your needs this semester. 
-      Prior to our meeting be sure you have contacted 
-      the Accessibility Coordinator in the 
-      Title IX and Equity, Accessibility and Accommodations Office at 
+      If a student has a documented disability that qualifies under  
+      ADA/ADAAA and requests accommodations, they should should 
+      review the Accessibility and Accommodations webpage at 
+      <a rel="noopener" target="_blank"
+      href="https://www.nwmissouri.edu/titleixequity/accessibility/index.htm">
+      https://www.nwmissouri.edu/titleixequity/accessibility/index.htm</a> 
+      for guidance, 
+      including the accommodations application 
+      and supporting documentation requirements. 
+      Contact 
       <a rel="noopener" target="_top" 
       href="mailto:ADA@nwmissouri.edu?Subject=Accomodations">
-      ADA@nwmissouri.edu</a>. 
-      
-      More information can be found at the University 
-      Title IX and Equity, Accessibility & Accommodations website at
-      <a rel="noopener" href=
-      "https://www.nwmissouri.edu/titleixequity/accessibility/index.htm">
-      https://www.nwmissouri.edu/titleixequity/accessibility/index.htm
-      </a>.
-       
-      If you have been approved for an accommodation, 
-      if you have emergency medical information to share with me, 
-      or if you need special arrangements 
-      in case the building must be evacuated, please inform me immediately.
-
+      ADA@nwmissouri.edu</a> or 660.562.1873 for further assistance.  
+      For the university policy on disability accommodation refer to 
+      <a rel="noopener" target="_blank" 
+      href="http://www.nwmissouri.edu/policies/student/Disability-Accommodation.pdf">
+      http://www.nwmissouri.edu/policies/student/Disability-Accommodation.pdf</a>.
       </div>
 
       <h2>Non-Discrimination and Anti-Harrassment Policy</h2>
