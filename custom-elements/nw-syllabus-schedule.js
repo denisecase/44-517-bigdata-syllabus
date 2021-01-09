@@ -43,7 +43,7 @@ class nwSyllabusSchedule extends HTMLElement {
 </tr>
 <tr class="d-flex">
 <td class="col-2 ">6</td>
-<td class="col-4 ">Mon 2-15/td>
+<td class="col-4 ">Mon 2-15</td>
 <td class="col-6 ">Module 3 begins</td>
 </tr>
 <tr class="d-flex">
