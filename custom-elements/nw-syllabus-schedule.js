@@ -19,12 +19,12 @@ class nwSyllabusSchedule extends HTMLElement {
   <tr class="d-flex">
     <td class="col-2 ">1</td>
     <td class="col-4 ">Wed 1-13</td>
-    <td class="col-6 ">Module 1 begins Wed, assignments due first day</td>
+    <td class="col-6 ">Class begins Wednesday, assignments due first day</td>
   </tr>
   <tr class="d-flex">
   <td class="col-2 ">2</td>
   <td class="col-4 ">Mon 1-18</td>
-  <td class="col-6 ">Module 1 continues</td>
+  <td class="col-6 ">No class Monday, Module 1 continues</td>
 </tr>
 <tr class="d-flex">
 <td class="col-2 ">3</td>
@@ -34,7 +34,7 @@ class nwSyllabusSchedule extends HTMLElement {
 <tr class="d-flex">
 <td class="col-2 ">4</td>
 <td class="col-4 ">Mon 2-1</td>
-<td class="col-6 ">No class Monday, Module 2 begins</td>
+<td class="col-6 ">Module 2 begins</td>
 </tr>
 <tr class="d-flex">
 <td class="col-2 ">5</td>
