@@ -19,7 +19,7 @@ class nwSyllabusSchedule extends HTMLElement {
   <tr class="d-flex">
     <td class="col-2 ">1</td>
     <td class="col-4 ">Wed 1-13</td>
-    <td class="col-6 ">Class begins Wednesday, assignments due first day</td>
+    <td class="col-6 ">Module 1 begins, assignments due first day</td>
   </tr>
   <tr class="d-flex">
   <td class="col-2 ">2</td>
@@ -29,12 +29,12 @@ class nwSyllabusSchedule extends HTMLElement {
 <tr class="d-flex">
 <td class="col-2 ">3</td>
 <td class="col-4 ">Mon 1-25</td>
-<td class="col-6 ">Module 1 continues</td>
+<td class="col-6 ">Module 2 begins</td>
 </tr>
 <tr class="d-flex">
 <td class="col-2 ">4</td>
 <td class="col-4 ">Mon 2-1</td>
-<td class="col-6 ">Module 2 begins</td>
+<td class="col-6 ">Module 2 continues</td>
 </tr>
 <tr class="d-flex">
 <td class="col-2 ">5</td>
@@ -94,12 +94,12 @@ class nwSyllabusSchedule extends HTMLElement {
 <tr class="d-flex">
 <td class="col-2 ">16</td>
 <td class="col-4 ">Mon 4-26</td>
-<td class="col-6 ">Prep week (no class)</td>
+<td class="col-6 ">No class - prep week</td>
 </tr>
 <tr class="d-flex">
 <td class="col-2 ">17</td>
 <td class="col-4 ">Mon 5-3</td>
-<td class="col-6 ">Online finals week (no late submissions)</td>
+<td class="col-6 ">Finals week (no late submissions)</td>
 </tr>
 
 </table>
@@ -133,5 +133,4 @@ class nwSyllabusSchedule extends HTMLElement {
     `;
   }
 }
-
 window.customElements.define('nw-syllabus-schedule', nwSyllabusSchedule);

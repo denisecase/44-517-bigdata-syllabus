@@ -69,17 +69,20 @@
 
     <!-- Font Awesome -->
     <link
-      href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+      defer
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
       rel="stylesheet"
     />
     <!-- Google Fonts -->
     <link
+      defer
       href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
       rel="stylesheet"
     />
     <!-- MDB -->
     <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/1.0.0-alpha3/mdb.min.css"
+      defer
+      href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.0.0/mdb.min.css"
       rel="stylesheet"
     />
 
@@ -99,7 +102,7 @@
   <body>
     <nw-syllabus-header
       shortNum="44-517"
-      courseURL="https://nwmissouri.instructure.com/courses/32423"
+      courseURL="https://nwmissouri.instructure.com/courses/36074"
     >
     </nw-syllabus-header>
 
@@ -150,9 +153,11 @@
 
           <h2>Section Details</h2>
 
-          Fall 2020 - Section 1
+          Spring 2021
           <br />
-          MWF 2-2:50pm CH 1150
+          Sec 01 - MWF 1-1:50pm CH 3300
+          <br />
+          Sec 02 - MWF 2-2:50pm CH 3300
 
           <nw-syllabus-professor></nw-syllabus-professor>
 
@@ -268,18 +273,26 @@
                 Jeffrey Dean and Sanjay Ghemawat, 2004.
               </a>
             </li>
-            
-             <li class="tap-target-li">
+
+            <li class="tap-target-li">
               <a
                 target="_blank"
                 rel="noopener"
                 href="https://www.cs.cornell.edu/courses/JavaAndDS/"
               >
-               Cornell Java reference (online book) by Professor David Gries.
+                Cornell Java reference (online book) by Professor David Gries.
               </a>
             </li>
-            
-            
+
+            <li class="tap-target-li">
+              <a
+                target="_blank"
+                rel="noopener"
+                href="https://web.mit.edu/6.005/www/fa15/classes/25-map-filter-reduce/"
+              >
+                MIT Software Construction Reading 25: Map, Filter, Reduce.
+              </a>
+            </li>
           </ul>
 
           <h3>Required</h3>
@@ -419,12 +432,39 @@
                 programming language
               </li>
               <li
+                id="113"
+                class="requirement-li list-group-item list-group-item-action active"
+              >
+                Free
+                <a
+                  target="_blank"
+                  rel="noopener"
+                  href="https://openjdk.java.net/"
+                >
+                  Java OpenJDK</a
+                >
+                programming language and platform
+              </li>
+              <li
+                id="113"
+                class="requirement-li list-group-item list-group-item-action active"
+              >
+                Free
+                <a
+                  target="_blank"
+                  rel="noopener"
+                  href="https://www.scala-lang.org/"
+                >
+                  Scala</a
+                >
+                programming language
+              </li>
+              <li
                 id="114"
                 class="requirement-li list-group-item list-group-item-action active"
               >
-                Free, open-source Apache Kafka, Spark, Storm, Flume, Zookeeper,
-                Hive, Pig and other tools and libraries as directed by the
-                instructor.
+                Free, open-source Apache Zookeeper, Kafka, Spark, Beam, and
+                other tools and libraries as directed by the instructor.
               </li>
               <li
                 id="115"
@@ -493,9 +533,8 @@
     <!-- Copy in content from https://mdbootstrap.com/docs/standard/getting-started/installation/ -->
     <!-- MDB -->
     <script
-      defer
       type="text/javascript"
-      src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/1.0.0-alpha3/mdb.min.js"
+      src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.0.0/mdb.min.js"
     ></script>
 
     <!-- Mark.js -->

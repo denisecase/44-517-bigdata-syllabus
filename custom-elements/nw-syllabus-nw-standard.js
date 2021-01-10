@@ -229,13 +229,12 @@ class nwSyllabusNWStandard extends HTMLElement {
       const utterance2 = new SpeechSynthesisUtterance();
       utterance1.text = heading;
       utterance2.text = content;
-      if (window.speechSynthesis.speaking){
-          window.speechSynthesis.cancel();
+      if (window.speechSynthesis.speaking) {
+        window.speechSynthesis.cancel();
+      } else {
+        window.speechSynthesis.speak(utterance1);
+        window.speechSynthesis.speak(utterance2);
       }
-      else{
-          window.speechSynthesis.speak(utterance1);
-          window.speechSynthesis.speak(utterance2);
-          }
     });
   }
 }
